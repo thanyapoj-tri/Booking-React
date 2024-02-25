@@ -6,6 +6,7 @@ function Table() {
     const [data, setData] = useState([])
     const [name, setName] = useState('')
     const [machine, setMachine] = useState('')
+    const [editID, setEditID] = useState(-1)
 
     useEffect(()=>{
         axios.get('http://localhost:3000/users')
@@ -15,8 +16,24 @@ function Table() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
+        // id = data.length + 1;
         axios.post('http://localhost:3000/users', {name: name, machine: machine})
-        .then(res => {location.reload()})
+        .then(res => {
+            location.reload()
+        })
+        .catch(er => console.log(er));
+    }
+    const handleEdit = (id) => {
+        
+    }
+
+    const handleDelte = (id) => {
+        console.log(id);
+        axios.delete('http://localhost:3000/users/'+id)
+        .then(res => {
+            location.reload();
+            console.log('deleted lew');
+        })
         .catch(er => console.log(er));
     }
 
@@ -46,8 +63,8 @@ function Table() {
                         <td>{user.name}</td>
                         <td>{user.machine}</td>
                         <td>
-                            <button >edit</button>
-                            <button>delete</button>
+                            {/* <button onClick={() => handleEdit(user.id)}>edit</button> */}
+                            <button onClick={() => handleDelte(user.id)}>return</button>
                         </td>
                     </tr>
                 ))
