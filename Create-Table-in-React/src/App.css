@@ -1,5 +1,5 @@
 #root {
-  max-width: 1280px;
+  max-width: 1980px;
   /* margin: 0 auto; */
   padding: 2rem;
   text-align: center;
@@ -22,13 +22,19 @@ table tr th,table tr td{
   padding-left: 80px;
   padding-right: 80px;
 }
-
+.form-div form{
+  width: auto;
+}
 .form-div form input{
-  width: 43.5%;
+  width: 33.5%;
   padding: 5px;
 }
 .form-div form button{
   width: 10%;
+  padding: 5px;
+}
+.form-div form select{
+  width: 20%;
   padding: 5px;
 }
 
