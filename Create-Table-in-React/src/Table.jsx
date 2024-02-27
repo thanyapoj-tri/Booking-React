@@ -22,36 +22,69 @@ function Table() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        axios.post('http://localhost:3000/users', {name: name, machine: machine})
-        .then(res => {
-            location.reload()
-        })
-        .catch(er => console.log(er));
+        const newMachine = machine;
+        const selectedMachineObj = machines.find(machine => machine.value === newMachine);
+        axios.post('http://localhost:3000/users', { name: name, machine: machine })
+            .then(res => {
+                // location.reload();       
+                console.log('added user');
+                console.log(`machine num. ${machine} has been borrow`);
+                handleDeleteMachine(selectedMachineObj.id);
+            })
+            .catch(er => console.log(er));
     }
+    const handleDeleteMachine = (machineId) => {
+        console.log('http://localhost:3000/machines/'+machineId);
+        axios.delete(`http://localhost:3000/machines/${machineId}`)
+            .then(() => {
+                console.log(`Deleted machine with id ${machineId} from machines array.`);
+            })
+            .catch(error => {
+                console.error('Error deleting machine:', error);
+            });
+    }
+
     const handleEdit = (id) => {
         
     }
 
     const handleDelete = (id) => {
+        console.log('http://localhost:3000/users/'+id)
+        console.log(data.find(data => data.id === id))
+        const selectedUserObj = data.find(data => data.id === id)
         axios.delete('http://localhost:3000/users/'+id)
         .then(res => {
-            location.reload();
-            console.log('deleted');
+            // location.reload();
+            console.log('user returned');
+            handleAddMachine(selectedUserObj.machine)
         })
         .catch(er => console.log(er));
+    }
+    const handleAddMachine = (machineValue) => {
+        console.log(machineValue)
+        axios.post('http://localhost:3000/machines', { value: machineValue })
+            .then(res => {
+                // location.reload();       
+                console.log(`added ${machineValue} machine dropdown`);
+            })
+            .catch(er => console.log(er));
     }
 
     return (
         <div className='container'>
             <div className='form-div'>
-                <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>
                     <input type="text" placeholder='Enter Name' onChange={e => setName(e.target.value)}/>
                     <select value={machine} onChange={(e) => setMachine(e.target.value)}>
-                        {machines.map(machine => (
-                            <option key={machine.id} value={machine.value}>
-                                {machine.value}
-                            </option>
-                        ))}
+                        {machines && machines.length > 0 ? (
+          machines.map(machine => (
+            <option key={machine.id} value={machine.value}>
+              {machine.value}
+            </option>
+          ))
+        ) : (
+          <option value="">Loading...</option>
+        )}
                     </select>
                     <button>Add</button> 
                 </form>
