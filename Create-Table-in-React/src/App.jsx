@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <div>
-        <h1>Vite + React</h1>
+        <h1>แบบฟอร์มยืมคืนอุปกรณ์คอมพิวเตอร์</h1>
         <Table />
       </div>
     </>

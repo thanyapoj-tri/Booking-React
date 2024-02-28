@@ -16,8 +16,12 @@ function Table() {
     }, [])
     useEffect(()=>{
         axios.get('http://localhost:3000/machines')
-        .then(res => setMachines(res.data || []))
+        .then(res => {
+            const sortedMachines = res.data.sort((a, b) => a.value - b.value);
+            setMachines(sortedMachines);
+        })
         .catch(er => console.log(er));
+        
     }, [])
 
     const handleSubmit = (event) => {
@@ -26,7 +30,7 @@ function Table() {
         const selectedMachineObj = machines.find(machine => machine.value === newMachine);
         axios.post('http://localhost:3000/users', { name: name, machine: machine })
             .then(res => {
-                // location.reload();       
+                location.reload();       
                 console.log('added user');
                 console.log(`machine num. ${machine} has been borrow`);
                 handleDeleteMachine(selectedMachineObj.id);
@@ -49,33 +53,44 @@ function Table() {
     }
 
     const handleDelete = (id) => {
-        console.log('http://localhost:3000/users/'+id)
-        console.log(data.find(data => data.id === id))
-        const selectedUserObj = data.find(data => data.id === id)
-        axios.delete('http://localhost:3000/users/'+id)
+        console.log('http://localhost:3000/users/' + id);
+    console.log(data.find(data => data.id === id));
+    const selectedUserObj = data.find(data => data.id === id);
+
+    axios.delete('http://localhost:3000/users/' + id)
         .then(res => {
             // location.reload();
             console.log('user returned');
-            handleAddMachine(selectedUserObj.machine)
+            handleAddMachine(selectedUserObj.machine);
+            
         })
         .catch(er => console.log(er));
     }
+
     const handleAddMachine = (machineValue) => {
-        console.log(machineValue)
+        console.log(machineValue+'thisismachinevalue');
         axios.post('http://localhost:3000/machines', { value: machineValue })
             .then(res => {
-                // location.reload();       
+                location.reload();       
                 console.log(`added ${machineValue} machine dropdown`);
+                // After successfully adding the machine, update the 'machines' state
+                // setMachines(prevMachines => {
+                //     const updatedMachines = [...prevMachines, { "value": machineValue, "id": "NEW_ID" }];
+                //     // Sort the machines array based on the 'value' property
+                //     updatedMachines.sort((a, b) => a.value - b.value);
+                //     return updatedMachines;
+                // });
             })
             .catch(er => console.log(er));
     }
+    
 
     return (
         <div className='container'>
             <div className='form-div'>
             <form onSubmit={handleSubmit}>
-                    <input type="text" placeholder='Enter Name' onChange={e => setName(e.target.value)}/>
-                    <select value={machine} onChange={(e) => setMachine(e.target.value)}>
+                    ชื่อผู้ยืม<input type="text" placeholder='Enter Name' onChange={e => setName(e.target.value)}/>
+                    หมายเลขเครื่อง<select value={machine} onChange={(e) => setMachine(e.target.value)}>
                         {machines && machines.length > 0 ? (
           machines.map(machine => (
             <option key={machine.id} value={machine.value}>
@@ -86,7 +101,7 @@ function Table() {
           <option value="">Loading...</option>
         )}
                     </select>
-                    <button>Add</button> 
+                    <button>ยืม</button> 
                 </form>
             </div>
             <table>
@@ -105,7 +120,7 @@ function Table() {
                             <td>{user.name}</td>
                             <td>{user.machine}</td>
                             <td>
-                                <button onClick={() => handleDelete(user.id)}>return</button>
+                                <button onClick={() => handleDelete(user.id)}>คืน</button>
                             </td>
                         </tr>
                     ))}
