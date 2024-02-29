@@ -86,47 +86,122 @@ function Table() {
     
 
     return (
-        <div className='container'>
+        <><div className='container'>
             <div className='form-div'>
-            <form onSubmit={handleSubmit}>
-                    ชื่อผู้ยืม<input type="text" placeholder='Enter Name' onChange={e => setName(e.target.value)}/>
-                    หมายเลขเครื่อง<select value={machine} onChange={(e) => setMachine(e.target.value)}>
+                <form onSubmit={handleSubmit}>
+                    <div>
+                    <label>
+                        ชื่อผู้ยืม<input type="text" placeholder='Enter Name' onChange={e => setName(e.target.value)} />
+                        </label>
+                        <label>
+                        ประเภทบุคคล<select value={machine} onChange={(e) => setMachine(e.target.value)}>
+
+                            <option value="">อาจารย์</option>
+                            <option value="">บุคลากร</option>
+                            <option value="">นักศึกษา</option>
+                        </select>
+                        </label>
+                    </div>
+                    <div>
+                    <label>
+                        หน่วยงาน/ภาควิชา<input type="text" ></input>
+                        </label>
+                        <label>
+                        โทร<input type="text" ></input>
+                        </label>
+                    </div>
+                    <label>Notebookจำนวน<select value={machine} onChange={(e) => setMachine(e.target.value)}>
                         {machines && machines.length > 0 ? (
-          machines.map(machine => (
-            <option key={machine.id} value={machine.value}>
-              {machine.value}
-            </option>
-          ))
-        ) : (
-          <option value="">Loading...</option>
-        )}
+                            machines.map(machine => (
+                                <option key={machine.id} value={machine.value}>
+                                    {machine.value} เครื่อง
+                                </option>
+                            ))
+                        ) : (
+                            <option value="">Loading...</option>
+                        )}
                     </select>
-                    <button>ยืม</button> 
+                    เครื่องเสียงจำนวน<select value={machine} onChange={(e) => setMachine(e.target.value)}>
+                        {machines && machines.length > 0 ? (
+                            machines.map(machine => (
+                                <option key={machine.id} value={machine.value}>
+                                    {machine.value} เครื่อง
+                                </option> 
+                            ))
+                        ) : (
+                            <option value="">Loading...</option>
+                        )}
+                    </select>
+                    
+                    </label>
+                    <div>
+                    <label>เครื่องไมโครโฟนชนิดไร้สาย<select value={machine} onChange={(e) => setMachine(e.target.value)}>
+                        {machines && machines.length > 0 ? (
+                            machines.map(machine => (
+                                <option key={machine.id} value={machine.value}>
+                                    {machine.value} เครื่อง
+                                </option>
+                            ))
+                        ) : (
+                            <option value="">Loading...</option>
+                        )}
+                    </select>
+                    เครื่องบันทึกเสียงจำนวน<select value={machine} onChange={(e) => setMachine(e.target.value)}>
+                        {machines && machines.length > 0 ? (
+                            machines.map(machine => (
+                                <option key={machine.id} value={machine.value}>
+                                    {machine.value} เครื่อง
+                                </option> 
+                            ))
+                        ) : (
+                            <option value="">Loading...</option>
+                        )}
+                    </select>
+                    </label>
+                    </div>
+                    <div>
+                    วัตถุประสงค์เพื่อ<input type="text" ></input>
+                    </div>
+                    <div>
+                    ยืม ณ วันที่<input type="date" ></input>
+                    ถึง วันที่<input type="date" ></input>
+                    </div>
+                    <div>
+                    ยืม ณ วันที่<input type="time" ></input>
+                    ถึง วันที่<input type="time" ></input>
+                    </div>
+                    <div>
+                    สถานที่<input type="type" ></input>
+                    </div>
+                    <button>ยืม</button>
                 </form>
             </div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Name</th>
-                        <th>Machine</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {data.map((user, index) => (
-                        <tr key={index}>
-                            <td>{user.id}</td>
-                            <td>{user.name}</td>
-                            <td>{user.machine}</td>
-                            <td>
-                                <button onClick={() => handleDelete(user.id)}>คืน</button>
-                            </td>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
         </div>
+        รายละเอียด
+        <div className='container'>
+                <table>
+                    <thead>
+                        <tr>
+                            {/* <th>ID</th> */}
+                            <th>ชื่อผู้ยืม</th>
+                            <th>อุปกรณ์ที่ยืม</th>
+                            <th>สถานะ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {data.map((user, index) => (
+                            <tr key={index}>
+                                {/* <td>{user.id}</td> */}
+                                <td>{user.name}</td>
+                                <td>{user.machine}</td>
+                                <td>
+                                    <button onClick={() => handleDelete(user.id)}>คืน</button>
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div></>
     )
 }
 

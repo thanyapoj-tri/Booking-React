@@ -8,9 +8,10 @@
 .container{
   border: 1px solid black;
   border-collapse: collapse;
-  width: 100%;
+  width: 1200px;
   text-align: center;
 }
+
 
 table tr{
   border-bottom: 1px solid black;
