@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import './App.css'
+import { Link } from 'react-router-dom'
 
 function Table() {
     const [data, setData] = useState([])
@@ -8,6 +9,16 @@ function Table() {
     const [name, setName] = useState('')
     const [machine, setMachine] = useState('') // Updated to hold a single value
     const [editID, setEditID] = useState(-1)
+    const [identity, setIdentity] = useState('')
+    const [department, setDepartment] = useState('')
+    const [tel, setTel] = useState('')
+    const [stereo, setStereo] = useState('')
+    const [wirelessmic, setWirelessmic] = useState('')
+    const [voicerec, setVoicerec] = useState('')
+    const [objective, setObjective] = useState('')
+    const [startdate, setStartdate] = useState('')
+    const [enddate, setEnddate] = useState('')
+    const [location, setLocation] = useState('')
 
     useEffect(()=>{
         axios.get('http://localhost:3000/users')
@@ -21,19 +32,18 @@ function Table() {
             setMachines(sortedMachines);
         })
         .catch(er => console.log(er));
-        
     }, [])
+
+    
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        const newMachine = machine;
-        const selectedMachineObj = machines.find(machine => machine.value === newMachine);
-        axios.post('http://localhost:3000/users', { name: name, machine: machine })
+        axios.post('http://localhost:3000/users', { name: name,identity: identity,department: department,tel: tel, machine: machine,stereo: stereo,wirelessmic: wirelessmic,voicerec: voicerec ,objective: objective,startdate: startdate,enddate: enddate ,location: location})
             .then(res => {
                 location.reload();       
                 console.log('added user');
                 console.log(`machine num. ${machine} has been borrow`);
-                handleDeleteMachine(selectedMachineObj.id);
+                // handleDeleteMachine(selectedMachineObj.id);
             })
             .catch(er => console.log(er));
     }
@@ -61,7 +71,7 @@ function Table() {
         .then(res => {
             // location.reload();
             console.log('user returned');
-            handleAddMachine(selectedUserObj.machine);
+            // handleAddMachine(selectedUserObj.machine);
             
         })
         .catch(er => console.log(er));
@@ -86,31 +96,36 @@ function Table() {
     
 
     return (
-        <><div className='container'>
+        <><div>
+        <h1>แบบฟอร์มยืมคืนอุปกรณ์โสต</h1>
+      </div>
+      <div className='container'>
             <div className='form-div'>
                 <form onSubmit={handleSubmit}>
                     <div>
-                    <label>
+                    <label className='lefttitleName'>
                         ชื่อผู้ยืม<input type="text" placeholder='Enter Name' onChange={e => setName(e.target.value)} />
                         </label>
-                        <label>
-                        ประเภทบุคคล<select value={machine} onChange={(e) => setMachine(e.target.value)}>
-
-                            <option value="">อาจารย์</option>
-                            <option value="">บุคลากร</option>
-                            <option value="">นักศึกษา</option>
+                        <label className='righttitleIdentity'>
+                        ประเภทบุคคล<select value={identity} onChange={(e) => setIdentity(e.target.value)}>
+                            <option value={null}>Please select an option...</option>
+                            <option value="อาจารย์">อาจารย์</option>
+                            <option value="บุคลากร">บุคลากร</option>
+                            <option value="นักศึกษา">นักศึกษา</option>
                         </select>
                         </label>
                     </div>
                     <div>
-                    <label>
-                        หน่วยงาน/ภาควิชา<input type="text" ></input>
+                    <label className='lefttitleDepartment'>
+                        หน่วยงาน/ภาควิชา<input type="text" placeholder='Enter หน่วยงาน/ภาควิชา' onChange={e => setDepartment(e.target.value)} />
                         </label>
-                        <label>
-                        โทร<input type="text" ></input>
+                        <label className='righttitleTel'>
+                        โทร<input type="text" placeholder='Enter โทร' onChange={e => setTel(e.target.value)}/>
                         </label>
                     </div>
-                    <label>Notebookจำนวน<select value={machine} onChange={(e) => setMachine(e.target.value)}>
+                    <div>
+                    <label className='lefttitleMachine'>Notebookจำนวน<select value={machine} onChange={(e) => setMachine(e.target.value)}>
+                    <option value={null}>Please select an option...</option>
                         {machines && machines.length > 0 ? (
                             machines.map(machine => (
                                 <option key={machine.id} value={machine.value}>
@@ -120,8 +135,12 @@ function Table() {
                         ) : (
                             <option value="">Loading...</option>
                         )}
+                        
                     </select>
-                    เครื่องเสียงจำนวน<select value={machine} onChange={(e) => setMachine(e.target.value)}>
+                    </label>
+                        <label className='righttitleStereo'>
+                    เครื่องเสียงจำนวน<select value={stereo} onChange={(e) => setStereo(e.target.value)}>
+                    <option value={null}>Please select an option...</option>
                         {machines && machines.length > 0 ? (
                             machines.map(machine => (
                                 <option key={machine.id} value={machine.value}>
@@ -134,8 +153,10 @@ function Table() {
                     </select>
                     
                     </label>
+                    </div>
                     <div>
-                    <label>เครื่องไมโครโฟนชนิดไร้สาย<select value={machine} onChange={(e) => setMachine(e.target.value)}>
+                    <label className='lefttitleWirelessmic'>เครื่องไมโครโฟนชนิดไร้สาย<select value={wirelessmic} onChange={(e) => setWirelessmic(e.target.value)}>
+                    <option value={null}>Please select an option...</option>
                         {machines && machines.length > 0 ? (
                             machines.map(machine => (
                                 <option key={machine.id} value={machine.value}>
@@ -146,7 +167,10 @@ function Table() {
                             <option value="">Loading...</option>
                         )}
                     </select>
-                    เครื่องบันทึกเสียงจำนวน<select value={machine} onChange={(e) => setMachine(e.target.value)}>
+                    </label>
+                        <label className='righttitleVoicerec'>
+                    เครื่องบันทึกเสียงจำนวน<select value={voicerec} onChange={(e) => setVoicerec(e.target.value)}>
+                    <option value={null}>Please select an option...</option>
                         {machines && machines.length > 0 ? (
                             machines.map(machine => (
                                 <option key={machine.id} value={machine.value}>
@@ -160,20 +184,32 @@ function Table() {
                     </label>
                     </div>
                     <div>
-                    วัตถุประสงค์เพื่อ<input type="text" ></input>
+                        <label className='lefttitleObjective'>
+                    วัตถุประสงค์เพื่อ<input type="text" placeholder='Enter วัตถุประสงค์' onChange={e => setObjective(e.target.value)} />
+                    </label>
+                    </div>
+                    {/* <div>
+                    ยืม ณ วันที่<input type="date" />
+                    ถึง วันที่<input type="date" />
+                    </div> */}
+                    <div>
+                        <label className='lefttitleStartdate'>
+                    ยืม ณ วันที่<input type="datetime-local" id="datetimeInput" name="datetimeInput" onChange={e => setStartdate(e.target.value)}/>
+                    </label>
+                    <label className='righttitleEnddate'>
+                    ถึง วันที่<input type="datetime-local" id="datetimeInput" name="datetimeInput" onChange={e => setEnddate(e.target.value)}/>
+                    </label>
                     </div>
                     <div>
-                    ยืม ณ วันที่<input type="date" ></input>
-                    ถึง วันที่<input type="date" ></input>
+                        <label className='lefttitleLocation'>
+                    สถานที่<input type="text" placeholder='Enter สถานที่' onChange={e => setLocation(e.target.value)} />
+                    </label>
                     </div>
                     <div>
-                    ยืม ณ วันที่<input type="time" ></input>
-                    ถึง วันที่<input type="time" ></input>
+                    <label className='borrowBtn'>
+                    <button disabled={machine === ''||location === ''}>ยืม</button>
+                    </label>
                     </div>
-                    <div>
-                    สถานที่<input type="type" ></input>
-                    </div>
-                    <button>ยืม</button>
                 </form>
             </div>
         </div>
@@ -184,8 +220,11 @@ function Table() {
                         <tr>
                             {/* <th>ID</th> */}
                             <th>ชื่อผู้ยืม</th>
-                            <th>อุปกรณ์ที่ยืม</th>
-                            <th>สถานะ</th>
+                            <th>Notebook</th>
+                            <th>เครื่องเสียง</th>
+                            <th>เครื่องไมโครโฟน</th>
+                            <th>เครื่องบันทึกเสียง</th>
+                            <th>เข้าสู่การคืน</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -193,9 +232,12 @@ function Table() {
                             <tr key={index}>
                                 {/* <td>{user.id}</td> */}
                                 <td>{user.name}</td>
-                                <td>{user.machine}</td>
+                                <td>{user.machine} เครื่อง</td>
+                                <td>{user.stereo} เครื่อง</td>
+                                <td>{user.wirelessmic} เครื่อง</td>
+                                <td>{user.voicerec} เครื่อง</td>
                                 <td>
-                                    <button onClick={() => handleDelete(user.id)}>คืน</button>
+                                    <Link to={`/read/${user.id}`} >รายละเอียด</Link>
                                 </td>
                             </tr>
                         ))}
