@@ -1,5 +1,5 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif, "Kanit";
   line-height: 1.5;
   font-weight: 400;
 
@@ -23,12 +23,17 @@ a:hover {
 }
 
 body {
-  margin: 0;
+  /* margin: 0; */
   display: flex;
   /* place-items: center; */
-  min-width: 720px;
-  min-height: 100vh;
+  min-width: 820px;
+  min-height: 99vh;
+  justify-content: center;
+  background-image: url('https://img.freepik.com/free-vector/vector-office-interior-room-with-desk-cartoon_107791-20715.jpg?w=1380&t=st=1710303680~exp=1710304280~hmac=e33cbdc8b0c338ad513cc6222bc6e43d8ca2694463374794d41650647ede09bf');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
+
 
 h1 {
   font-size: 3.2em;

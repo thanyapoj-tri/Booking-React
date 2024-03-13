@@ -31,44 +31,50 @@ function Read() {
   return (
     <div className='readBox'>
       <div className='card'>
-        <h2>ลายละเอียดผู้ใช้งานอุปกรณ์โสต</h2>
+        <div className='readForm'>
+        <img src="https://mahidol.ac.th/temp/2019/06/logo-MU_Color.png" alt="Logo" />
+        <div className='readTitle'>
+        <h2>รายละเอียดการใช้บริการเทคโนโลยีสารสนเทศด้านโสตทัศนูปกรณ์</h2>
+        <h4>คณะสังคมศาสตร์และมนุษยศาสตร์ มหาวิทยาลัยมหิดล</h4>
+        </div>
+        </div>
         <h3>บุคลากร</h3>
-        <div className='mb-2'>
+        <div className='mbOne'>
           <strong>ชื่อผู้ยืม: {data.name}</strong>
         </div>
-        <div className='mb-2'>
+        <div className='mbOne'>
           <strong>ประเภทบุคคล: {data.identity}</strong>
         </div>
-        <div className='mb-3'>
+        <div className='mbOne'>
           <strong>หน่วยงาน/ภาควิชา: {data.department}</strong>
         </div>
-        <div className='mb-3'>
+        <div className='mbOne'>
           <strong>โทร: {data.tel}</strong>
         </div>
         <h3>อุปกรณ์โสต</h3>
-        <div className='mb-3'>
+        <div className='mbOne'>
           <strong>Notebook: {data.machine} เครื่อง</strong>
         </div>
-        <div className='mb-3'>
+        <div className='mbOne'>
           <strong>เครื่องเสียง: {data.stereo} เครื่อง</strong>
         </div>
-        <div className='mb-3'>
+        <div className='mbOne'>
           <strong>เครื่องไมโครโฟนชนิดไร้สาย: {data.wirelessmic} เครื่อง</strong>
         </div>
-        <div className='mb-3'>
+        <div className='mbOne'>
           <strong>เครื่องบันทึกเสียง: {data.voicerec} เครื่อง</strong>
         </div>
         <h3>ความประสงค์,เวลา,สภานที่</h3>
-        <div className='mb-3'>
+        <div className='mbOne'>
           <strong>วัตถุประสงค์เพื่อ: {data.objective}</strong>
         </div>
-        <div className='mb-3'>
+        <div className='mbOne'>
           <strong>วันที่: {data.startdate}</strong>
         </div>
-        <div className='mb-3'>
+        <div className='mbOne'>
           <strong>ถึง วันที่: {data.enddate}</strong>
         </div>
-        <div className='mb-3'>
+        <div className='mbOne'>
           <strong>สถานที่: {data.location}</strong>
         </div>
         <div>

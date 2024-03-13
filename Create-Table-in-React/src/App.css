@@ -4,54 +4,83 @@
   padding: 2rem;
   text-align: center;
 }
+.titleForm {
+  position: relative;
+  display: inline-block;
+}
 
+.titleForm img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  padding-top: 30px;
+  width: 73px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.titleForm h1 {
+  color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-left: 80px;
+}
 .container{
   border: 1px solid black;
   border-collapse: collapse;
-  width: 1200px;
+  width: 1444px;
   text-align: left;
   border-radius: 0.5rem;
+  background-color: #f0ebea; /* White background */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Shadow effect */
+
 }
 .lefttitleName{
-  margin-left: 133px;
+  margin-left: 125px;
+}
+.righttitleIdentity{
+  margin-left: 70px;
 }
 
 .lefttitleDepartment{
-  margin-left: 60px;
+  margin-left: 53px;
 }
 .righttitleTel{
-  margin-left: 64px;
+  margin-left: 135px;
 }
 
 .lefttitleMachine{
-  margin-left: 67px;
+  margin-left: 59px;
 }
 .righttitleStereo{
-  margin-left: 150px;
+  margin-left: 248px;
 }
 
 .righttitleVoicerec{
-  margin-left: 109px
+  margin-left: 210px
 }
 
 .lefttitleObjective{
-  margin-left: 77px;
+  margin-left: 68px;
 }
 
 .lefttitleStartdate{
-  margin-left: 112px;
+  margin-left: 103px;
 }
 .righttitleEnddate{
-  margin-left: 39px;
+  margin-left: 107px;
 }
 .lefttitleLocation{
-  margin-left: 134px;
+  margin-left: 128px;
 }
 .borrowBtn{
   margin-left: 45%;
 }
 table{
   border-radius: 0.25rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Shadow effect */
+  
 }
 table tr{
   border-bottom: 1px solid black;

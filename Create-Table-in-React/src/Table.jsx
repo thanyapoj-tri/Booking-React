@@ -33,15 +33,15 @@ function Table() {
         })
         .catch(er => console.log(er));
     }, [])
-
+    
     
 
     const handleSubmit = (event) => {
         event.preventDefault();
         axios.post('http://localhost:3000/users', { name: name,identity: identity,department: department,tel: tel, machine: machine,stereo: stereo,wirelessmic: wirelessmic,voicerec: voicerec ,objective: objective,startdate: startdate,enddate: enddate ,location: location})
-            .then(res => {
-                location.reload();       
+            .then(res => {    
                 console.log('added user');
+                window.location.reload(true);
                 console.log(`machine num. ${machine} has been borrow`);
                 // handleDeleteMachine(selectedMachineObj.id);
             })
@@ -63,18 +63,7 @@ function Table() {
     }
 
     const handleDelete = (id) => {
-        console.log('http://localhost:3000/users/' + id);
-    console.log(data.find(data => data.id === id));
-    const selectedUserObj = data.find(data => data.id === id);
-
-    axios.delete('http://localhost:3000/users/' + id)
-        .then(res => {
-            // location.reload();
-            console.log('user returned');
-            // handleAddMachine(selectedUserObj.machine);
-            
-        })
-        .catch(er => console.log(er));
+        window.location.reload(true);
     }
 
     const handleAddMachine = (machineValue) => {
@@ -96,7 +85,8 @@ function Table() {
     
 
     return (
-        <><div>
+        <><div className='titleForm'>
+            <img src="https://mahidol.ac.th/temp/2019/06/logo-MU_Color.png" alt="Logo" />
         <h1>แบบฟอร์มยืมคืนอุปกรณ์โสต</h1>
       </div>
       <div className='container'>
@@ -224,11 +214,13 @@ function Table() {
                             <th>เครื่องเสียง</th>
                             <th>เครื่องไมโครโฟน</th>
                             <th>เครื่องบันทึกเสียง</th>
+                            <th>สถานะการยืม</th>
                             <th>เข้าสู่การคืน</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {data.map((user, index) => (
+                        {data.map((user, index) => 
+                            (
                             <tr key={index}>
                                 {/* <td>{user.id}</td> */}
                                 <td>{user.name}</td>
@@ -236,11 +228,13 @@ function Table() {
                                 <td>{user.stereo} เครื่อง</td>
                                 <td>{user.wirelessmic} เครื่อง</td>
                                 <td>{user.voicerec} เครื่อง</td>
+                                <td>{new Date(user.enddate) < new Date() ? 'เกินกำหนด' : 'อยู่ในกำหนดการยืม'}</td>
                                 <td>
                                     <Link to={`/read/${user.id}`} >รายละเอียด</Link>
                                 </td>
                             </tr>
-                        ))}
+                            )
+                        )}
                     </tbody>
                 </table>
             </div></>

@@ -47,11 +47,6 @@
   ],
   "users": [
     {
-      "id": "7db8",
-      "name": "fame",
-      "machine": "4"
-    },
-    {
       "id": "7466",
       "name": "ธัญพจน์ ไตรเกษมศักดิ์",
       "identity": "นักศึกษา",
@@ -67,19 +62,34 @@
       "location": "placetest4"
     },
     {
-      "id": "38df",
-      "name": "thanyapoj trikasemsak",
-      "identity": "",
-      "department": "",
-      "tel": "",
-      "machine": "3",
-      "stereo": "",
-      "wirelessmic": "",
-      "voicerec": "",
-      "objective": "",
-      "startdate": "2024-03-06",
-      "enddate": "2024-03-07T16:00",
-      "location": "testtime"
+      "id": "307e",
+      "name": "สมชาย",
+      "identity": "อาจารย์",
+      "department": "สังคม",
+      "tel": "110",
+      "machine": "1",
+      "stereo": "0",
+      "wirelessmic": "0",
+      "voicerec": "0",
+      "objective": "อบรม",
+      "startdate": "2024-03-11T14:30",
+      "enddate": "2024-03-12T14:30",
+      "location": "ห้องประชุม"
+    },
+    {
+      "id": "8c5e",
+      "name": "สมหญิง",
+      "identity": "นักศึกษา",
+      "department": "อาชีพ",
+      "tel": "112",
+      "machine": "1",
+      "stereo": "1",
+      "wirelessmic": "1",
+      "voicerec": "1",
+      "objective": "ชมชม",
+      "startdate": "2024-03-11T15:30",
+      "enddate": "2024-03-11T15:35",
+      "location": "ชมประชุม"
     }
   ]
 }
