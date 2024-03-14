@@ -1,0 +1,25 @@
+.reportContainer{
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: auto;
+    text-align: left;
+    border-radius: 0.5rem;
+    background-color: #f0ebea; /* White background */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Shadow effect */
+  
+  }
+table{
+    border-radius: 0.25rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Shadow effect */
+    
+  }
+table tr{
+    border-bottom: 1px solid black;
+    background-color: rgb(58, 49, 39);
+    color: rgb(233, 247, 253);
+  }
+table tr th,table tr td{
+    padding: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }

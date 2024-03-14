@@ -29,7 +29,7 @@ body {
   min-width: 820px;
   min-height: 99vh;
   justify-content: center;
-  background-image: url('https://img.freepik.com/free-vector/vector-office-interior-room-with-desk-cartoon_107791-20715.jpg?w=1380&t=st=1710303680~exp=1710304280~hmac=e33cbdc8b0c338ad513cc6222bc6e43d8ca2694463374794d41650647ede09bf');
+  /* background-image: url('https://mahidol.ac.th/openhouse/2022/wp-content/uploads/2022/06/1-1024x769.png'); */
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -62,7 +62,7 @@ button:focus-visible {
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #e4d4b3;
+    background-color: #1b4099;
   }
   a:hover {
     color: #747bff;

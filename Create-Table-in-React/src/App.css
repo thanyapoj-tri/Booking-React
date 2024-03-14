@@ -1,7 +1,7 @@
 #root {
   max-width: 1980px;
   /* margin: 0 auto; */
-  padding: 2rem;
+  /* padding: 2rem; */
   text-align: center;
 }
 .titleForm {
@@ -14,7 +14,7 @@
   top: 0;
   left: 0;
   z-index: 1;
-  padding-top: 30px;
+  padding-top: 47px;
   width: 73px; /* Adjust the width as needed */
   height: auto; /* Maintain aspect ratio */
 }
@@ -25,19 +25,40 @@
   -webkit-text-stroke-color: black;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   margin-left: 80px;
+  margin-bottom: 0px;
+}
+.titleForm h2 {
+  color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-left: 80px;
+  margin-top: 0px;
+  text-align: left;
 }
 .container{
   border: 1px solid black;
   border-collapse: collapse;
-  width: 1444px;
+  width: calc((1444 / 1000) * 63%);
   text-align: left;
   border-radius: 0.5rem;
   background-color: #f0ebea; /* White background */
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Shadow effect */
-
+  height: 350px;
+  margin-left: 60px;
+}
+.containertable{
+  border: 1px solid black;
+  border-collapse: collapse;
+  width: auto;
+  text-align: left;
+  border-radius: 0.5rem;
+  background-color: #f0ebea; /* White background */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Shadow effect */
+  height: auto;
 }
 .lefttitleName{
-  margin-left: 125px;
+  margin-left: 93px;
 }
 .righttitleIdentity{
   margin-left: 70px;
@@ -47,14 +68,14 @@
   margin-left: 53px;
 }
 .righttitleTel{
-  margin-left: 135px;
+  margin-left: 134px;
 }
 
 .lefttitleMachine{
   margin-left: 59px;
 }
 .righttitleStereo{
-  margin-left: 248px;
+  margin-left: 249px;
 }
 
 .righttitleVoicerec{
@@ -69,7 +90,7 @@
   margin-left: 103px;
 }
 .righttitleEnddate{
-  margin-left: 107px;
+  margin-left: 106px;
 }
 .lefttitleLocation{
   margin-left: 128px;
@@ -98,12 +119,13 @@ table tr th,table tr td{
   padding-left: 6px;
 }
 .form-div form div{
-  padding-top: 2.5px;
+  padding-top: 8.5px;
   padding-bottom: 1px;
 }
 
 .form-div form{
   width: auto;
+  padding-top: 15px;
 }
 
 .form-div form input{
@@ -130,6 +152,24 @@ table tr th,table tr td{
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f0f0f0;
+  padding: 10px 20px;
+  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+  text-align: right;
+}
+
+.bottom-bar .signature {
+  margin: 0;
+  padding-right: 2.5%;
+  font-size: 12px;
+  color: #888;
 }
 
 @keyframes logo-spin {

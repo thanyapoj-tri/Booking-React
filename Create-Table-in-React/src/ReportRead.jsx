@@ -1,32 +1,19 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import './Read.css'
+import './ReportRead.css'
 
-function Read() {
-
+function reportRead() {
   const [data, setData] = useState([])
   const {id} = useParams();
-  const naviagte = useNavigate();
+
     useEffect(()=>{
-        axios.get('http://localhost:3000/users/' + id)
+        axios.get('http://localhost:4000/usersreport/' + id)
         .then(res => setData(res.data))
         .catch(er => console.log(er));
     }, [])
 
-
-    const handleDelete = (id) => {
-      
-  axios.delete('http://localhost:3000/users/' + id)
-      .then(res => {
-          // location.reload();
-          console.log('user returned');
-          // handleAddMachine(selectedUserObj.machine);
-          window.alert("user returned");
-          naviagte('/');
-      })
-      .catch(er => console.log(er));
-  }
 
   return (
     <div className='readBox'>
@@ -78,10 +65,8 @@ function Read() {
           <strong>สถานที่: {data.location}</strong>
         </div>
         <div>
-        <Link to={`/`} className='button'>Back</Link>
+        <Link to={`/report/`} className='button'>&lt;</Link>
 
-        <button onClick={e => handleDelete(data.id)} className='btn-danger'>คืน</button>
-        
         </div>
       </div>
     </div>
@@ -90,4 +75,4 @@ function Read() {
   
 }
 
-export default Read
+export default reportRead

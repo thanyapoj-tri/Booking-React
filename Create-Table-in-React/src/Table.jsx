@@ -19,6 +19,7 @@ function Table() {
     const [startdate, setStartdate] = useState('')
     const [enddate, setEnddate] = useState('')
     const [location, setLocation] = useState('')
+    const [report, setReport] = useState([]);
 
     useEffect(()=>{
         axios.get('http://localhost:3000/users')
@@ -33,12 +34,23 @@ function Table() {
         })
         .catch(er => console.log(er));
     }, [])
-    
+    useEffect(()=>{
+        axios.get('http://localhost:4000/usersreport')
+        .then(res => setReport(res.data))
+        .catch(er => console.log(er));
+    }, [])
     
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        axios.post('http://localhost:3000/users', { name: name,identity: identity,department: department,tel: tel, machine: machine,stereo: stereo,wirelessmic: wirelessmic,voicerec: voicerec ,objective: objective,startdate: startdate,enddate: enddate ,location: location})
+        const id = report.length + 1;
+        axios.post('http://localhost:4000/users', {id: 'IT-S002-'+id, name: name,identity: identity,department: department,tel: tel, machine: machine,stereo: stereo,wirelessmic: wirelessmic,voicerec: voicerec ,objective: objective,startdate: startdate,enddate: enddate ,location: location})
+            .then(res => {    
+                console.log('added user report');
+            })
+            .catch(er => console.log(er));
+        const id2 = data.length + 1;
+        axios.post('http://localhost:3000/users', {id: 'q-'+id2, name: name,identity: identity,department: department,tel: tel, machine: machine,stereo: stereo,wirelessmic: wirelessmic,voicerec: voicerec ,objective: objective,startdate: startdate,enddate: enddate ,location: location})
             .then(res => {    
                 console.log('added user');
                 window.location.reload(true);
@@ -88,16 +100,17 @@ function Table() {
         <><div className='titleForm'>
             <img src="https://mahidol.ac.th/temp/2019/06/logo-MU_Color.png" alt="Logo" />
         <h1>แบบฟอร์มยืมคืนอุปกรณ์โสต</h1>
+        <h2>คณะสังคมศาสตร์และมนุษยศาสตร์ มหาวิทยาลัยมหิดล</h2>
       </div>
       <div className='container'>
             <div className='form-div'>
                 <form onSubmit={handleSubmit}>
                     <div>
                     <label className='lefttitleName'>
-                        ชื่อผู้ยืม<input type="text" placeholder='Enter Name' onChange={e => setName(e.target.value)} />
+                        ชื่อ-นามสกุล <input type="text" placeholder='Enter Name' onChange={e => setName(e.target.value)} />
                         </label>
                         <label className='righttitleIdentity'>
-                        ประเภทบุคคล<select value={identity} onChange={(e) => setIdentity(e.target.value)}>
+                        ประเภทบุคคล <select value={identity} onChange={(e) => setIdentity(e.target.value)}>
                             <option value={null}>Please select an option...</option>
                             <option value="อาจารย์">อาจารย์</option>
                             <option value="บุคลากร">บุคลากร</option>
@@ -107,14 +120,15 @@ function Table() {
                     </div>
                     <div>
                     <label className='lefttitleDepartment'>
-                        หน่วยงาน/ภาควิชา<input type="text" placeholder='Enter หน่วยงาน/ภาควิชา' onChange={e => setDepartment(e.target.value)} />
+                        หน่วยงาน/ภาควิชา <input type="text" placeholder='Enter หน่วยงาน/ภาควิชา' onChange={e => setDepartment(e.target.value)} />
                         </label>
                         <label className='righttitleTel'>
-                        โทร<input type="text" placeholder='Enter โทร' onChange={e => setTel(e.target.value)}/>
+                        โทร <input type="text" placeholder='Enter โทร' onChange={e => setTel(e.target.value)}/>
                         </label>
                     </div>
                     <div>
-                    <label className='lefttitleMachine'>Notebookจำนวน<select value={machine} onChange={(e) => setMachine(e.target.value)}>
+                    <label className='lefttitleMachine'>
+                    Notebookจำนวน <select value={machine} onChange={(e) => setMachine(e.target.value)}>
                     <option value={null}>Please select an option...</option>
                         {machines && machines.length > 0 ? (
                             machines.map(machine => (
@@ -129,7 +143,7 @@ function Table() {
                     </select>
                     </label>
                         <label className='righttitleStereo'>
-                    เครื่องเสียงจำนวน<select value={stereo} onChange={(e) => setStereo(e.target.value)}>
+                    เครื่องเสียงจำนวน <select value={stereo} onChange={(e) => setStereo(e.target.value)}>
                     <option value={null}>Please select an option...</option>
                         {machines && machines.length > 0 ? (
                             machines.map(machine => (
@@ -145,7 +159,8 @@ function Table() {
                     </label>
                     </div>
                     <div>
-                    <label className='lefttitleWirelessmic'>เครื่องไมโครโฟนชนิดไร้สาย<select value={wirelessmic} onChange={(e) => setWirelessmic(e.target.value)}>
+                    <label className='lefttitleWirelessmic'>
+                    เครื่องไมโครโฟนชนิดไร้สาย <select value={wirelessmic} onChange={(e) => setWirelessmic(e.target.value)}>
                     <option value={null}>Please select an option...</option>
                         {machines && machines.length > 0 ? (
                             machines.map(machine => (
@@ -159,7 +174,7 @@ function Table() {
                     </select>
                     </label>
                         <label className='righttitleVoicerec'>
-                    เครื่องบันทึกเสียงจำนวน<select value={voicerec} onChange={(e) => setVoicerec(e.target.value)}>
+                    เครื่องบันทึกเสียงจำนวน <select value={voicerec} onChange={(e) => setVoicerec(e.target.value)}>
                     <option value={null}>Please select an option...</option>
                         {machines && machines.length > 0 ? (
                             machines.map(machine => (
@@ -175,7 +190,7 @@ function Table() {
                     </div>
                     <div>
                         <label className='lefttitleObjective'>
-                    วัตถุประสงค์เพื่อ<input type="text" placeholder='Enter วัตถุประสงค์' onChange={e => setObjective(e.target.value)} />
+                    วัตถุประสงค์เพื่อ <input type="text" placeholder='Enter วัตถุประสงค์' onChange={e => setObjective(e.target.value)} />
                     </label>
                     </div>
                     {/* <div>
@@ -184,15 +199,15 @@ function Table() {
                     </div> */}
                     <div>
                         <label className='lefttitleStartdate'>
-                    ยืม ณ วันที่<input type="datetime-local" id="datetimeInput" name="datetimeInput" onChange={e => setStartdate(e.target.value)}/>
+                    ยืม ณ วันที่ <input type="datetime-local" id="datetimeInput" name="datetimeInput" onChange={e => setStartdate(e.target.value)}/>
                     </label>
                     <label className='righttitleEnddate'>
-                    ถึง วันที่<input type="datetime-local" id="datetimeInput" name="datetimeInput" onChange={e => setEnddate(e.target.value)}/>
+                    ถึง วันที่ <input type="datetime-local" id="datetimeInput" name="datetimeInput" onChange={e => setEnddate(e.target.value)}/>
                     </label>
                     </div>
                     <div>
                         <label className='lefttitleLocation'>
-                    สถานที่<input type="text" placeholder='Enter สถานที่' onChange={e => setLocation(e.target.value)} />
+                    สถานที่ <input type="text" placeholder='Enter สถานที่' onChange={e => setLocation(e.target.value)} />
                     </label>
                     </div>
                     <div>
@@ -204,11 +219,11 @@ function Table() {
             </div>
         </div>
         รายละเอียด
-        <div className='container'>
+        <div className='containertable'>
                 <table>
                     <thead>
                         <tr>
-                            {/* <th>ID</th> */}
+                            <th>ลำดับที่</th>
                             <th>ชื่อผู้ยืม</th>
                             <th>Notebook</th>
                             <th>เครื่องเสียง</th>
@@ -222,7 +237,7 @@ function Table() {
                         {data.map((user, index) => 
                             (
                             <tr key={index}>
-                                {/* <td>{user.id}</td> */}
+                                <td>{user.id}</td>
                                 <td>{user.name}</td>
                                 <td>{user.machine} เครื่อง</td>
                                 <td>{user.stereo} เครื่อง</td>
@@ -237,7 +252,11 @@ function Table() {
                         )}
                     </tbody>
                 </table>
-            </div></>
+            </div>
+            <div class="bottom-bar">
+            <p class="signature">Created by Thanyapoj</p>
+            </div>
+            </>
     )
 }
 

@@ -1,53 +1,7 @@
 {
-  "machines": [
+  "usersreport": [
     {
-      "value": "0",
-      "id": "b24a"
-    },
-    {
-      "value": "1",
-      "id": "bafd"
-    },
-    {
-      "id": "0c3c",
-      "value": "3"
-    },
-    {
-      "value": "4",
-      "id": "03ae"
-    },
-    {
-      "value": "5",
-      "id": "d455"
-    },
-    {
-      "value": "6",
-      "id": "de82"
-    },
-    {
-      "value": "7",
-      "id": "1931"
-    },
-    {
-      "value": "8",
-      "id": "5977"
-    },
-    {
-      "value": "9",
-      "id": "9e2d"
-    },
-    {
-      "value": "10",
-      "id": "409b"
-    },
-    {
-      "id": "d8e6",
-      "value": "2"
-    }
-  ],
-  "users": [
-    {
-      "id": "q-1",
+      "id": "IT-S002-1",
       "name": "ธัญพจน์ ไตรเกษมศักดิ์",
       "identity": "นักศึกษา",
       "department": "งานtest4",
@@ -62,8 +16,8 @@
       "location": "placetest4"
     },
     {
-      "id": "q-2",
-      "name": "สมชาย",
+      "id": "IT-S002-2",
+      "name": "สมจิต",
       "identity": "อาจารย์",
       "department": "สังคม",
       "tel": "110",
@@ -77,8 +31,8 @@
       "location": "ห้องประชุม"
     },
     {
-      "id": "q-3",
-      "name": "สมหญิง",
+      "id": "IT-S002-3",
+      "name": "สมหมาย",
       "identity": "นักศึกษา",
       "department": "อาชีพ",
       "tel": "112",
@@ -92,7 +46,37 @@
       "location": "ชมประชุม"
     },
     {
-      "id": "q-4",
+      "id": "IT-S002-4",
+      "name": "สมใหม่",
+      "identity": "บุคลากร",
+      "department": "สำนักงาน",
+      "tel": "113",
+      "machine": "1",
+      "stereo": "2",
+      "wirelessmic": "1",
+      "voicerec": "2",
+      "objective": "ประชุม",
+      "startdate": "2024-03-14T09:37",
+      "enddate": "2024-03-16T16:30",
+      "location": "ห้องประชุม"
+    },
+    {
+      "id": "IT-S002-5",
+      "name": "สมดี",
+      "identity": "บุคลากร",
+      "department": "สำนักงาน",
+      "tel": "104",
+      "machine": "2",
+      "stereo": "0",
+      "wirelessmic": "1",
+      "voicerec": "0",
+      "objective": "ประชุม",
+      "startdate": "2024-03-14T10:30",
+      "enddate": "2024-03-17T10:42",
+      "location": "ห้องประชุม"
+    },
+    {
+      "id": "IT-S002-6",
       "name": "สมสาย",
       "identity": "บุคลากร",
       "department": "สำนักงาน",
@@ -107,7 +91,7 @@
       "location": "ห้องประชุม"
     },
     {
-      "id": "q-5",
+      "id": "IT-S002-7",
       "name": "สมฤดู",
       "identity": "บุคลากร",
       "department": "สำนักงาน",
@@ -122,7 +106,7 @@
       "location": "ห้องประชุม"
     },
     {
-      "id": "q-6",
+      "id": "IT-S002-8",
       "name": "สมดี",
       "identity": "บุคลากร",
       "department": "สำนักงาน",
@@ -137,7 +121,52 @@
       "location": "ห้องประชุม"
     },
     {
-      "id": "q-7",
+      "id": "IT-S002-9",
+      "name": "สมทาย",
+      "identity": "บุคลากร",
+      "department": "สำนักงาน",
+      "tel": "1108",
+      "machine": "2",
+      "stereo": "0",
+      "wirelessmic": "0",
+      "voicerec": "1",
+      "objective": "ประชุม",
+      "startdate": "2024-03-14T10:58",
+      "enddate": "2024-03-19T17:58",
+      "location": "ห้องประชุม"
+    },
+    {
+      "id": "IT-S002-10",
+      "name": "สมทายใหม่",
+      "identity": "บุคลากร",
+      "department": "สำนักงาน",
+      "tel": "119",
+      "machine": "1",
+      "stereo": "1",
+      "wirelessmic": "2",
+      "voicerec": "2",
+      "objective": "ประชุม",
+      "startdate": "2024-03-14T11:03",
+      "enddate": "2024-03-19T16:03",
+      "location": "ห้องประชุม"
+    },
+    {
+      "id": "IT-S002-11",
+      "name": "สมทายแก้",
+      "identity": "บุคลากร",
+      "department": "สำนัก",
+      "tel": "119",
+      "machine": "2",
+      "stereo": "1",
+      "wirelessmic": "2",
+      "voicerec": "2",
+      "objective": "ประชุม",
+      "startdate": "2024-03-14T11:05",
+      "enddate": "2024-03-16T15:05",
+      "location": "ห้องประชุม"
+    },
+    {
+      "id": "IT-S002-12",
       "name": "สมใส",
       "identity": "บุคลากร",
       "department": "ประชุม",
