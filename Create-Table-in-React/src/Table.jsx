@@ -4,6 +4,8 @@ import './App.css'
 import { Link } from 'react-router-dom'
 
 function Table() {
+    // const ip = 'localhost';
+    const ip = '10.12.3.100';
     const [data, setData] = useState([])
     const [machines, setMachines] = useState([]);
     const [name, setName] = useState('')
@@ -22,12 +24,17 @@ function Table() {
     const [report, setReport] = useState([]);
 
     useEffect(()=>{
-        axios.get('http://localhost:3000/users')
-        .then(res => setData(res.data || []))
+        axios.get(`http://${ip}:3000/users`)
+        // axios.get(`http://localhost:3000/users`)
+        .then(res => {
+            console.log("API response:", res.data); // Log the API response
+            setData(res.data || []);
+        })
         .catch(er => console.log(er));
     }, [])
     useEffect(()=>{
-        axios.get('http://localhost:3000/machines')
+        axios.get(`http://${ip}:3000/machines`)
+        // axios.get(`http://localhost:3000/machines`)
         .then(res => {
             const sortedMachines = res.data.sort((a, b) => a.value - b.value);
             setMachines(sortedMachines);
@@ -35,7 +42,7 @@ function Table() {
         .catch(er => console.log(er));
     }, [])
     useEffect(()=>{
-        axios.get('http://localhost:4000/usersreport')
+        axios.get(`http://${ip}:4000/usersreport`)
         .then(res => setReport(res.data))
         .catch(er => console.log(er));
     }, [])
@@ -44,13 +51,14 @@ function Table() {
     const handleSubmit = (event) => {
         event.preventDefault();
         const id = report.length + 1;
-        axios.post('http://localhost:4000/users', {id: 'IT-S002-'+id, name: name,identity: identity,department: department,tel: tel, machine: machine,stereo: stereo,wirelessmic: wirelessmic,voicerec: voicerec ,objective: objective,startdate: startdate,enddate: enddate ,location: location})
+        axios.post(`http://${ip}:4000/users`
+        , {id: 'IT-S002-'+id, name: name,identity: identity,department: department,tel: tel, machine: machine,stereo: stereo,wirelessmic: wirelessmic,voicerec: voicerec ,objective: objective,startdate: startdate,enddate: enddate ,location: location})
             .then(res => {    
                 console.log('added user report');
             })
             .catch(er => console.log(er));
         const id2 = data.length + 1;
-        axios.post('http://localhost:3000/users', {id: 'q-'+id2, name: name,identity: identity,department: department,tel: tel, machine: machine,stereo: stereo,wirelessmic: wirelessmic,voicerec: voicerec ,objective: objective,startdate: startdate,enddate: enddate ,location: location})
+        axios.post(`http://${ip}:3000/users`, {id: 'q-'+id2+name, name: name,identity: identity,department: department,tel: tel, machine: machine,stereo: stereo,wirelessmic: wirelessmic,voicerec: voicerec ,objective: objective,startdate: startdate,enddate: enddate ,location: location})
             .then(res => {    
                 console.log('added user');
                 window.location.reload(true);
@@ -60,8 +68,8 @@ function Table() {
             .catch(er => console.log(er));
     }
     const handleDeleteMachine = (machineId) => {
-        console.log('http://localhost:3000/machines/'+machineId);
-        axios.delete(`http://localhost:3000/machines/${machineId}`)
+        console.log(`http://${ip}:3000/machines/`+machineId);
+        axios.delete(`http://${ip}:3000/machines/${machineId}`)
             .then(() => {
                 console.log(`Deleted machine with id ${machineId} from machines array.`);
             })
@@ -80,7 +88,7 @@ function Table() {
 
     const handleAddMachine = (machineValue) => {
         console.log(machineValue+'thisismachinevalue');
-        axios.post('http://localhost:3000/machines', { value: machineValue })
+        axios.post(`http://${ip}:3000/machines`, { value: machineValue })
             .then(res => {
                 location.reload();       
                 console.log(`added ${machineValue} machine dropdown`);
@@ -120,7 +128,21 @@ function Table() {
                     </div>
                     <div>
                     <label className='lefttitleDepartment'>
-                        หน่วยงาน/ภาควิชา <input type="text" placeholder='Enter หน่วยงาน/ภาควิชา' onChange={e => setDepartment(e.target.value)} />
+                        หน่วยงาน/ภาควิชา <select value={department} onChange={(e) => setDepartment(e.target.value)}>
+                            <option value={null}>Please select an option...</option>
+                            <option value="สังคม">ภาควิชาสังคมศาสตร์</option>
+                            <option value="ศึกษา">ภาควิชาศึกษาศาสตร์</option>
+                            <option value="สังคมและสุขภาพ">ภาควิชาสังคมและสุขภาพ</option>
+                            <option value="มนุษย">ภาควิชามนุษยศาสตร์</option>
+                            <option value="บริหารทั่วไป">งานบริหารทั่วไป</option>
+                            <option value="คลังและสินทรัพย์">งานคลังและสินทรัพย์</option>
+                            <option value="ยุทธศาสตร์">งานยุทธศาสตร์แผนและงบประมาณ</option>
+                            <option value="ทรัพยากรบุคคล">งานบริหารทรัพยากรบุคคล</option>
+                            <option value="วิจัยและบริการวิชาการ">งานบริหารและส่งเสริมการวิจัยและบริการวิชาการ</option>
+                            <option value="การศึกษาและกิจการนักศึกษา">งานบริหารการศึกษาและกิจการนักศึกษา</option>
+                            <option value="การศึกษาแบบยืดหยุ่นและพัฒนาทักษะ">งานส่งเสริมการศึกษาแบบยืดหยุ่นและพัฒนาทักษะ</option>
+                            <option value="บูรณาการวิชาการเพื่อสังคม">สำนักงานบูรณาการวิชาการเพื่อสังคม</option>
+                        </select>
                         </label>
                         <label className='righttitleTel'>
                         โทร <input type="text" placeholder='Enter โทร' onChange={e => setTel(e.target.value)}/>
@@ -243,7 +265,11 @@ function Table() {
                                 <td>{user.stereo} เครื่อง</td>
                                 <td>{user.wirelessmic} เครื่อง</td>
                                 <td>{user.voicerec} เครื่อง</td>
-                                <td>{new Date(user.enddate) < new Date() ? 'เกินกำหนด' : 'อยู่ในกำหนดการยืม'}</td>
+                                <td>
+  <span style={{ color: new Date(user.enddate) < new Date() ? 'red' : 'green' }}>
+    {new Date(user.enddate) < new Date() ? 'เกินกำหนด' : 'อยู่ในกำหนดการยืม'}
+  </span>
+</td>
                                 <td>
                                     <Link to={`/read/${user.id}`} >รายละเอียด</Link>
                                 </td>
@@ -254,7 +280,7 @@ function Table() {
                 </table>
             </div>
             <div class="bottom-bar">
-            <p class="signature">Created by Thanyapoj</p>
+            <p class="signature">Created by Thanyapoj v1.0</p>
             </div>
             </>
     )

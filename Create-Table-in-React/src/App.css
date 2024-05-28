@@ -56,7 +56,10 @@
   background-color: #f0ebea; /* White background */
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Shadow effect */
   height: auto;
+  margin-bottom: 2%;
 }
+
+
 .lefttitleName{
   margin-left: 93px;
 }
@@ -75,11 +78,11 @@
   margin-left: 59px;
 }
 .righttitleStereo{
-  margin-left: 249px;
+  margin-left: 39px;
 }
 
 .righttitleVoicerec{
-  margin-left: 210px
+  margin-left: 0px
 }
 
 .lefttitleObjective{
@@ -131,14 +134,16 @@ table tr th,table tr td{
 .form-div form input{
   width: 33.5%;
   padding: 5px;
+  font-size: 14px;
 }
 .form-div form button{
   width: 10%;
   padding: 5px;
 }
 .form-div form select{
-  width: 20%;
+  width: 34.5%;
   padding: 5px;
+  font-size: 14px;
 }
 
 .logo {
