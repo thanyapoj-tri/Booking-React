@@ -4,26 +4,38 @@ import { Link, useNavigate, useParams } from 'react-router-dom';
 import './Read.css'
 
 function Read() {
-
+  const ip = '10.12.3.100';
   const [data, setData] = useState([])
   const {id} = useParams();
   const naviagte = useNavigate();
-    useEffect(()=>{
-        axios.get('http://localhost:3000/users/' + id)
+
+  useEffect(()=>{
+        axios.get(`http://${ip}:3000/users/` + id)
         .then(res => setData(res.data))
         .catch(er => console.log(er));
-    }, [])
+  }, [])
 
 
-    const handleDelete = (id) => {
+  const handleDelete = (id) => {
       
-  axios.delete('http://localhost:3000/users/' + id)
-      .then(res => {
+      axios.delete(`http://${ip}:3000/users/` + id)
+        .then(res => {
           // location.reload();
           console.log('user returned');
-          // handleAddMachine(selectedUserObj.machine);
+          if (data && data.machinenumber) {
+            data.machinenumber.forEach(machine => handleAddMachine(machine));
+          }
           window.alert("user returned");
           naviagte('/');
+        })
+      .catch(er => console.log(er));
+  }
+
+  const handleAddMachine = (machine) => {
+    console.log(machine);
+    axios.post(`http://${ip}:3000/machines`, { value: machine.value, id: machine.id })
+      .then(res => {
+        console.log(`Added machine with value: ${machine.value} and id: ${machine.id}`);
       })
       .catch(er => console.log(er));
   }
@@ -76,6 +88,9 @@ function Read() {
         </div>
         <div className='mbOne'>
           <strong>สถานที่: {data.location}</strong>
+        </div>
+        <div className='mbOne'>
+          <strong>เลขเครื่อง: {data.machinenumber && data.machinenumber.map(machine => machine.label).join(', ')}</strong>
         </div>
         <div>
         <Link to={`/`} className='button'>Back</Link>

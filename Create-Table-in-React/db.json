@@ -1,65 +1,64 @@
 {
   "machines": [
     {
-      "value": "0",
-      "id": "b24a"
+      "id": "SH01",
+      "value": "1"
     },
     {
-      "value": "1",
-      "id": "bafd"
+      "id": "SH02",
+      "value": "2"
     },
     {
-      "id": "0c3c",
+      "id": "SH03",
       "value": "3"
     },
     {
-      "value": "4",
-      "id": "03ae"
+      "id": "SH04",
+      "value": "4"
     },
     {
-      "value": "5",
-      "id": "d455"
+      "id": "SH05",
+      "value": "5"
     },
     {
-      "value": "6",
-      "id": "de82"
+      "id": "SH06",
+      "value": "6"
     },
     {
-      "value": "7",
-      "id": "1931"
+      "id": "SH08",
+      "value": "8"
     },
     {
-      "value": "8",
-      "id": "5977"
+      "id": "SH09",
+      "value": "9"
     },
     {
-      "value": "9",
-      "id": "9e2d"
-    },
-    {
-      "value": "10",
-      "id": "409b"
-    },
-    {
-      "id": "d8e6",
-      "value": "2"
+      "id": "SH10",
+      "value": "10"
     }
   ],
   "users": [
     {
-      "id": "q-1",
-      "name": "ธัญพจน์ ไตรเกษมศักดิ์",
-      "identity": "นักศึกษา",
-      "department": "งานtest4",
-      "tel": "โทรtest4",
-      "machine": "5",
-      "stereo": "6",
-      "wirelessmic": "7",
-      "voicerec": "8",
-      "objective": "obtest4",
-      "startdate": "2024-03-05",
-      "enddate": "2024-03-14",
-      "location": "placetest4"
+      "id": "q-1หน่วยIT",
+      "name": "หน่วยIT",
+      "identity": "บุคลากร",
+      "department": "งานบริหารทั่วไป",
+      "tel": "1105",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ประชุม",
+      "startdate": "2024-06-07T13:22",
+      "enddate": "2024-07-25T13:22",
+      "location": "ห้องกันภัย",
+      "machinenumber": [
+        {
+          "value": "7",
+          "label": "เครื่อง No. 7",
+          "id": "SH07"
+        }
+      ]
     }
   ]
 }

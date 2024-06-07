@@ -1,7 +1,8 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import './App.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate, useParams } from 'react-router-dom'
+import CreatableSelect from "react-select/creatable";
 
 function Table() {
     // const ip = 'localhost';
@@ -9,19 +10,20 @@ function Table() {
     const [data, setData] = useState([])
     const [machines, setMachines] = useState([]);
     const [name, setName] = useState('')
-    const [machine, setMachine] = useState('') // Updated to hold a single value
+    const [machine, setMachine] = useState('ไม่ใช้') // Updated to hold a single value
     const [editID, setEditID] = useState(-1)
     const [identity, setIdentity] = useState('')
     const [department, setDepartment] = useState('')
     const [tel, setTel] = useState('')
-    const [stereo, setStereo] = useState('')
-    const [wirelessmic, setWirelessmic] = useState('')
-    const [voicerec, setVoicerec] = useState('')
+    const [stereo, setStereo] = useState('ไม่ใช้')
+    const [wirelessmic, setWirelessmic] = useState('ไม่ใช้')
+    const [voicerec, setVoicerec] = useState('ไม่ใช้')
     const [objective, setObjective] = useState('')
     const [startdate, setStartdate] = useState('')
     const [enddate, setEnddate] = useState('')
     const [location, setLocation] = useState('')
     const [report, setReport] = useState([]);
+    const [selectedOption, setSelectedOption] = useState('ไม่ใช้');
 
     useEffect(()=>{
         axios.get(`http://${ip}:3000/users`)
@@ -48,22 +50,42 @@ function Table() {
     }, [])
     
 
+    const creatableOptions = machines.map(machine => ({
+        value: machine.value,
+        label: `เครื่อง No. ${machine.value}`,
+        id: machine.id
+      }));
+
+      const handleCreatableChange = (selectedOption) => {
+        setSelectedOption(selectedOption);
+        console.log('handleChange', selectedOption);
+      };
+    
+    //   const handleInputChange = (inputValue) => {
+    //     console.log('handleInputChange', inputValue);
+    //   };
+
     const handleSubmit = (event) => {
         event.preventDefault();
+
         const id = report.length + 1;
-        axios.post(`http://${ip}:4000/users`
-        , {id: 'IT-S002-'+id, name: name,identity: identity,department: department,tel: tel, machine: machine,stereo: stereo,wirelessmic: wirelessmic,voicerec: voicerec ,objective: objective,startdate: startdate,enddate: enddate ,location: location})
+        axios.post(`http://${ip}:4000/usersreport`
+        , {id: 'IT-S002-'+id, name: name,identity: identity,department: department,tel: tel, machine: machine,stereo: stereo,wirelessmic: wirelessmic,voicerec: voicerec ,objective: objective,startdate: startdate,enddate: enddate ,location: location,machinenumber: selectedOption})
             .then(res => {    
                 console.log('added user report');
             })
             .catch(er => console.log(er));
+
         const id2 = data.length + 1;
-        axios.post(`http://${ip}:3000/users`, {id: 'q-'+id2+name, name: name,identity: identity,department: department,tel: tel, machine: machine,stereo: stereo,wirelessmic: wirelessmic,voicerec: voicerec ,objective: objective,startdate: startdate,enddate: enddate ,location: location})
+        axios.post(`http://${ip}:3000/users`
+        , {id: 'q-'+id2+name, name: name,identity: identity,department: department,tel: tel, machine: machine,stereo: stereo,wirelessmic: wirelessmic,voicerec: voicerec ,objective: objective,startdate: startdate,enddate: enddate ,location: location,machinenumber: selectedOption})
             .then(res => {    
                 console.log('added user');
                 window.location.reload(true);
-                console.log(`machine num. ${machine} has been borrow`);
-                // handleDeleteMachine(selectedMachineObj.id);
+                console.log(`machine num. ${JSON.stringify(selectedOption)} has been borrow`);
+                selectedOption.forEach(machine => {
+                handleDeleteMachine(machine.id);
+            });
             })
             .catch(er => console.log(er));
     }
@@ -80,10 +102,6 @@ function Table() {
 
     const handleEdit = (id) => {
         
-    }
-
-    const handleDelete = (id) => {
-        window.location.reload(true);
     }
 
     const handleAddMachine = (machineValue) => {
@@ -119,7 +137,7 @@ function Table() {
                         </label>
                         <label className='righttitleIdentity'>
                         ประเภทบุคคล <select value={identity} onChange={(e) => setIdentity(e.target.value)}>
-                            <option value={null}>Please select an option...</option>
+                            <option value="" selected disabled hidden>Please select an option...</option>
                             <option value="อาจารย์">อาจารย์</option>
                             <option value="บุคลากร">บุคลากร</option>
                             <option value="นักศึกษา">นักศึกษา</option>
@@ -128,20 +146,20 @@ function Table() {
                     </div>
                     <div>
                     <label className='lefttitleDepartment'>
-                        หน่วยงาน/ภาควิชา <select value={department} onChange={(e) => setDepartment(e.target.value)}>
-                            <option value={null}>Please select an option...</option>
-                            <option value="สังคม">ภาควิชาสังคมศาสตร์</option>
-                            <option value="ศึกษา">ภาควิชาศึกษาศาสตร์</option>
-                            <option value="สังคมและสุขภาพ">ภาควิชาสังคมและสุขภาพ</option>
-                            <option value="มนุษย">ภาควิชามนุษยศาสตร์</option>
-                            <option value="บริหารทั่วไป">งานบริหารทั่วไป</option>
-                            <option value="คลังและสินทรัพย์">งานคลังและสินทรัพย์</option>
-                            <option value="ยุทธศาสตร์">งานยุทธศาสตร์แผนและงบประมาณ</option>
-                            <option value="ทรัพยากรบุคคล">งานบริหารทรัพยากรบุคคล</option>
-                            <option value="วิจัยและบริการวิชาการ">งานบริหารและส่งเสริมการวิจัยและบริการวิชาการ</option>
-                            <option value="การศึกษาและกิจการนักศึกษา">งานบริหารการศึกษาและกิจการนักศึกษา</option>
-                            <option value="การศึกษาแบบยืดหยุ่นและพัฒนาทักษะ">งานส่งเสริมการศึกษาแบบยืดหยุ่นและพัฒนาทักษะ</option>
-                            <option value="บูรณาการวิชาการเพื่อสังคม">สำนักงานบูรณาการวิชาการเพื่อสังคม</option>
+                        หน่วยงาน/ภาควิชา <select onChange={(e) => setDepartment(e.target.value)}>
+                            <option value="" selected disabled hidden>Please select an option...</option>
+                            <option value="ภาควิชาสังคมศาสตร์">ภาควิชาสังคมศาสตร์</option>
+                            <option value="ภาควิชาศึกษาศาสตร์">ภาควิชาศึกษาศาสตร์</option>
+                            <option value="ภาควิชาสังคมและสุขภาพ">ภาควิชาสังคมและสุขภาพ</option>
+                            <option value="ภาควิชามนุษยศาสตร์">ภาควิชามนุษยศาสตร์</option>
+                            <option value="งานบริหารทั่วไป">งานบริหารทั่วไป</option>
+                            <option value="งานคลังและสินทรัพย์">งานคลังและสินทรัพย์</option>
+                            <option value="งานยุทธศาสตร์แผนและงบประมาณ">งานยุทธศาสตร์แผนและงบประมาณ</option>
+                            <option value="งานบริหารทรัพยากรบุคคล">งานบริหารทรัพยากรบุคคล</option>
+                            <option value="งานบริหารและส่งเสริมการวิจัยและบริการวิชาการ">งานบริหารและส่งเสริมการวิจัยและบริการวิชาการ</option>
+                            <option value="งานบริหารการศึกษาและกิจการนักศึกษา">งานบริหารการศึกษาและกิจการนักศึกษา</option>
+                            <option value="งานส่งเสริมการศึกษาแบบยืดหยุ่นและพัฒนาทักษะ">งานส่งเสริมการศึกษาแบบยืดหยุ่นและพัฒนาทักษะ</option>
+                            <option value="สำนักงานบูรณาการวิชาการเพื่อสังคม">สำนักงานบูรณาการวิชาการเพื่อสังคม</option>
                         </select>
                         </label>
                         <label className='righttitleTel'>
@@ -150,31 +168,44 @@ function Table() {
                     </div>
                     <div>
                     <label className='lefttitleMachine'>
-                    Notebookจำนวน <select value={machine} onChange={(e) => setMachine(e.target.value)}>
-                    <option value={null}>Please select an option...</option>
+                    Notebookจำนวน <select onChange={(e) => setMachine(e.target.value)}>
+                    <option value="ไม่ใช้">ไม่ใช้</option>
                         {machines && machines.length > 0 ? (
-                            machines.map(machine => (
-                                <option key={machine.id} value={machine.value}>
-                                    {machine.value} เครื่อง
-                                </option>
-                            ))
+                        [
+                            <option key="1" value="1 เครื่อง">1 เครื่อง</option>,
+                            <option key="2" value="2 เครื่อง">2 เครื่อง</option>,
+                            <option key="3" value="3 เครื่อง">3 เครื่อง</option>,
+                            <option key="4" value="4 เครื่อง">4 เครื่อง</option>,
+                            <option key="5" value="5 เครื่อง">5 เครื่อง</option>,
+                            <option key="6" value="6 เครื่อง">6 เครื่อง</option>,
+                            <option key="7" value="7 เครื่อง">7 เครื่อง</option>,
+                            <option key="8" value="8 เครื่อง">8 เครื่อง</option>,
+                            <option key="9" value="9 เครื่อง">9 เครื่อง</option>,
+                            <option key="10" value="10 เครื่อง">10 เครื่อง</option>
+                        ]
                         ) : (
-                            <option value="">Loading...</option>
+                            <option value="" selected>Loading...</option>
                         )}
-                        
                     </select>
                     </label>
                         <label className='righttitleStereo'>
-                    เครื่องเสียงจำนวน <select value={stereo} onChange={(e) => setStereo(e.target.value)}>
-                    <option value={null}>Please select an option...</option>
+                    เครื่องเสียงจำนวน <select onChange={(e) => setStereo(e.target.value)}>
+                    <option value="ไม่ใช้">ไม่ใช้</option>
                         {machines && machines.length > 0 ? (
-                            machines.map(machine => (
-                                <option key={machine.id} value={machine.value}>
-                                    {machine.value} เครื่อง
-                                </option> 
-                            ))
+                        [
+                            <option key="1" value="1 เครื่อง">1 เครื่อง</option>,
+                            <option key="2" value="2 เครื่อง">2 เครื่อง</option>,
+                            <option key="3" value="3 เครื่อง">3 เครื่อง</option>,
+                            <option key="4" value="4 เครื่อง">4 เครื่อง</option>,
+                            <option key="5" value="5 เครื่อง">5 เครื่อง</option>,
+                            <option key="6" value="6 เครื่อง">6 เครื่อง</option>,
+                            <option key="7" value="7 เครื่อง">7 เครื่อง</option>,
+                            <option key="8" value="8 เครื่อง">8 เครื่อง</option>,
+                            <option key="9" value="9 เครื่อง">9 เครื่อง</option>,
+                            <option key="10" value="10 เครื่อง">10 เครื่อง</option>
+                        ]
                         ) : (
-                            <option value="">Loading...</option>
+                            <option value="" selected>Loading...</option>
                         )}
                     </select>
                     
@@ -182,30 +213,44 @@ function Table() {
                     </div>
                     <div>
                     <label className='lefttitleWirelessmic'>
-                    เครื่องไมโครโฟนชนิดไร้สาย <select value={wirelessmic} onChange={(e) => setWirelessmic(e.target.value)}>
-                    <option value={null}>Please select an option...</option>
+                    เครื่องไมโครโฟนชนิดไร้สาย <select onChange={(e) => setWirelessmic(e.target.value)}>
+                    <option value="ไม่ใช้">ไม่ใช้</option>
                         {machines && machines.length > 0 ? (
-                            machines.map(machine => (
-                                <option key={machine.id} value={machine.value}>
-                                    {machine.value} เครื่อง
-                                </option>
-                            ))
+                        [
+                            <option key="1" value="1 เครื่อง">1 เครื่อง</option>,
+                            <option key="2" value="2 เครื่อง">2 เครื่อง</option>,
+                            <option key="3" value="3 เครื่อง">3 เครื่อง</option>,
+                            <option key="4" value="4 เครื่อง">4 เครื่อง</option>,
+                            <option key="5" value="5 เครื่อง">5 เครื่อง</option>,
+                            <option key="6" value="6 เครื่อง">6 เครื่อง</option>,
+                            <option key="7" value="7 เครื่อง">7 เครื่อง</option>,
+                            <option key="8" value="8 เครื่อง">8 เครื่อง</option>,
+                            <option key="9" value="9 เครื่อง">9 เครื่อง</option>,
+                            <option key="10" value="10 เครื่อง">10 เครื่อง</option>
+                        ]
                         ) : (
-                            <option value="">Loading...</option>
+                            <option value="" selected>Loading...</option>
                         )}
                     </select>
                     </label>
                         <label className='righttitleVoicerec'>
-                    เครื่องบันทึกเสียงจำนวน <select value={voicerec} onChange={(e) => setVoicerec(e.target.value)}>
-                    <option value={null}>Please select an option...</option>
+                    เครื่องบันทึกเสียงจำนวน <select onChange={(e) => setVoicerec(e.target.value)}>
+                    <option value="ไม่ใช้">ไม่ใช้</option>
                         {machines && machines.length > 0 ? (
-                            machines.map(machine => (
-                                <option key={machine.id} value={machine.value}>
-                                    {machine.value} เครื่อง
-                                </option> 
-                            ))
+                        [
+                            <option key="1" value="1 เครื่อง">1 เครื่อง</option>,
+                            <option key="2" value="2 เครื่อง">2 เครื่อง</option>,
+                            <option key="3" value="3 เครื่อง">3 เครื่อง</option>,
+                            <option key="4" value="4 เครื่อง">4 เครื่อง</option>,
+                            <option key="5" value="5 เครื่อง">5 เครื่อง</option>,
+                            <option key="6" value="6 เครื่อง">6 เครื่อง</option>,
+                            <option key="7" value="7 เครื่อง">7 เครื่อง</option>,
+                            <option key="8" value="8 เครื่อง">8 เครื่อง</option>,
+                            <option key="9" value="9 เครื่อง">9 เครื่อง</option>,
+                            <option key="10" value="10 เครื่อง">10 เครื่อง</option>
+                        ]
                         ) : (
-                            <option value="">Loading...</option>
+                            <option value="" selected>Loading...</option>
                         )}
                     </select>
                     </label>
@@ -232,9 +277,20 @@ function Table() {
                     สถานที่ <input type="text" placeholder='Enter สถานที่' onChange={e => setLocation(e.target.value)} />
                     </label>
                     </div>
+                    <div className="creatable-select-wrapper">
+                    <label >
+                    หมายเลขเครื่องNotebook <CreatableSelect className="my-select" classNamePrefix="my-select"
+                        options={creatableOptions}
+                        onChange={handleCreatableChange}
+                        isMulti
+                        // styles={colorStyles}
+                        value={selectedOption}
+                        />
+                        </label>
+                    </div>
                     <div>
                     <label className='borrowBtn'>
-                    <button disabled={machine === ''||location === ''}>ยืม</button>
+                    <button disabled={selectedOption === ''||enddate === ''}>ยืม</button>
                     </label>
                     </div>
                 </form>
@@ -280,6 +336,7 @@ function Table() {
                 </table>
             </div>
             <div class="bottom-bar">
+            <Link to={`/report/`} className='button'>รวมผู้ใช้</Link>
             <p class="signature">Created by Thanyapoj v1.0</p>
             </div>
             </>

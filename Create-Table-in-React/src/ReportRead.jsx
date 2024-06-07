@@ -5,11 +5,12 @@ import './Read.css'
 import './ReportRead.css'
 
 function reportRead() {
+  const ip = '10.12.3.100';
   const [data, setData] = useState([])
   const {id} = useParams();
 
     useEffect(()=>{
-        axios.get('http://localhost:4000/usersreport/' + id)
+        axios.get(`http://${ip}:4000/usersreport/` + id)
         .then(res => setData(res.data))
         .catch(er => console.log(er));
     }, [])
@@ -63,6 +64,9 @@ function reportRead() {
         </div>
         <div className='mbOne'>
           <strong>สถานที่: {data.location}</strong>
+        </div>
+        <div className='mbOne'>
+          <strong>เลขเครื่อง: {data.machinenumber && data.machinenumber.map(machine => machine.label).join(', ')}</strong>
         </div>
         <div>
         <Link to={`/report/`} className='button'>&lt;</Link>

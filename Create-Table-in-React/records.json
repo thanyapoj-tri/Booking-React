@@ -14,6 +14,28 @@
       "startdate": "2024-03-05",
       "enddate": "2024-03-14",
       "location": "placetest4"
+    },
+    {
+      "id": "IT-S002-2",
+      "name": "หน่วยIT",
+      "identity": "บุคลากร",
+      "department": "งานบริหารทั่วไป",
+      "tel": "1105",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ประชุม",
+      "startdate": "2024-06-07T13:22",
+      "enddate": "2024-07-25T13:22",
+      "location": "ห้องกันภัย",
+      "machinenumber": [
+        {
+          "value": "7",
+          "label": "เครื่อง No. 7",
+          "id": "SH07"
+        }
+      ]
     }
   ]
 }

@@ -4,10 +4,11 @@ import './Report.css'
 import { Link } from 'react-router-dom'
 
 function report() {
+    const ip = '10.12.3.100';
     const [data, setData] = useState([])
 
     useEffect(()=>{
-        axios.get('http://localhost:4000/usersreport')
+        axios.get(`http://${ip}:4000/usersreport`)
         .then(res => setData(res.data || []))
         .catch(er => console.log(er));
     }, [])
@@ -48,6 +49,10 @@ function report() {
                         )}
                     </tbody>
                 </table>
+            </div>
+            <div class="bottom-bar">
+            <Link to={`/`} className='button'>กลับหน้าหลัก</Link>
+            <p class="signature">Created by Thanyapoj v1.0</p>
             </div>
     </div>
   )
