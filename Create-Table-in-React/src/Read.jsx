@@ -68,6 +68,9 @@ function Read() {
           <strong>Notebook: {data.machine} เครื่อง</strong>
         </div>
         <div className='mbOne'>
+          <strong>เลขเครื่อง: {data.machinenumber && data.machinenumber.map(machine => machine.label).join(', ')}</strong>
+        </div>
+        <div className='mbOne'>
           <strong>เครื่องเสียง: {data.stereo} เครื่อง</strong>
         </div>
         <div className='mbOne'>
@@ -89,8 +92,9 @@ function Read() {
         <div className='mbOne'>
           <strong>สถานที่: {data.location}</strong>
         </div>
+        <h3>ผู้รับทราบการยืม</h3>
         <div className='mbOne'>
-          <strong>เลขเครื่อง: {data.machinenumber && data.machinenumber.map(machine => machine.label).join(', ')}</strong>
+          <strong>ชื่อเจ้าหน้าที่: {data.approvedBy}</strong>
         </div>
         <div>
         <Link to={`/`} className='button'>Back</Link>

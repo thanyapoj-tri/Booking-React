@@ -24,6 +24,8 @@ function Table() {
     const [location, setLocation] = useState('')
     const [report, setReport] = useState([]);
     const [selectedOption, setSelectedOption] = useState('ไม่ใช้');
+    const [pendingData, setPendingData] = useState([]);
+    const [staffName, setStaffName] = useState(''); // Staff identifier
 
     useEffect(()=>{
         axios.get(`http://${ip}:3000/users`)
@@ -43,6 +45,11 @@ function Table() {
         })
         .catch(er => console.log(er));
     }, [])
+    useEffect(() => {
+        axios.get(`http://${ip}:3000/pending`)
+            .then(res => setPendingData(res.data))
+            .catch(er => console.log(er));
+    }, []);
     useEffect(()=>{
         axios.get(`http://${ip}:4000/usersreport`)
         .then(res => setReport(res.data))
@@ -64,6 +71,23 @@ function Table() {
     //   const handleInputChange = (inputValue) => {
     //     console.log('handleInputChange', inputValue);
     //   };
+    const sendLineNotification = (message) => {
+        const token = '8slGeeb0faUlVbqsxnC18Cf4Seki4rmFNtnosHIbv0F'; // Replace with your LINE Notify token
+        const url = 'https://notify-api.line.me/api/notify';
+        const headers = {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Authorization': `Bearer ${token}`
+        };
+        const data = `message=${message}`;
+    
+        axios.post(url, data, { headers })
+            .then(() => {
+                console.log('LINE notification sent');
+            })
+            .catch(error => {
+                console.error('Error sending LINE notification:', error);
+            });
+    };
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -77,17 +101,24 @@ function Table() {
             .catch(er => console.log(er));
 
         const id2 = data.length + 1;
-        axios.post(`http://${ip}:3000/users`
-        , {id: 'q-'+id2+name, name: name,identity: identity,department: department,tel: tel, machine: machine,stereo: stereo,wirelessmic: wirelessmic,voicerec: voicerec ,objective: objective,startdate: startdate,enddate: enddate ,location: location,machinenumber: selectedOption})
-            .then(res => {    
-                console.log('added user');
-                window.location.reload(true);
-                console.log(`machine num. ${JSON.stringify(selectedOption)} has been borrow`);
-                selectedOption.forEach(machine => {
-                handleDeleteMachine(machine.id);
-            });
-            })
-            .catch(er => console.log(er));
+        axios.post(`http://${ip}:3000/pending`
+            , {id: 'q-'+id2+name, name: name,identity: identity,department: department,tel: tel, machine: machine,stereo: stereo,wirelessmic: wirelessmic,voicerec: voicerec ,objective: objective,startdate: startdate,enddate: enddate ,location: location,machinenumber: selectedOption})
+                .then(res => {    
+                    console.log('added user report to pending');
+                    window.location.reload(true);
+                })
+                .catch(er => console.log(er));
+        // axios.post(`http://${ip}:3000/users`
+        // , {id: 'q-'+id2+name, name: name,identity: identity,department: department,tel: tel, machine: machine,stereo: stereo,wirelessmic: wirelessmic,voicerec: voicerec ,objective: objective,startdate: startdate,enddate: enddate ,location: location,machinenumber: selectedOption})
+        //     .then(res => {    
+        //         console.log('added user');
+        //         window.location.reload(true);
+        //         console.log(`machine num. ${JSON.stringify(selectedOption)} has been borrow`);
+        //         selectedOption.forEach(machine => {
+        //         handleDeleteMachine(machine.id);
+        //     });
+        //     })
+        //     .catch(er => console.log(er));
     }
     const handleDeleteMachine = (machineId) => {
         console.log(`http://${ip}:3000/machines/`+machineId);
@@ -99,6 +130,36 @@ function Table() {
                 console.error('Error deleting machine:', error);
             });
     }
+
+    const handleApprove = (pendingId) => {
+        const approvedItem = pendingData.find(item => item.id === pendingId);
+        const approvedData = {
+            ...approvedItem,
+            approvedBy: staffName, // Add staff identifier
+        };
+        axios.post(`http://${ip}:3000/users`, approvedData)
+            // .then(() => {
+            //     return axios.post(`http://${ip}:4000/usersreport`, approvedData);
+            // })
+            .then(() => {
+                return axios.delete(`http://${ip}:3000/pending/${pendingId}`);
+            })
+            .then(() => {
+                console.log('Approved and moved to users');
+                setPendingData(pendingData.filter(item => item.id !== pendingId));
+                 // Send LINE notification
+                sendLineNotification(`Request by ${approvedData.name} has been approved by ${staffName}.`);
+            })
+            .catch(er => console.log(er));
+    };
+    const handleReject = (pendingId) => {
+        axios.delete(`http://${ip}:3000/pending/${pendingId}`)
+            .then(() => {
+                console.log('Rejected and removed from pending');
+                setPendingData(pendingData.filter(item => item.id !== pendingId));
+            })
+            .catch(er => console.log(er));
+    };
 
     const handleEdit = (id) => {
         
@@ -137,7 +198,7 @@ function Table() {
                         </label>
                         <label className='righttitleIdentity'>
                         ประเภทบุคคล <select value={identity} onChange={(e) => setIdentity(e.target.value)}>
-                            <option value="" selected disabled hidden>Please select an option...</option>
+                            <option value="" selected disabled>Please select an option...</option>
                             <option value="อาจารย์">อาจารย์</option>
                             <option value="บุคลากร">บุคลากร</option>
                             <option value="นักศึกษา">นักศึกษา</option>
@@ -147,7 +208,7 @@ function Table() {
                     <div>
                     <label className='lefttitleDepartment'>
                         หน่วยงาน/ภาควิชา <select onChange={(e) => setDepartment(e.target.value)}>
-                            <option value="" selected disabled hidden>Please select an option...</option>
+                            <option value="" selected disabled>Please select an option...</option>
                             <option value="ภาควิชาสังคมศาสตร์">ภาควิชาสังคมศาสตร์</option>
                             <option value="ภาควิชาศึกษาศาสตร์">ภาควิชาศึกษาศาสตร์</option>
                             <option value="ภาควิชาสังคมและสุขภาพ">ภาควิชาสังคมและสุขภาพ</option>
@@ -193,16 +254,16 @@ function Table() {
                     <option value="ไม่ใช้">ไม่ใช้</option>
                         {machines && machines.length > 0 ? (
                         [
-                            <option key="1" value="1 เครื่อง">1 เครื่อง</option>,
-                            <option key="2" value="2 เครื่อง">2 เครื่อง</option>,
-                            <option key="3" value="3 เครื่อง">3 เครื่อง</option>,
-                            <option key="4" value="4 เครื่อง">4 เครื่อง</option>,
-                            <option key="5" value="5 เครื่อง">5 เครื่อง</option>,
-                            <option key="6" value="6 เครื่อง">6 เครื่อง</option>,
-                            <option key="7" value="7 เครื่อง">7 เครื่อง</option>,
-                            <option key="8" value="8 เครื่อง">8 เครื่อง</option>,
-                            <option key="9" value="9 เครื่อง">9 เครื่อง</option>,
-                            <option key="10" value="10 เครื่อง">10 เครื่อง</option>
+                            <option key="1" value="1">1 เครื่อง</option>,
+                            <option key="2" value="2">2 เครื่อง</option>,
+                            <option key="3" value="3">3 เครื่อง</option>,
+                            <option key="4" value="4">4 เครื่อง</option>,
+                            <option key="5" value="5">5 เครื่อง</option>,
+                            <option key="6" value="6">6 เครื่อง</option>,
+                            <option key="7" value="7">7 เครื่อง</option>,
+                            <option key="8" value="8">8 เครื่อง</option>,
+                            <option key="9" value="9">9 เครื่อง</option>,
+                            <option key="10" value="10">10 เครื่อง</option>
                         ]
                         ) : (
                             <option value="" selected>Loading...</option>
@@ -217,16 +278,16 @@ function Table() {
                     <option value="ไม่ใช้">ไม่ใช้</option>
                         {machines && machines.length > 0 ? (
                         [
-                            <option key="1" value="1 เครื่อง">1 เครื่อง</option>,
-                            <option key="2" value="2 เครื่อง">2 เครื่อง</option>,
-                            <option key="3" value="3 เครื่อง">3 เครื่อง</option>,
-                            <option key="4" value="4 เครื่อง">4 เครื่อง</option>,
-                            <option key="5" value="5 เครื่อง">5 เครื่อง</option>,
-                            <option key="6" value="6 เครื่อง">6 เครื่อง</option>,
-                            <option key="7" value="7 เครื่อง">7 เครื่อง</option>,
-                            <option key="8" value="8 เครื่อง">8 เครื่อง</option>,
-                            <option key="9" value="9 เครื่อง">9 เครื่อง</option>,
-                            <option key="10" value="10 เครื่อง">10 เครื่อง</option>
+                            <option key="1" value="1">1 เครื่อง</option>,
+                            <option key="2" value="2">2 เครื่อง</option>,
+                            <option key="3" value="3">3 เครื่อง</option>,
+                            <option key="4" value="4">4 เครื่อง</option>,
+                            <option key="5" value="5">5 เครื่อง</option>,
+                            <option key="6" value="6">6 เครื่อง</option>,
+                            <option key="7" value="7">7 เครื่อง</option>,
+                            <option key="8" value="8">8 เครื่อง</option>,
+                            <option key="9" value="9">9 เครื่อง</option>,
+                            <option key="10" value="10">10 เครื่อง</option>
                         ]
                         ) : (
                             <option value="" selected>Loading...</option>
@@ -238,16 +299,16 @@ function Table() {
                     <option value="ไม่ใช้">ไม่ใช้</option>
                         {machines && machines.length > 0 ? (
                         [
-                            <option key="1" value="1 เครื่อง">1 เครื่อง</option>,
-                            <option key="2" value="2 เครื่อง">2 เครื่อง</option>,
-                            <option key="3" value="3 เครื่อง">3 เครื่อง</option>,
-                            <option key="4" value="4 เครื่อง">4 เครื่อง</option>,
-                            <option key="5" value="5 เครื่อง">5 เครื่อง</option>,
-                            <option key="6" value="6 เครื่อง">6 เครื่อง</option>,
-                            <option key="7" value="7 เครื่อง">7 เครื่อง</option>,
-                            <option key="8" value="8 เครื่อง">8 เครื่อง</option>,
-                            <option key="9" value="9 เครื่อง">9 เครื่อง</option>,
-                            <option key="10" value="10 เครื่อง">10 เครื่อง</option>
+                            <option key="1" value="1">1 เครื่อง</option>,
+                            <option key="2" value="2">2 เครื่อง</option>,
+                            <option key="3" value="3">3 เครื่อง</option>,
+                            <option key="4" value="4">4 เครื่อง</option>,
+                            <option key="5" value="5">5 เครื่อง</option>,
+                            <option key="6" value="6">6 เครื่อง</option>,
+                            <option key="7" value="7">7 เครื่อง</option>,
+                            <option key="8" value="8">8 เครื่อง</option>,
+                            <option key="9" value="9">9 เครื่อง</option>,
+                            <option key="10" value="10">10 เครื่อง</option>
                         ]
                         ) : (
                             <option value="" selected>Loading...</option>
@@ -295,6 +356,42 @@ function Table() {
                     </div>
                 </form>
             </div>
+        </div>
+        Pending Approvals
+        
+        <div className='containertable'>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {pendingData.map((item, index) => (
+                        <tr key={index}>
+                            <td>{item.id}</td>
+                            <td>{item.name}</td>
+                            <td>
+                            <label>
+                                Staff Name:
+                                    <select value={staffName} onChange={(e) => setStaffName(e.target.value)}>
+                                    <option value="" disabled>Select Staff Name</option>
+                                    
+                                    <option key="1" value="สราวุฒิ สุขเกลอ">สราวุฒิ สุขเกลอ</option>,
+                                    <option key="2" value="ชวลิต นุชเจริญ">ชวลิต นุชเจริญ</option>,
+                                    <option key="3" value="สิทธิพจน์ บุญเสริมสุข">สิทธิพจน์ บุญเสริมสุข</option>,
+                                    <option key="3" value="ธัญพจน์ ไตรเกษมศักดิ์">ธัญพจน์ ไตรเกษมศักดิ์</option>,
+                                    </select>
+                            </label>
+                                <button onClick={() => handleApprove(item.id)} disabled={staffName === ''}>Approve</button>
+                                <button onClick={() => handleReject(item.id)}>Reject</button>
+                            </td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
         </div>
         รายละเอียด
         <div className='containertable'>

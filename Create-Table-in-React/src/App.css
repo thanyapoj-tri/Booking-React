@@ -114,14 +114,14 @@
   min-height: 30px;
   height: 30px;
   font-size: 12px;
-  width: 200px;
   padding-top: 0 !important;  /* Override the padding for the CreatableSelect wrapper */
   padding-bottom: 0 !important;
-  width: 40.4%;
+  width: 39.8%;
 }
 
 .creatable-select-wrapper .my-select__value-container {
   padding: 0 8px;
+  font-size: 14px;
 }
 
 .creatable-select-wrapper .my-select__input {

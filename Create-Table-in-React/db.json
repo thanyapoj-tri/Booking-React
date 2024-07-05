@@ -9,18 +9,6 @@
       "value": "2"
     },
     {
-      "id": "SH03",
-      "value": "3"
-    },
-    {
-      "id": "SH04",
-      "value": "4"
-    },
-    {
-      "id": "SH05",
-      "value": "5"
-    },
-    {
       "id": "SH06",
       "value": "6"
     },
@@ -35,30 +23,125 @@
     {
       "id": "SH10",
       "value": "10"
+    },
+    {
+      "id": "SH07",
+      "value": "7"
     }
   ],
-  "users": [
+  "pending": [
     {
-      "id": "q-1หน่วยIT",
-      "name": "หน่วยIT",
+      "id": "q-6ROI",
+      "name": "ROI",
       "identity": "บุคลากร",
       "department": "งานบริหารทั่วไป",
-      "tel": "1105",
+      "tel": "456",
       "machine": "1 เครื่อง",
       "stereo": "ไม่ใช้",
       "wirelessmic": "ไม่ใช้",
       "voicerec": "ไม่ใช้",
-      "objective": "ประชุม",
-      "startdate": "2024-06-07T13:22",
-      "enddate": "2024-07-25T13:22",
-      "location": "ห้องกันภัย",
+      "objective": "OIR",
+      "startdate": "2024-07-05T11:21",
+      "enddate": "2024-07-06T11:21",
+      "location": "RRO",
       "machinenumber": [
         {
-          "value": "7",
-          "label": "เครื่อง No. 7",
-          "id": "SH07"
+          "value": "6",
+          "label": "เครื่อง No. 6",
+          "id": "SH06"
         }
       ]
+    }
+  ],
+  "users": [
+    {
+      "id": "q-1PAI",
+      "name": "PAI",
+      "identity": "บุคลากร",
+      "department": "ภาควิชาศึกษาศาสตร์",
+      "tel": "123",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "UAII",
+      "startdate": "2024-07-02T15:46",
+      "enddate": "2024-07-03T15:46",
+      "location": "YAI",
+      "machinenumber": [
+        {
+          "value": "3",
+          "label": "เครื่อง No. 3",
+          "id": "SH03"
+        }
+      ]
+    },
+    {
+      "id": "q-2OAI",
+      "name": "OAI",
+      "identity": "บุคลากร",
+      "department": "ภาควิชาศึกษาศาสตร์",
+      "tel": "123",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "IAO",
+      "startdate": "2024-07-02T15:49",
+      "enddate": "2024-07-03T15:49",
+      "location": "AIO",
+      "machinenumber": [
+        {
+          "value": "4",
+          "label": "เครื่อง No. 4",
+          "id": "SH04"
+        }
+      ]
+    },
+    {
+      "id": "q-AOI",
+      "name": "AOI",
+      "identity": "บุคลากร",
+      "department": "ภาควิชาสังคมศาสตร์",
+      "tel": "150",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "OIU",
+      "startdate": "2024-07-05T11:06",
+      "enddate": "2024-07-06T11:06",
+      "location": "IIO",
+      "machinenumber": [
+        {
+          "value": "5",
+          "label": "เครื่อง No. 5",
+          "id": "SH05"
+        }
+      ]
+    },
+    {
+      "id": "q-4UOI",
+      "name": "UOI",
+      "identity": "บุคลากร",
+      "department": "ภาควิชาสังคมศาสตร์",
+      "tel": "150",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "OIU",
+      "startdate": "2024-07-05T11:06",
+      "enddate": "2024-07-06T11:06",
+      "location": "IIO",
+      "machinenumber": [
+        {
+          "value": "5",
+          "label": "เครื่อง No. 5",
+          "id": "SH05"
+        }
+      ],
+      "approvedBy": "Fame"
     }
   ]
 }
