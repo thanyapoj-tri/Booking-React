@@ -7,6 +7,7 @@ import CreatableSelect from "react-select/creatable";
 function Table() {
     // const ip = 'localhost';
     const ip = '10.12.3.100';
+    const ip2 = '10.12.1.71';
     const [data, setData] = useState([])
     const [machines, setMachines] = useState([]);
     const [name, setName] = useState('')
@@ -71,16 +72,8 @@ function Table() {
     //   const handleInputChange = (inputValue) => {
     //     console.log('handleInputChange', inputValue);
     //   };
-    const sendLineNotification = (message) => {
-        const token = '8slGeeb0faUlVbqsxnC18Cf4Seki4rmFNtnosHIbv0F'; // Replace with your LINE Notify token
-        const url = 'https://notify-api.line.me/api/notify';
-        const headers = {
-            'Content-Type': 'application/x-www-form-urlencoded',
-            'Authorization': `Bearer ${token}`
-        };
-        const data = `message=${message}`;
-    
-        axios.post(url, data, { headers })
+    const sendLineNotification = async (message) => {
+        axios.post('http://localhost:3001/send-line-notification', { message })
             .then(() => {
                 console.log('LINE notification sent');
             })
@@ -202,6 +195,7 @@ function Table() {
                             <option value="อาจารย์">อาจารย์</option>
                             <option value="บุคลากร">บุคลากร</option>
                             <option value="นักศึกษา">นักศึกษา</option>
+                            <option value="อื่นๆ">อื่นๆ</option>
                         </select>
                         </label>
                     </div>
@@ -365,6 +359,7 @@ function Table() {
                     <tr>
                         <th>ID</th>
                         <th>Name</th>
+                        <th>Staff</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -374,7 +369,6 @@ function Table() {
                             <td>{item.id}</td>
                             <td>{item.name}</td>
                             <td>
-                            <label>
                                 Staff Name:
                                     <select value={staffName} onChange={(e) => setStaffName(e.target.value)}>
                                     <option value="" disabled>Select Staff Name</option>
@@ -384,7 +378,8 @@ function Table() {
                                     <option key="3" value="สิทธิพจน์ บุญเสริมสุข">สิทธิพจน์ บุญเสริมสุข</option>,
                                     <option key="3" value="ธัญพจน์ ไตรเกษมศักดิ์">ธัญพจน์ ไตรเกษมศักดิ์</option>,
                                     </select>
-                            </label>
+                            </td>
+                            <td>
                                 <button onClick={() => handleApprove(item.id)} disabled={staffName === ''}>Approve</button>
                                 <button onClick={() => handleReject(item.id)}>Reject</button>
                             </td>
