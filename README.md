@@ -19,3 +19,7 @@ http-server
 json-server --watch db.json
 json-server --watch records.json --port 4000
 ```
+```
+npm install cors
+node server.cjs
+```
