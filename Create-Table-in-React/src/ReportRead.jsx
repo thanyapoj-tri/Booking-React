@@ -5,7 +5,8 @@ import './Read.css'
 import './ReportRead.css'
 
 function reportRead() {
-  const ip = '10.12.3.100';
+  // const ip = '10.12.3.100';
+  const ip = '10.12.1.71';
   const [data, setData] = useState([])
   const {id} = useParams();
 

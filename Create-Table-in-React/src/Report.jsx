@@ -4,7 +4,8 @@ import './Report.css'
 import { Link } from 'react-router-dom'
 
 function report() {
-    const ip = '10.12.3.100';
+    // const ip = '10.12.3.100';
+    const ip = '10.12.1.71';
     const [data, setData] = useState([])
 
     useEffect(()=>{

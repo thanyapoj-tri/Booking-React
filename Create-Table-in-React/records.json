@@ -36,6 +36,77 @@
           "id": "SH07"
         }
       ]
+    },
+    {
+      "id": "IT-S002-3",
+      "name": "test",
+      "identity": "บุคลากร",
+      "department": "ภาควิชาสังคมศาสตร์",
+      "tel": "1505",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "test",
+      "startdate": "2024-08-06T11:33",
+      "enddate": "2024-08-07T11:33",
+      "location": "test",
+      "machinenumber": [
+        {
+          "value": "6",
+          "label": "เครื่อง No. 6",
+          "id": "SH06"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-4",
+      "name": "ปานชีวา เปี้ยปลูก",
+      "identity": "บุคลากร",
+      "department": "งานบริหารทรัพยากรบุคคล",
+      "tel": "1013",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ใช้ในงานบริหารทรัพยากรบุคคล",
+      "startdate": "2024-08-07T10:00",
+      "enddate": "2024-09-30T10:00",
+      "location": "คณะสังคม",
+      "machinenumber": [
+        {
+          "value": "2",
+          "label": "เครื่อง No. 2",
+          "id": "SH02"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-5",
+      "name": "พายุ กลีบบัว",
+      "identity": "บุคลากร",
+      "department": "ภาควิชาสังคมและสุขภาพ",
+      "tel": "0917274356",
+      "machine": "2 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ใช้สำหรับการเรียนการสอน",
+      "startdate": "2024-08-08T13:59",
+      "enddate": "2024-08-13T13:59",
+      "location": "ห้องประชุมศรีรัง",
+      "machinenumber": [
+        {
+          "value": "6",
+          "label": "เครื่อง No. 6",
+          "id": "SH06"
+        },
+        {
+          "value": "7",
+          "label": "เครื่อง No. 7",
+          "id": "SH07"
+        }
+      ]
     }
   ]
 }

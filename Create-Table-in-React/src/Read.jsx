@@ -4,7 +4,8 @@ import { Link, useNavigate, useParams } from 'react-router-dom';
 import './Read.css'
 
 function Read() {
-  const ip = '10.12.3.100';
+  // const ip = '10.12.3.100';
+  const ip = '10.12.1.71';
   const [data, setData] = useState([])
   const {id} = useParams();
   const naviagte = useNavigate();

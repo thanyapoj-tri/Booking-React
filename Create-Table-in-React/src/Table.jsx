@@ -6,8 +6,8 @@ import CreatableSelect from "react-select/creatable";
 
 function Table() {
     // const ip = 'localhost';
-    const ip = '10.12.3.100';
-    const ip2 = '10.12.1.71';
+    // const ip = '10.12.3.100';
+    const ip = '10.12.1.71';
     const [data, setData] = useState([])
     const [machines, setMachines] = useState([]);
     const [name, setName] = useState('')
@@ -27,6 +27,7 @@ function Table() {
     const [selectedOption, setSelectedOption] = useState('ไม่ใช้');
     const [pendingData, setPendingData] = useState([]);
     const [staffName, setStaffName] = useState(''); // Staff identifier
+    const [phpusers, setPhpusers] = useState([]); // Phpusers
 
     useEffect(()=>{
         axios.get(`http://${ip}:3000/users`)
@@ -56,7 +57,14 @@ function Table() {
         .then(res => setReport(res.data))
         .catch(er => console.log(er));
     }, [])
+    useEffect(() => {
+        fetch(`http://${ip}:5000/api/data`)
+          .then(response => response.json())
+          .then(data => setPhpusers(data))
+          .catch(error => console.error('Error fetching data:', error));
+      }, []);
     
+      console.log(phpusers);
 
     const creatableOptions = machines.map(machine => ({
         value: machine.value,
@@ -99,6 +107,9 @@ function Table() {
                 .then(res => {    
                     console.log('added user report to pending');
                     window.location.reload(true);
+                    selectedOption.forEach(machine => {
+                        handleDeleteMachine(machine.id);
+                    });
                 })
                 .catch(er => console.log(er));
         // axios.post(`http://${ip}:3000/users`

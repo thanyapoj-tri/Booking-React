@@ -9,10 +9,6 @@
       "value": "2"
     },
     {
-      "id": "SH06",
-      "value": "6"
-    },
-    {
       "id": "SH08",
       "value": "8"
     },
@@ -25,123 +21,66 @@
       "value": "10"
     },
     {
-      "id": "SH07",
-      "value": "7"
+      "id": "SH04",
+      "value": "4"
+    },
+    {
+      "id": "SH05",
+      "value": "5"
     }
   ],
-  "pending": [
+  "pending": [],
+  "users": [
     {
-      "id": "q-6ROI",
-      "name": "ROI",
+      "id": "q-6ปานชีวา เปี้ยปลูก",
+      "name": "ปานชีวา เปี้ยปลูก",
       "identity": "บุคลากร",
-      "department": "งานบริหารทั่วไป",
-      "tel": "456",
+      "department": "งานบริหารทรัพยากรบุคคล",
+      "tel": "1013",
       "machine": "1 เครื่อง",
       "stereo": "ไม่ใช้",
       "wirelessmic": "ไม่ใช้",
       "voicerec": "ไม่ใช้",
-      "objective": "OIR",
-      "startdate": "2024-07-05T11:21",
-      "enddate": "2024-07-06T11:21",
-      "location": "RRO",
+      "objective": "ใช้ในงานบริหารทรัพยากรบุคคล",
+      "startdate": "2024-08-07T10:00",
+      "enddate": "2024-09-30T10:00",
+      "location": "คณะสังคม",
+      "machinenumber": [
+        {
+          "value": "2",
+          "label": "เครื่อง No. 3",
+          "id": "SH02"
+        }
+      ],
+      "approvedBy": "ธัญพจน์ ไตรเกษมศักดิ์"
+    },
+    {
+      "id": "q-6พายุ กลีบบัว",
+      "name": "พายุ กลีบบัว",
+      "identity": "บุคลากร",
+      "department": "ภาควิชาสังคมและสุขภาพ",
+      "tel": "0917274356",
+      "machine": "2 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ใช้สำหรับการเรียนการสอน",
+      "startdate": "2024-08-08T13:59",
+      "enddate": "2024-08-13T13:59",
+      "location": "ห้องประชุมศรีรัง",
       "machinenumber": [
         {
           "value": "6",
           "label": "เครื่อง No. 6",
           "id": "SH06"
-        }
-      ]
-    }
-  ],
-  "users": [
-    {
-      "id": "q-1PAI",
-      "name": "PAI",
-      "identity": "บุคลากร",
-      "department": "ภาควิชาศึกษาศาสตร์",
-      "tel": "123",
-      "machine": "1 เครื่อง",
-      "stereo": "ไม่ใช้",
-      "wirelessmic": "ไม่ใช้",
-      "voicerec": "ไม่ใช้",
-      "objective": "UAII",
-      "startdate": "2024-07-02T15:46",
-      "enddate": "2024-07-03T15:46",
-      "location": "YAI",
-      "machinenumber": [
+        },
         {
-          "value": "3",
-          "label": "เครื่อง No. 3",
-          "id": "SH03"
-        }
-      ]
-    },
-    {
-      "id": "q-2OAI",
-      "name": "OAI",
-      "identity": "บุคลากร",
-      "department": "ภาควิชาศึกษาศาสตร์",
-      "tel": "123",
-      "machine": "1 เครื่อง",
-      "stereo": "ไม่ใช้",
-      "wirelessmic": "ไม่ใช้",
-      "voicerec": "ไม่ใช้",
-      "objective": "IAO",
-      "startdate": "2024-07-02T15:49",
-      "enddate": "2024-07-03T15:49",
-      "location": "AIO",
-      "machinenumber": [
-        {
-          "value": "4",
-          "label": "เครื่อง No. 4",
-          "id": "SH04"
-        }
-      ]
-    },
-    {
-      "id": "q-AOI",
-      "name": "AOI",
-      "identity": "บุคลากร",
-      "department": "ภาควิชาสังคมศาสตร์",
-      "tel": "150",
-      "machine": "1 เครื่อง",
-      "stereo": "ไม่ใช้",
-      "wirelessmic": "ไม่ใช้",
-      "voicerec": "ไม่ใช้",
-      "objective": "OIU",
-      "startdate": "2024-07-05T11:06",
-      "enddate": "2024-07-06T11:06",
-      "location": "IIO",
-      "machinenumber": [
-        {
-          "value": "5",
-          "label": "เครื่อง No. 5",
-          "id": "SH05"
-        }
-      ]
-    },
-    {
-      "id": "q-4UOI",
-      "name": "UOI",
-      "identity": "บุคลากร",
-      "department": "ภาควิชาสังคมศาสตร์",
-      "tel": "150",
-      "machine": "1 เครื่อง",
-      "stereo": "ไม่ใช้",
-      "wirelessmic": "ไม่ใช้",
-      "voicerec": "ไม่ใช้",
-      "objective": "OIU",
-      "startdate": "2024-07-05T11:06",
-      "enddate": "2024-07-06T11:06",
-      "location": "IIO",
-      "machinenumber": [
-        {
-          "value": "5",
-          "label": "เครื่อง No. 5",
-          "id": "SH05"
+          "value": "7",
+          "label": "เครื่อง No. 7",
+          "id": "SH07"
         }
       ],
-      "approvedBy": "Fame"
+      "approvedBy": "ธัญพจน์ ไตรเกษมศักดิ์"
     }
   ]
 }
