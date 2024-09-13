@@ -26,7 +26,7 @@ db.connect(err => {
 
 // Example route to fetch data
 app.get('/api/data', (req, res) => {
-  let sql = 'SELECT * FROM users';
+  let sql = 'SELECT * FROM member';
   db.query(sql, (err, results) => {
     if (err) throw err;
     res.json(results);

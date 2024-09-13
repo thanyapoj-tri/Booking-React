@@ -45,6 +45,9 @@ function reportRead() {
           <strong>Notebook: {data.machine} เครื่อง</strong>
         </div>
         <div className='mbOne'>
+          <strong>เลขเครื่อง: {Array.isArray(data.machinenumber) && data.machinenumber.length > 0 ? data.machinenumber.map(machine => machine.label).join(', ') : 'ไม่มีข้อมูล'}</strong>
+        </div>
+        <div className='mbOne'>
           <strong>เครื่องเสียง: {data.stereo} เครื่อง</strong>
         </div>
         <div className='mbOne'>
@@ -65,9 +68,6 @@ function reportRead() {
         </div>
         <div className='mbOne'>
           <strong>สถานที่: {data.location}</strong>
-        </div>
-        <div className='mbOne'>
-          <strong>เลขเครื่อง: {data.machinenumber && data.machinenumber.map(machine => machine.label).join(', ')}</strong>
         </div>
         <div>
         <Link to={`/report/`} className='button'>&lt;</Link>

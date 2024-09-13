@@ -20,11 +20,15 @@ function Read() {
   const handleDelete = (id) => {
       
       axios.delete(`http://${ip}:3000/users/` + id)
-        .then(res => {
+        .then(() => {
           // location.reload();
           console.log('user returned');
-          if (data && data.machinenumber) {
+          
+          //wrn data != pendingData
+          if (data && Array.isArray(data.machinenumber)) {
             data.machinenumber.forEach(machine => handleAddMachine(machine));
+          }else {
+            console.log('machinenumber is undefined or not an array');
           }
           window.alert("user returned");
           naviagte('/');
@@ -69,7 +73,7 @@ function Read() {
           <strong>Notebook: {data.machine} เครื่อง</strong>
         </div>
         <div className='mbOne'>
-          <strong>เลขเครื่อง: {data.machinenumber && data.machinenumber.map(machine => machine.label).join(', ')}</strong>
+          <strong>เลขเครื่อง: {Array.isArray(data.machinenumber) && data.machinenumber.length > 0 ? data.machinenumber.map(machine => machine.label).join(', ') : 'ไม่มีข้อมูล'}</strong>
         </div>
         <div className='mbOne'>
           <strong>เครื่องเสียง: {data.stereo} เครื่อง</strong>

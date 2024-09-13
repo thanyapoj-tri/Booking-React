@@ -5,9 +5,9 @@ import { Link, useNavigate, useParams } from 'react-router-dom'
 import CreatableSelect from "react-select/creatable";
 
 function Table() {
-    // const ip = 'localhost';
     // const ip = '10.12.3.100';
     const ip = '10.12.1.71';
+    const dbip = '10.12.1.72';
     const [data, setData] = useState([])
     const [machines, setMachines] = useState([]);
     const [name, setName] = useState('')
@@ -58,13 +58,36 @@ function Table() {
         .catch(er => console.log(er));
     }, [])
     useEffect(() => {
+        fetchEmployeeData();
         fetch(`http://${ip}:5000/api/data`)
           .then(response => response.json())
           .then(data => setPhpusers(data))
           .catch(error => console.error('Error fetching data:', error));
       }, []);
+
+      const fetchEmployeeData = async () => {
+        try {
+        // Replace with your actual data fetching logic
+        const response = await fetch(`http://${ip}:5000/api/data`); // Example API endpoint
+        const data = await response.json();
+      
+        // if (data.length > 0) {
+        //     const employee = data[0]; // Access the first (or desired) employee object
+        //     setName(employee.Employee_name);
+        //     setIdentity(employee.Position);
+        //     setDepartment(employee.Organization);
+        //     console.log(data.employee.Employee_name);
+        //   } else {
+        //     console.error("No employee data found");
+        //   }
+        } catch (error) {
+          console.error("Error fetching employee data:", error);
+        }
+        
+      };
+      
     
-      console.log(phpusers);
+    //   console.log(phpusers);
 
     const creatableOptions = machines.map(machine => ({
         value: machine.value,
@@ -81,7 +104,7 @@ function Table() {
     //     console.log('handleInputChange', inputValue);
     //   };
     const sendLineNotification = async (message) => {
-        axios.post('http://localhost:3001/send-line-notification', { message })
+        axios.post(`http://${ip}:3001/send-line-notification`, { message })
             .then(() => {
                 console.log('LINE notification sent');
             })
@@ -156,35 +179,46 @@ function Table() {
             })
             .catch(er => console.log(er));
     };
+    
     const handleReject = (pendingId) => {
+        // Step 1: Delete the pending item by its ID
         axios.delete(`http://${ip}:3000/pending/${pendingId}`)
             .then(() => {
                 console.log('Rejected and removed from pending');
+                console.log('Pending Data object:', pendingData); // Log the entire pendingData object
+    
+                // Step 2: Find the specific pending item by ID to access its machinenumber
+                const rejectedItem = pendingData.find(item => item.id === pendingId);
+    
+                // Step 3: Check if machinenumber exists and is an array
+                if (rejectedItem && Array.isArray(rejectedItem.machinenumber)) {
+                    rejectedItem.machinenumber.forEach(machine => handleAddMachine(machine)); // Post each machine
+                } else {
+                    console.log('machinenumber is undefined or not an array');
+                }
+    
+                // Step 4: Remove the pending item from the local state
                 setPendingData(pendingData.filter(item => item.id !== pendingId));
             })
-            .catch(er => console.log(er));
+            .catch(error => console.log(error));
     };
 
     const handleEdit = (id) => {
         
     }
 
-    const handleAddMachine = (machineValue) => {
-        console.log(machineValue+'thisismachinevalue');
-        axios.post(`http://${ip}:3000/machines`, { value: machineValue })
+    const handleAddMachine = (machine) => {
+        console.log(machine, 'this is machine object');
+        
+        // Step 5: Post the machine back to the machines collection
+        axios.post(`http://${ip}:3000/machines`, { value: machine.value, id: machine.id })
             .then(res => {
-                location.reload();       
-                console.log(`added ${machineValue} machine dropdown`);
-                // After successfully adding the machine, update the 'machines' state
-                // setMachines(prevMachines => {
-                //     const updatedMachines = [...prevMachines, { "value": machineValue, "id": "NEW_ID" }];
-                //     // Sort the machines array based on the 'value' property
-                //     updatedMachines.sort((a, b) => a.value - b.value);
-                //     return updatedMachines;
-                // });
+                console.log(`Added ${machine.label} with id ${machine.id} to machines collection`);
+                // Optional: If you need to reload the page or update the state after adding
+                // location.reload();
             })
-            .catch(er => console.log(er));
-    }
+            .catch(error => console.log(error));
+    };
     
 
     return (
@@ -197,10 +231,10 @@ function Table() {
             <div className='form-div'>
                 <form onSubmit={handleSubmit}>
                     <div>
-                    <label className='lefttitleName'>
-                        ชื่อ-นามสกุล <input type="text" placeholder='Enter Name' onChange={e => setName(e.target.value)} />
+                    <label className='lefttitleName' style={{ color: 'black' }}>
+                        ชื่อ-นามสกุล <input type="text" placeholder='Enter Name' value={name} onChange={e => setName(e.target.value)} />
                         </label>
-                        <label className='righttitleIdentity'>
+                        <label className='righttitleIdentity' style={{ color: 'black' }}>
                         ประเภทบุคคล <select value={identity} onChange={(e) => setIdentity(e.target.value)}>
                             <option value="" selected disabled>Please select an option...</option>
                             <option value="อาจารย์">อาจารย์</option>
@@ -211,7 +245,7 @@ function Table() {
                         </label>
                     </div>
                     <div>
-                    <label className='lefttitleDepartment'>
+                    <label className='lefttitleDepartment' style={{ color: 'black' }}>
                         หน่วยงาน/ภาควิชา <select onChange={(e) => setDepartment(e.target.value)}>
                             <option value="" selected disabled>Please select an option...</option>
                             <option value="ภาควิชาสังคมศาสตร์">ภาควิชาสังคมศาสตร์</option>
@@ -228,12 +262,12 @@ function Table() {
                             <option value="สำนักงานบูรณาการวิชาการเพื่อสังคม">สำนักงานบูรณาการวิชาการเพื่อสังคม</option>
                         </select>
                         </label>
-                        <label className='righttitleTel'>
+                        <label className='righttitleTel' style={{ color: 'black' }}>
                         โทร <input type="text" placeholder='Enter โทร' onChange={e => setTel(e.target.value)}/>
                         </label>
                     </div>
                     <div>
-                    <label className='lefttitleMachine'>
+                    <label className='lefttitleMachine' style={{ color: 'black' }}>
                     Notebookจำนวน <select onChange={(e) => setMachine(e.target.value)}>
                     <option value="ไม่ใช้">ไม่ใช้</option>
                         {machines && machines.length > 0 ? (
@@ -254,7 +288,7 @@ function Table() {
                         )}
                     </select>
                     </label>
-                        <label className='righttitleStereo'>
+                        <label className='righttitleStereo' style={{ color: 'black' }}>
                     เครื่องเสียงจำนวน <select onChange={(e) => setStereo(e.target.value)}>
                     <option value="ไม่ใช้">ไม่ใช้</option>
                         {machines && machines.length > 0 ? (
@@ -278,7 +312,7 @@ function Table() {
                     </label>
                     </div>
                     <div>
-                    <label className='lefttitleWirelessmic'>
+                    <label className='lefttitleWirelessmic' style={{ color: 'black' }}>
                     เครื่องไมโครโฟนชนิดไร้สาย <select onChange={(e) => setWirelessmic(e.target.value)}>
                     <option value="ไม่ใช้">ไม่ใช้</option>
                         {machines && machines.length > 0 ? (
@@ -299,7 +333,7 @@ function Table() {
                         )}
                     </select>
                     </label>
-                        <label className='righttitleVoicerec'>
+                        <label className='righttitleVoicerec' style={{ color: 'black' }}>
                     เครื่องบันทึกเสียงจำนวน <select onChange={(e) => setVoicerec(e.target.value)}>
                     <option value="ไม่ใช้">ไม่ใช้</option>
                         {machines && machines.length > 0 ? (
@@ -322,7 +356,7 @@ function Table() {
                     </label>
                     </div>
                     <div>
-                        <label className='lefttitleObjective'>
+                        <label className='lefttitleObjective' style={{ color: 'black' }}>
                     วัตถุประสงค์เพื่อ <input type="text" placeholder='Enter วัตถุประสงค์' onChange={e => setObjective(e.target.value)} />
                     </label>
                     </div>
@@ -331,20 +365,20 @@ function Table() {
                     ถึง วันที่<input type="date" />
                     </div> */}
                     <div>
-                        <label className='lefttitleStartdate'>
+                        <label className='lefttitleStartdate' style={{ color: 'black' }}>
                     ยืม ณ วันที่ <input type="datetime-local" id="datetimeInput" name="datetimeInput" onChange={e => setStartdate(e.target.value)}/>
                     </label>
-                    <label className='righttitleEnddate'>
+                    <label className='righttitleEnddate' style={{ color: 'black' }}>
                     ถึง วันที่ <input type="datetime-local" id="datetimeInput" name="datetimeInput" onChange={e => setEnddate(e.target.value)}/>
                     </label>
                     </div>
                     <div>
-                        <label className='lefttitleLocation'>
+                        <label className='lefttitleLocation' style={{ color: 'black' }}>
                     สถานที่ <input type="text" placeholder='Enter สถานที่' onChange={e => setLocation(e.target.value)} />
                     </label>
                     </div>
                     <div className="creatable-select-wrapper">
-                    <label >
+                    <label style={{ color: 'black' }}>
                     หมายเลขเครื่องNotebook <CreatableSelect className="my-select" classNamePrefix="my-select"
                         options={creatableOptions}
                         onChange={handleCreatableChange}
@@ -356,7 +390,7 @@ function Table() {
                     </div>
                     <div>
                     <label className='borrowBtn'>
-                    <button disabled={selectedOption === ''||enddate === ''}>ยืม</button>
+                    <button disabled={location === ''||enddate === ''}>ยืม</button>
                     </label>
                     </div>
                 </form>
