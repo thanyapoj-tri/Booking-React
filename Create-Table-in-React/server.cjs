@@ -1,33 +1,44 @@
 const express = require('express');
 const axios = require('axios');
-const bodyParser = require('body-parser');
-const cors = require('cors');  // Add this line
+const cors = require('cors');
 
 const app = express();
-const port = 3001;
+const PORT = 3050;
 
-app.use(cors());  // Add this line
-app.use(bodyParser.json());
+// Middleware
+app.use(cors());
+app.use(express.json());
 
-app.post('/send-line-notification', (req, res) => {
-    const { message } = req.body;
-    const token = '8slGeeb0faUlVbqsxnC18Cf4Seki4rmFNtnosHIbv0F'; // my token
-    // const token = '0Gd7z2YrmgzHNFRY6fwcuVxM566fD4eFL5zfmWugqYa'; // Ptui token
+// LINE Messaging API Configuration
+const LINE_CHANNEL_ACCESS_TOKEN = 'aVvjXdXH5ftlwN8hGeBIxw6NH4qu1IvKEWKqBWbgMLnStJ2ip9MAdppgsH1hbJXUGxRP7X8RhqngWYHYEAR2k4Zx0UALv09hWWo+nw/Vd1RALqqIS5Vpy/lW7NEfDxji+H9f5zsJnZa/c7aEALKxJQdB04t89/1O/w1cDnyilFU=';
 
-    const headers = {
-        'Content-Type': 'application/x-www-form-urlencoded',
-        'Authorization': `Bearer ${token}`
-    };
+// Endpoint to send LINE messages
+app.post('/send-line-message', async (req, res) => {
+  const { userId, message } = req.body;
 
-    axios.post('https://notify-api.line.me/api/notify', `message=${message}`, { headers })
-        .then(response => {
-            res.status(200).json({ success: true, data: response.data });
-        })
-        .catch(error => {
-            res.status(500).json({ success: false, error: error.message });
-        });
+  try {
+    const response = await axios.post(
+      'https://api.line.me/v2/bot/message/push',
+      {
+        to: userId,
+        messages: [{ type: 'text', text: message }],
+      },
+      {
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${LINE_CHANNEL_ACCESS_TOKEN}`,
+        },
+      }
+    );
+
+    res.status(200).json({ success: true, response: response.data });
+  } catch (error) {
+    console.error('Error sending LINE message:', error.response?.data || error.message);
+    res.status(500).json({ success: false, error: error.response?.data || error.message });
+  }
 });
 
-app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}`);
+// Start the server
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
 });

@@ -384,6 +384,2079 @@
           "id": "SH06"
         }
       ]
+    },
+    {
+      "id": "IT-S002-21",
+      "name": "พายุ กลีบบัว",
+      "identity": "บุคลากร",
+      "department": "ภาควิชาสังคมและสุขภาพ",
+      "tel": "1202",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ใช้สอบนักศึกษา",
+      "startdate": "2024-09-13T16:30",
+      "enddate": "2024-09-17T16:30",
+      "location": "ห้องศรีตรัง",
+      "machinenumber": [
+        {
+          "value": "4",
+          "label": "เครื่อง No. 4",
+          "id": "SH04"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-22",
+      "name": "วิศรุตา บุญปาลิต",
+      "identity": "บุคลากร",
+      "department": "ภาควิชาศึกษาศาสตร์",
+      "tel": "0890372312",
+      "machine": "ไม่ใช้",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "จัดงานปัจฉิมนิเทศแบบ Hybrid (online/on-site) ป.เอก ประชากรฯ ภาคศึกษาศาสตร์",
+      "startdate": "2024-10-04T13:00",
+      "enddate": "2024-10-04T16:00",
+      "location": "ห้องประชุมภาควิชาศึกษาศาสตร์",
+      "machinenumber": "ไม่ใช้"
+    },
+    {
+      "id": "IT-S002-23",
+      "name": "ศิริออร กลางสำโรง",
+      "identity": "บุคลากร",
+      "department": "ภาควิชาสังคมและสุขภาพ",
+      "tel": "",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "การเรียนการสอน",
+      "startdate": "2024-09-18T13:00",
+      "enddate": "2024-09-18T15:00",
+      "location": "ห้องศรีตรัง",
+      "machinenumber": "ไม่ใช้"
+    },
+    {
+      "id": "IT-S002-24",
+      "name": "ศิริอร กลางสำโรง",
+      "identity": "บุคลากร",
+      "department": "ภาควิชาสังคมและสุขภาพ",
+      "tel": "1201",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "การเรียนการสอน",
+      "startdate": "2024-09-19T09:30",
+      "enddate": "2024-09-19T16:00",
+      "location": "ห้องกระดังงา",
+      "machinenumber": []
+    },
+    {
+      "id": "IT-S002-25",
+      "name": "น้ำอ้อย   คำชื่น",
+      "identity": "บุคลากร",
+      "department": "ภาควิชาสังคมศาสตร์",
+      "tel": "1260",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "จัดพิมพ์เอกสาร",
+      "startdate": "2024-09-20T16:15",
+      "enddate": "2024-09-25T16:16",
+      "location": "home",
+      "machinenumber": [
+        {
+          "value": "7",
+          "label": "เครื่อง No. 7",
+          "id": "SH07"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-26",
+      "name": "ปรียาวดี ธีรานุวัตร",
+      "identity": "บุคลากร",
+      "department": "งานบริหารทรัพยากรบุคคล",
+      "tel": "1003",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ประชุมฯ",
+      "startdate": "2024-09-26T09:00",
+      "enddate": "2024-09-26T12:00",
+      "location": "ห้องประชุมภาควิชาศึกษาศาสตร์ ",
+      "machinenumber": [
+        {
+          "value": "8",
+          "label": "เครื่อง No. 8",
+          "id": "SH08"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-27",
+      "name": "กนกวรรณ นิ่มทัศนศิริ",
+      "identity": "บุคลากร",
+      "department": "งานบริหารทั่วไป",
+      "tel": "1105",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ทวนสอบโครงการก๊าซเรือนกระจกองค์กร ประจำปี 2567",
+      "startdate": "2024-09-25T08:30",
+      "enddate": "2024-09-25T17:00",
+      "location": "ห้องประชุม (ฝั่งงานคลังและสินทรัพย์) อาคารสังคมฯ 3 ชั้น 1",
+      "machinenumber": "ไม่ใช้"
+    },
+    {
+      "id": "IT-S002-28",
+      "name": "พายุ กลีบบัว",
+      "identity": "บุคลากร",
+      "department": "ภาควิชาสังคมและสุขภาพ",
+      "tel": "1202",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ใช้สำหรับการเรียนการสอน",
+      "startdate": "2024-09-25T09:00",
+      "enddate": "2024-09-30T16:00",
+      "location": "ห้องศรีตรัง",
+      "machinenumber": [
+        {
+          "value": "4",
+          "label": "เครื่อง No. 4",
+          "id": "SH04"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-29",
+      "name": "Dr. Seungchun Paek",
+      "identity": "อาจารย์",
+      "department": "ภาควิชาสังคมและสุขภาพ",
+      "tel": "",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "teaching",
+      "startdate": "2024-10-02T13:08",
+      "enddate": "2024-10-02T16:00",
+      "location": "Sritrang meeting room",
+      "machinenumber": "ไม่ใช้"
+    },
+    {
+      "id": "IT-S002-30",
+      "name": "งามญา ศรีพอ",
+      "identity": "บุคลากร",
+      "department": "งานยุทธศาสตร์แผนและงบประมาณ",
+      "tel": "1102",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ประชุมงานยุทธศาสตร์",
+      "startdate": "2024-10-04T13:30",
+      "enddate": "2024-10-04T16:30",
+      "location": "ห้องประชุมภาควิชาศึกษาศาสตร์",
+      "machinenumber": [
+        {
+          "value": "6",
+          "label": "เครื่อง No. 6",
+          "id": "SH06"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-31",
+      "name": "อ.ดร.ปานจิตร์ หลงประดิษฐ์",
+      "identity": "อาจารย์",
+      "department": "ภาควิชาศึกษาศาสตร์",
+      "tel": "",
+      "machine": "ไม่ใช้",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "สอน",
+      "startdate": "2024-10-02T09:00",
+      "enddate": "2024-10-02T16:00",
+      "location": "ภาควิชาศึกษา",
+      "machinenumber": [
+        {
+          "value": "2",
+          "label": "เครื่อง No. 2",
+          "id": "SH02"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-30",
+      "name": "พายุ กลีบบัว",
+      "identity": "บุคลากร",
+      "department": "ภาควิชาสังคมและสุขภาพ",
+      "tel": "1202",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ใช้สำหรับการเรียนการสอน",
+      "startdate": "2024-10-03T09:20",
+      "enddate": "2024-10-04T00:00",
+      "location": "ห้องกระดังงา",
+      "machinenumber": "ไม่ใช้"
+    },
+    {
+      "id": "IT-S002-33",
+      "name": "วรรณวิมล สิทธิโฃคสัมพันธ์",
+      "identity": "บุคลากร",
+      "department": "งานคลังและสินทรัพย์",
+      "tel": "1005",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ปฏิบัติงาน",
+      "startdate": "2024-10-04T16:06",
+      "enddate": "2024-10-09T16:06",
+      "location": "-",
+      "machinenumber": [
+        {
+          "value": "4",
+          "label": "เครื่อง No. 4",
+          "id": "SH04"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-34",
+      "name": "พายุ กลีบบัว",
+      "identity": "บุคลากร",
+      "department": "ภาควิชาสังคมและสุขภาพ",
+      "tel": "1202",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ใช้สำหรับการเรียนการสอน",
+      "startdate": "2024-10-10T08:45",
+      "enddate": "2024-10-10T16:30",
+      "location": "ห้องศรีตรัง",
+      "machinenumber": [
+        {
+          "value": "3",
+          "label": "เครื่อง No. 3",
+          "id": "SH02"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-35",
+      "name": "งามญา ศรีพอ",
+      "identity": "บุคลากร",
+      "department": "งานยุทธศาสตร์แผนและงบประมาณ",
+      "tel": "1102",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ประชุมงานยุทธศาสตร์",
+      "startdate": "2024-10-10T13:59",
+      "enddate": "2024-10-11T16:30",
+      "location": "ภาควิชาศึกษาศาสตร์",
+      "machinenumber": [
+        {
+          "value": "4",
+          "label": "เครื่อง No. 4",
+          "id": "SH04"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-36",
+      "name": "สุพัตรา เกียรติเลิศธรรม",
+      "identity": "บุคลากร",
+      "department": "งานบริหารและส่งเสริมการวิจัยและบริการวิชาการ",
+      "tel": "",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ประชุม",
+      "startdate": "2024-10-11T13:30",
+      "enddate": "2024-10-11T15:30",
+      "location": "ห้องประชุมศูนย์จีนฯ",
+      "machinenumber": [
+        {
+          "value": "3",
+          "label": "เครื่อง No. 3",
+          "id": "SH02"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-37",
+      "name": "พายุ กลีบบัว",
+      "identity": "บุคลากร",
+      "department": "ภาควิชาสังคมและสุขภาพ",
+      "tel": "1202",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ใช้สำหรับการเรียนการสอน",
+      "startdate": "2024-10-15T11:30",
+      "enddate": "2024-10-17T16:30",
+      "location": "ห้องศรีตรัง",
+      "machinenumber": [
+        {
+          "value": "6",
+          "label": "เครื่อง No. 6",
+          "id": "SH06"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-38",
+      "name": "พายุ กลีบบัว",
+      "identity": "บุคลากร",
+      "department": "ภาควิชาสังคมและสุขภาพ",
+      "tel": "1202",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ใช้สำหรับการเรียนการสอน",
+      "startdate": "2024-10-15T13:00",
+      "enddate": "2024-10-15T16:00",
+      "location": "ห้องศรีตรัง",
+      "machinenumber": [
+        {
+          "value": "4",
+          "label": "เครื่อง No. 4",
+          "id": "SH04"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-39",
+      "name": "ฌลานันท์ แสงศิลา",
+      "identity": "บุคลากร",
+      "department": "",
+      "tel": "1621",
+      "machine": "1 เครื่อง",
+      "stereo": "1",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ตรวจประเมินคุณภาพการศึกษา AUN-QA",
+      "startdate": "2024-10-18T13:00",
+      "enddate": "2024-10-18T16:30",
+      "location": "ห้องประชุมภาควิชาศึกษาศาสตร์ ชั้น 2",
+      "machinenumber": [
+        {
+          "value": "4",
+          "label": "เครื่อง No. 4",
+          "id": "SH04"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-40",
+      "name": "สุพัตรา เกียรติเลิศธรรม",
+      "identity": "บุคลากร",
+      "department": "เลขาคณบดี",
+      "tel": "1111",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ประชุม",
+      "startdate": "2024-10-21T14:30",
+      "enddate": "2024-10-21T16:30",
+      "location": "ห้องประชุมศูนย์จีน",
+      "machinenumber": [
+        {
+          "value": "6",
+          "label": "เครื่อง No. 6",
+          "id": "SH06"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-41",
+      "name": "นางน้ำอ้อย  คำชื่น",
+      "identity": "บุคลากร",
+      "department": "ภาควิชาสังคมศาสตร์",
+      "tel": "092-2645876",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "พิมพ์งานเอกสารของหลักสูตรฯ",
+      "startdate": "2024-10-21T14:41",
+      "enddate": "2024-10-28T14:41",
+      "location": "ภาควิชาสังคมศาสตร์",
+      "machinenumber": "ไม่ใช้"
+    },
+    {
+      "id": "IT-S002-42",
+      "name": "นางสาวฌลานันท์ แสงศิลา",
+      "identity": "บุคลากร",
+      "department": "",
+      "tel": "1621",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ตรวจประเมินติดตามหลักสูตร ภายหลังการตรวจประเมินฯ MU AUN-QA รูปแบบ Hybrid ณ ห้องจันทร์ผา จำนวน 2 หลักสูตร",
+      "startdate": "2024-10-25T10:00",
+      "enddate": "2024-10-25T16:30",
+      "location": "ณ ห้องจันทร์ผา ภาควิชาศึกษาศาสตร์",
+      "machinenumber": [
+        {
+          "value": "8",
+          "label": "เครื่อง No. 8",
+          "id": "SH08"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-43",
+      "name": "จุฑามาศ โตศิลา",
+      "identity": "บุคลากร",
+      "department": "ภาควิชาสังคมและสุขภาพ",
+      "tel": "0954318478",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ประชุมภาควิชาฯ",
+      "startdate": "2024-10-28T08:24",
+      "enddate": "2024-10-28T12:00",
+      "location": "ห้องประชุมศรีตรัง",
+      "machinenumber": [
+        {
+          "value": "6",
+          "label": "เครื่อง No. 6",
+          "id": "SH06"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-44",
+      "name": "นางสาวดาระวี เหลืองไพโรจน์",
+      "identity": "บุคลากร",
+      "department": "งานส่งเสริมการศึกษาแบบยืดหยุ่นและพัฒนาทักษะ",
+      "tel": "1121",
+      "machine": "4 เครื่อง",
+      "stereo": "1",
+      "wirelessmic": "2",
+      "voicerec": "ไม่ใช้",
+      "objective": "การตรวจประเมินคุณภาพการศึกษาระดับหลักสูตรตามเกณฑ์ AUN-QA มหาวิทยาลัยมหิดล MU AUN-QA หลักสูตรวิทยาศาสตรบัณฑิต สาขาวิชาเวชระเบียน วันที่ 30-31 ตุลาคม 2567",
+      "startdate": "2024-10-30T20:00",
+      "enddate": "2024-10-31T00:00",
+      "location": "ห้องประชุมศูนย์จีนศึกษา (ห้องกลาง) อาคาร 1 ชั้น 3",
+      "machinenumber": [
+        {
+          "value": "7",
+          "label": "เครื่อง No. 7",
+          "id": "SH07"
+        },
+        {
+          "value": "8",
+          "label": "เครื่อง No. 8",
+          "id": "SH08"
+        },
+        {
+          "value": "9",
+          "label": "เครื่อง No. 9",
+          "id": "SH09"
+        },
+        {
+          "value": "10",
+          "label": "เครื่อง No. 10",
+          "id": "SH10"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-45",
+      "name": "พายุ กลีบบัว",
+      "identity": "บุคลากร",
+      "department": "ภาควิชาสังคมและสุขภาพ",
+      "tel": "1202",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ใช้สำหรับการเรียนการสอน",
+      "startdate": "2024-10-29T08:30",
+      "enddate": "2024-10-29T16:00",
+      "location": "ห้องศรีตรัง",
+      "machinenumber": [
+        {
+          "value": "6",
+          "label": "เครื่อง No. 6",
+          "id": "SH06"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-46",
+      "name": "ฐานิดา สุวลักษณ์",
+      "identity": "บุคลากร",
+      "department": "งานบริหารและส่งเสริมการวิจัยและบริการวิชาการ",
+      "tel": "1007",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ประชุมสำนักงานวิจัยและบริการวิชาการ",
+      "startdate": "2024-10-30T13:30",
+      "enddate": "2024-10-31T12:00",
+      "location": "ห้องประชุม (ฝั่งห้องการเงิน) อาคาร 3 ชั้น 1",
+      "machinenumber": [
+        {
+          "value": "6",
+          "label": "เครื่อง No. 6",
+          "id": "SH06"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-47",
+      "name": "เกษร แกมเชย",
+      "identity": "บุคลากร",
+      "department": "งานบริหารทั่วไป",
+      "tel": "1600",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ตรวจเช็คครุภัณฑ์",
+      "startdate": "2024-10-30T14:38",
+      "enddate": "2024-11-30T14:38",
+      "location": "คณะสังคมศาสตร์และมนุษยศาสตร์",
+      "machinenumber": [
+        {
+          "value": "4",
+          "label": "เครื่อง No. 4",
+          "id": "SH04"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-48",
+      "name": "พายุ กลีบบัว",
+      "identity": "บุคลากร",
+      "department": "ภาควิชาสังคมและสุขภาพ",
+      "tel": "1202",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "สำหรับการเรียนการสอน",
+      "startdate": "2024-10-31T00:50",
+      "enddate": "2024-10-31T16:00",
+      "location": "ห้องประชุมศรีตรัง",
+      "machinenumber": [
+        {
+          "value": "2",
+          "label": "เครื่อง No. 2",
+          "id": "SH02"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-49",
+      "name": "ณัฏฐ์ญา ราชธานี",
+      "identity": "บุคลากร",
+      "department": "ภาควิชาศึกษาศาสตร์",
+      "tel": "1302",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "",
+      "startdate": "2024-11-05T13:00",
+      "enddate": "2024-11-05T15:00",
+      "location": "ห้องประชุมภาควิชาศึกษาศาสตร์",
+      "machinenumber": [
+        {
+          "value": "7",
+          "label": "เครื่อง No. 7",
+          "id": "SH07"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-50",
+      "name": "วรรณวิมล สิทธิโชคสัมพันธ์",
+      "identity": "บุคลากร",
+      "department": "งานคลังและสินทรัพย์",
+      "tel": "1005",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ทำงาน",
+      "startdate": "2024-11-04T15:34",
+      "enddate": "2024-11-10T15:34",
+      "location": "งานคลัง",
+      "machinenumber": [
+        {
+          "value": "6",
+          "label": "เครื่อง No. 6",
+          "id": "SH06"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-51",
+      "name": "ธนวัน",
+      "identity": "บุคลากร",
+      "department": "ภาควิชาศึกษาศาสตร์",
+      "tel": "1305",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "สอน",
+      "startdate": "2024-11-06T08:16",
+      "enddate": "2024-11-08T16:00",
+      "location": "ภาควิชาศึกษาศาสตร์",
+      "machinenumber": [
+        {
+          "value": "7",
+          "label": "เครื่อง No. 7",
+          "id": "SH07"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-52",
+      "name": "น้ำอ้อย  คำชื่น",
+      "identity": "บุคลากร",
+      "department": "ภาควิชาสังคมศาสตร์",
+      "tel": "0922645876",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "พิมพ์เอกสารงานการศึกษา",
+      "startdate": "2024-11-06T09:43",
+      "enddate": "2024-11-12T09:44",
+      "location": "ภาควิชาสังคมศาสตร์",
+      "machinenumber": "ไม่ใช้"
+    },
+    {
+      "id": "IT-S002-53",
+      "name": "พายุ กลีบบัว",
+      "identity": "บุคลากร",
+      "department": "ภาควิชาสังคมและสุขภาพ",
+      "tel": "1202",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ใช้สำหรับการเรียนการสอน",
+      "startdate": "2024-11-07T12:52",
+      "enddate": "2024-11-08T16:00",
+      "location": "ห้องศรีตรัง",
+      "machinenumber": [
+        {
+          "value": "10",
+          "label": "เครื่อง No. 10",
+          "id": "SH10"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-54",
+      "name": "วิศรุตา บุญปาลิต",
+      "identity": "บุคลากร",
+      "department": "ภาควิชาศึกษาศาสตร์",
+      "tel": "1331",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "สอบวิทยานิพนธ์ ป.เอก ประชากร",
+      "startdate": "2024-11-08T13:00",
+      "enddate": "2024-11-08T16:00",
+      "location": "ห้องประชุมภาควิชาศึกษาศาสตร์ อาคาร 3 ชั้น 2",
+      "machinenumber": [
+        {
+          "value": "2",
+          "label": "เครื่อง No. 2",
+          "id": "SH02"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-55",
+      "name": "ชัยพร รองทอง",
+      "identity": "บุคลากร",
+      "department": "ภาควิชาสังคมศาสตร์",
+      "tel": "094-4719354",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "สอบวิทยานิพนธ์ นายฐกฤต แก้วทับทิม",
+      "startdate": "2024-11-08T13:08",
+      "enddate": "2024-11-08T13:08",
+      "location": "ห้องประชุม ข้างห้องคณบดี ชั้น 2 ",
+      "machinenumber": [
+        {
+          "value": "5",
+          "label": "เครื่อง No. 5",
+          "id": "SH05"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-56",
+      "name": "วิศรุตา บุญปาลิต",
+      "identity": "บุคลากร",
+      "department": "ภาควิชาศึกษาศาสตร์",
+      "tel": "1331",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ประชุมภาควิชาศึกษาศาสตร์ ครั้งที่ 9/2567",
+      "startdate": "2024-11-12T10:00",
+      "enddate": "2024-11-12T12:00",
+      "location": "ห้องประชุมภาควิชาศึกษาศาสตร์ อาคาร 3 ชั้น 2",
+      "machinenumber": [
+        {
+          "value": "10",
+          "label": "เครื่อง No. 10",
+          "id": "SH10"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-57",
+      "name": "ศิริอร กลางสำโรง",
+      "identity": "บุคลากร",
+      "department": "ภาควิชาสังคมและสุขภาพ",
+      "tel": "1201",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "การสอบวัดคุณสมบัติ",
+      "startdate": "2024-11-12T09:00",
+      "enddate": "2024-11-12T12:28",
+      "location": "ห้องกระดังงา",
+      "machinenumber": [
+        {
+          "value": "6",
+          "label": "เครื่อง No. 6",
+          "id": "SH06"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-58",
+      "name": "ผศ.ดร. ดรุณี ภู่ขาว",
+      "identity": "อาจารย์",
+      "department": "ภาควิชาสังคมและสุขภาพ",
+      "tel": "1202",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ใช้สำหรับประชุม",
+      "startdate": "2024-11-12T09:00",
+      "enddate": "2024-11-12T16:00",
+      "location": "ห้องศรีตรัง",
+      "machinenumber": [
+        {
+          "value": "2",
+          "label": "เครื่อง No. 2",
+          "id": "SH02"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-59",
+      "name": "ธันยาพร ลักษณะ",
+      "identity": "บุคลากร",
+      "department": "งานบริหารทรัพยากรบุคคล",
+      "tel": "1110",
+      "machine": "2 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ประชุมคณะกรรมการสรรหาหัวหน้าภาควิชาสังคมและสุขภาพ",
+      "startdate": "2024-11-19T09:00",
+      "enddate": "2024-11-19T10:00",
+      "location": "ห้องประชุมข้างห้องคณบดี",
+      "machinenumber": [
+        {
+          "value": "1",
+          "label": "เครื่อง No. 1",
+          "id": "SH01"
+        },
+        {
+          "value": "3",
+          "label": "เครื่อง No. 3",
+          "id": "SH03"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-60",
+      "name": "พายุ กลีบบัว",
+      "identity": "บุคลากร",
+      "department": "ภาควิชาสังคมและสุขภาพ",
+      "tel": "1202",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ใช้สำหรับการเรียนการสอน",
+      "startdate": "2024-11-13T10:00",
+      "enddate": "2024-11-17T16:00",
+      "location": "ห้องประชุมศรีตรัง",
+      "machinenumber": [
+        {
+          "value": "6",
+          "label": "เครื่อง No. 6",
+          "id": "SH06"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-61",
+      "name": "วรรณวิมล สิทธิโชคสัมพันธ์",
+      "identity": "บุคลากร",
+      "department": "งานคลังและสินทรัพย์",
+      "tel": "1005",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ทำงาน",
+      "startdate": "2024-11-14T15:33",
+      "enddate": "2024-11-18T15:33",
+      "location": "คณะสังคมฯ",
+      "machinenumber": [
+        {
+          "value": "2",
+          "label": "เครื่อง No. 2",
+          "id": "SH02"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-62",
+      "name": "นางสาวธิดาพร บุญเม่น",
+      "identity": "บุคลากร",
+      "department": "งานยุทธศาสตร์แผนและงบประมาณ",
+      "tel": "1019",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ประชุมเตรียมงานคืนสู่้เหย้า",
+      "startdate": "2024-11-15T09:03",
+      "enddate": "2024-11-15T11:00",
+      "location": "Electric Library",
+      "machinenumber": [
+        {
+          "value": "10",
+          "label": "เครื่อง No. 10",
+          "id": "SH10"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-63",
+      "name": "ดารุณยา สติภา",
+      "identity": "บุคลากร",
+      "department": "งานบริหารการศึกษาและกิจการนักศึกษา",
+      "tel": "1122",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ประชุมงานคืนสู่เหย่าฝ่ายลงทะเบียน",
+      "startdate": "2024-11-15T11:08",
+      "enddate": "2024-11-15T16:00",
+      "location": "ห้องประชุมภาควิชาศึกษาศาสตร์",
+      "machinenumber": [
+        {
+          "value": "9",
+          "label": "เครื่อง No. 9",
+          "id": "SH09"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-64",
+      "name": "สุพัตรา เกียรติเลิศธรรม",
+      "identity": "บุคลากร",
+      "department": "เลขาคณบดี",
+      "tel": "1111",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ทำงาน",
+      "startdate": "2024-11-15T16:09",
+      "enddate": "2024-11-18T16:10",
+      "location": "-",
+      "machinenumber": [
+        {
+          "value": "9",
+          "label": "เครื่อง No. 9",
+          "id": "SH09"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-65",
+      "name": "ธันยาพร ลักษณะ",
+      "identity": "บุคลากร",
+      "department": "งานบริหารทรัพยากรบุคคล",
+      "tel": "1110",
+      "machine": "2 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ประชุมคณะกรรมการสรรหาหัวหน้าภาควิชาสังคมและสุขภาพ",
+      "startdate": "2567-12-09T13:00",
+      "enddate": "2567-12-09T16:00",
+      "location": "ห้องประชุมข้างห้องคณบดี",
+      "machinenumber": [
+        {
+          "value": "5",
+          "label": "เครื่อง No. 5",
+          "id": "SH05"
+        },
+        {
+          "value": "6",
+          "label": "เครื่อง No. 6",
+          "id": "SH06"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-66",
+      "name": "วิศรุตา บุญปาลิต",
+      "identity": "บุคลากร",
+      "department": "ภาควิชาศึกษาศาสตร์",
+      "tel": "1331",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ประชุมโครงการบริการวิชาการ ภาควิชาศึกษาศาสตร์ ครั้งที่1/2568",
+      "startdate": "2024-11-20T09:00",
+      "enddate": "2024-11-20T12:00",
+      "location": "ห้องภาควิชาศึกษาศาสตร์ (ใช้ที่โต๊ะทำงานของวิศรุตา)",
+      "machinenumber": [
+        {
+          "value": "2",
+          "label": "เครื่อง No. 2",
+          "id": "SH02"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-67",
+      "name": "พายุ กลีบบัว",
+      "identity": "บุคลากร",
+      "department": "ภาควิชาสังคมและสุขภาพ",
+      "tel": "1202",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "สอนนักศึกษา",
+      "startdate": "2024-11-21T09:00",
+      "enddate": "2024-11-22T16:00",
+      "location": "ห้องประชุมศรีตรัง",
+      "machinenumber": [
+        {
+          "value": "10",
+          "label": "เครื่อง No. 10",
+          "id": "SH10"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-68",
+      "name": "นางน้ำอ้อย  คำชื่น",
+      "identity": "บุคลากร",
+      "department": "ภาควิชาสังคมศาสตร์",
+      "tel": "1260",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "จัดทำเอกสารค่าสอนในหลักสูตรฯ",
+      "startdate": "2024-11-21T13:51",
+      "enddate": "2024-11-30T13:52",
+      "location": "ภาควิชาส้งคมศาสตร์",
+      "machinenumber": [
+        {
+          "value": "6",
+          "label": "เครื่อง No. 6",
+          "id": "SH06"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-69",
+      "name": "วิศรุตา บุญปาลิต",
+      "identity": "บุคลากร",
+      "department": "ภาควิชาศึกษาศาสตร์",
+      "tel": "1331",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ทำรายงานการประชุม",
+      "startdate": "2024-11-22T16:00",
+      "enddate": "2024-11-25T16:30",
+      "location": "ภาควิชาศึกษาศาสตร์/ที่อยู่อาศัย",
+      "machinenumber": [
+        {
+          "value": "3",
+          "label": "เครื่อง No. 3",
+          "id": "SH03"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-70",
+      "name": "ศินาลักษณ์ จิตบวรรัตน์",
+      "identity": "บุคลากร",
+      "department": "งานบริหารการศึกษาและกิจการนักศึกษา",
+      "tel": "1215",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "สัมภาษณ์ทุน 55 ปีวันคล้ายวันสภาปนาคณะสังคมศาสตร์และมนุษย์ศาสตร์",
+      "startdate": "2024-11-25T09:00",
+      "enddate": "2024-11-25T00:00",
+      "location": "ห้องประชุมข้างห้องการเงิน",
+      "machinenumber": [
+        {
+          "value": "4",
+          "label": "เครื่อง No. 4",
+          "id": "SH04"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-71",
+      "name": "อ.ดร.ลภัสรดา จิตวารินทร์",
+      "identity": "อาจารย์",
+      "department": "ภาควิชาศึกษาศาสตร์",
+      "tel": "0815516353",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ประชุมประเมินผลการทดลองปฏิบัติงานของ น.ส.วิศรุตา บุญปาลิต",
+      "startdate": "2024-11-25T11:23",
+      "enddate": "2024-11-25T13:30",
+      "location": "ห้องประชุมฟอร์ด",
+      "machinenumber": [
+        {
+          "value": "2",
+          "label": "เครื่อง No. 2",
+          "id": "SH02"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-72",
+      "name": "ศิริอร กลางสำโรง",
+      "identity": "บุคลากร",
+      "department": "ภาควิชาสังคมและสุขภาพ",
+      "tel": "1201",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "การสอบ",
+      "startdate": "2024-11-25T12:00",
+      "enddate": "2024-11-26T17:30",
+      "location": "ห้องกระดังงา",
+      "machinenumber": [
+        {
+          "value": "10",
+          "label": "เครื่อง No. 10",
+          "id": "SH10"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-73",
+      "name": "พายุ กลีบบัว",
+      "identity": "บุคลากร",
+      "department": "ภาควิชาสังคมและสุขภาพ",
+      "tel": "1202",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ใช้สำหรับการเรียนการสอน",
+      "startdate": "2024-11-28T09:00",
+      "enddate": "2024-11-26T09:00",
+      "location": "ห้องศรีตรัง",
+      "machinenumber": [
+        {
+          "value": "2",
+          "label": "เครื่อง No. 2",
+          "id": "SH02"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-74",
+      "name": "พัชรา กลิ่นเปี่ยม",
+      "identity": "บุคลากร",
+      "department": "ภาควิชาศึกษาศาสตร์",
+      "tel": "1333",
+      "machine": "1 เครื่อง",
+      "stereo": "3",
+      "wirelessmic": "3",
+      "voicerec": "1",
+      "objective": "ประชุมภาคววิชาศึกษาศาสตร์",
+      "startdate": "2024-12-03T09:00",
+      "enddate": "2024-12-03T12:00",
+      "location": "ห้องประชุมภาควิชาศึกษาศาสตร์",
+      "machinenumber": [
+        {
+          "value": "1",
+          "label": "เครื่อง No. 1",
+          "id": "SH01"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-75",
+      "name": "นางสาวสุพัตรา เกียรติเลิศธรรม",
+      "identity": "บุคลากร",
+      "department": "เลขาคณบดี",
+      "tel": "1111",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ทำงาน",
+      "startdate": "2024-11-29T14:46",
+      "enddate": "2024-12-02T14:46",
+      "location": "-",
+      "machinenumber": [
+        {
+          "value": "3",
+          "label": "เครื่อง No. 3",
+          "id": "SH03"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-76",
+      "name": "ชลธิชา ดิษฐเกษร",
+      "identity": "บุคลากร",
+      "department": "งานบริหารการศึกษาและกิจการนักศึกษา",
+      "tel": "1215",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ประชุม",
+      "startdate": "2024-12-02T09:33",
+      "enddate": "2024-12-02T09:34",
+      "location": "ห้องประชุมข้างห้องการเงิน",
+      "machinenumber": [
+        {
+          "value": "1",
+          "label": "เครื่อง No. 1",
+          "id": "SH01"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-77",
+      "name": "น้ำอ้อย  คำชื่น",
+      "identity": "บุคลากร",
+      "department": "ภาควิชาสังคมศาสตร์",
+      "tel": "1260",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "พิมพ์เอกสารงานหลักสูตรฯ",
+      "startdate": "2024-12-03T11:26",
+      "enddate": "2024-12-13T11:27",
+      "location": "ภาควิชาส้งคมศาสตร์",
+      "machinenumber": [
+        {
+          "value": "6",
+          "label": "เครื่อง No. 6",
+          "id": "SH06"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-78",
+      "name": "อจ.สุธรรม เชื้อประกอบกิจ",
+      "identity": "อาจารย์",
+      "department": "งานบริหารและส่งเสริมการวิจัยและบริการวิชาการ",
+      "tel": "0000",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "วิจัย",
+      "startdate": "2024-12-09T16:01",
+      "enddate": "2024-12-13T16:01",
+      "location": "คณะสังคม",
+      "machinenumber": [
+        {
+          "value": "1",
+          "label": "เครื่อง No. 1",
+          "id": "SH01"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-79",
+      "name": "ธันยาพร ลักษณะ",
+      "identity": "บุคลากร",
+      "department": "งานบริหารทรัพยากรบุคคล",
+      "tel": "1110",
+      "machine": "2 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ประชุมคณะกรรมการสรรหาหัวหน้าภาควิชาสังคมและสุขภาพ",
+      "startdate": "2025-01-13T14:00",
+      "enddate": "2025-01-13T16:00",
+      "location": "ห้องประชุมข้างห้องคณบดี ชั้น 2 อาคาร 1",
+      "machinenumber": [
+        {
+          "value": "2",
+          "label": "เครื่อง No. 2",
+          "id": "SH02"
+        },
+        {
+          "value": "4",
+          "label": "เครื่อง No. 4",
+          "id": "SH04"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-80",
+      "name": "เบญจมาศ บุญบวรพานิชกุล",
+      "identity": "บุคลากร",
+      "department": "งานบริหารทรัพยากรบุคคล",
+      "tel": "1006",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ประชุม",
+      "startdate": "2024-12-12T15:26",
+      "enddate": "2024-12-13T15:26",
+      "location": "ห้องประชุมภาคศึกษา",
+      "machinenumber": [
+        {
+          "value": "10",
+          "label": "เครื่อง No. 10",
+          "id": "SH10"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-81",
+      "name": "น้ำอ้อย  คำชื่น",
+      "identity": "บุคลากร",
+      "department": "ภาควิชาสังคมศาสตร์",
+      "tel": "1260",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "พิมพ์เอกสารงานหลักสูตรฯ",
+      "startdate": "2024-12-17T10:58",
+      "enddate": "2024-12-25T10:58",
+      "location": "ภาควิชาสังคมศาสตร์",
+      "machinenumber": [
+        {
+          "value": "7",
+          "label": "เครื่อง No. 7",
+          "id": "SH07"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-82",
+      "name": "สุพัตรา เกียรติเลิศธรรม",
+      "identity": "บุคลากร",
+      "department": "เลขาคณบดี",
+      "tel": "111",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ประชุม",
+      "startdate": "2024-12-17T13:30",
+      "enddate": "2024-12-17T15:30",
+      "location": "ห้องประชุมศูนย์จีนฯ ",
+      "machinenumber": [
+        {
+          "value": "10",
+          "label": "เครื่อง No. 10",
+          "id": "SH10"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-83",
+      "name": "วิศรุตา บุญปาลิต",
+      "identity": "บุคลากร",
+      "department": "ภาควิชาศึกษาศาสตร์",
+      "tel": "1331",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "สอบสัมภาษณ์นักศึกษา ป.โท การจัดการการกีฬา",
+      "startdate": "2024-12-17T13:00",
+      "enddate": "2024-12-17T15:00",
+      "location": "ห้องประชุมภาควิชาศึกษาศาสตร์ อาคาร 3 ชั้น 2",
+      "machinenumber": [
+        {
+          "value": "6",
+          "label": "เครื่อง No. 6",
+          "id": "SH06"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-84",
+      "name": "พัชรา กลิ่นเปี่ยม",
+      "identity": "บุคลากร",
+      "department": "ภาควิชาศึกษาศาสตร์",
+      "tel": "1333",
+      "machine": "1 เครื่อง",
+      "stereo": "1",
+      "wirelessmic": "3",
+      "voicerec": "ไม่ใช้",
+      "objective": "ประชุมภาคศึกษาศาสตร์กับรองศาสตราจารย์ ดร. สมศักดิ์ อมรสิริพงศ์ รองคณบดีฝ่ายการศึกษาและพัฒนาการเรียนรู้",
+      "startdate": "2024-12-19T13:00",
+      "enddate": "2024-12-19T15:00",
+      "location": "ห้องประชุมภาคศึกษาศาสตร์",
+      "machinenumber": [
+        {
+          "value": "2",
+          "label": "เครื่อง No. 2",
+          "id": "SH02"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-84",
+      "name": "วรรณวิมล สิทธิโชคสัมพันธ์",
+      "identity": "บุคลากร",
+      "department": "งานคลังและสินทรัพย์",
+      "tel": "1005",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "จัดทำเงินเดือน",
+      "startdate": "2024-12-27T16:16",
+      "enddate": "2025-01-02T16:17",
+      "location": "work from home",
+      "machinenumber": [
+        {
+          "value": "10",
+          "label": "เครื่อง No. 10",
+          "id": "SH10"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-86",
+      "name": "อาจารย์ ดร. ลภัสรดา จิตวารินทร์",
+      "identity": "อาจารย์",
+      "department": "ภาควิชาศึกษาศาสตร์",
+      "tel": "1331",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "การเรียนการสอนวิชาของอาจารย์ ดร. ลภัสรดา จิตวารินทร์",
+      "startdate": "2025-01-15T09:00",
+      "enddate": "2025-01-15T12:00",
+      "location": "ห้องประชุมทองกวาว อาคาร 3 ชั้น 2",
+      "machinenumber": [
+        {
+          "value": "7",
+          "label": "เครื่อง No. 7",
+          "id": "SH07"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-87",
+      "name": "ปรียาวดี ธีรานุวัตร",
+      "identity": "บุคลากร",
+      "department": "งานบริหารทรัพยากรบุคคล",
+      "tel": "1003",
+      "machine": "1 เครื่อง",
+      "stereo": "1",
+      "wirelessmic": "2",
+      "voicerec": "ไม่ใช้",
+      "objective": "จัดกิจกรรมตลาดนนทรี Market",
+      "startdate": "2025-02-05T09:00",
+      "enddate": "2025-02-05T14:00",
+      "location": "ลานนนทรี คณะสังคมศาสตร์และมนุษยศาสตร์",
+      "machinenumber": [
+        {
+          "value": "2",
+          "label": "เครื่อง No. 2",
+          "id": "SH02"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-88",
+      "name": "นางน้ำอ้อย  คำชื่น",
+      "identity": "บุคลากร",
+      "department": "ภาควิชาสังคมศาสตร์",
+      "tel": "1260",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "พิมพ์เอกสารของหลักสูตรฯ",
+      "startdate": "2025-01-16T14:32",
+      "enddate": "2025-01-30T14:32",
+      "location": "ภาควิชาสังคมศาสตร์",
+      "machinenumber": [
+        {
+          "value": "7",
+          "label": "เครื่อง No. 7",
+          "id": "SH07"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-89",
+      "name": "วิศรุตา บุญปาลิต",
+      "identity": "บุคลากร",
+      "department": "ภาควิชาศึกษาศาสตร์",
+      "tel": "1331",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ประชุมโครงการบริการวิชาการ ครั้งที่2/2568",
+      "startdate": "2025-01-21T09:00",
+      "enddate": "2025-01-21T12:00",
+      "location": "ห้องประชุมผกากรอง อาคาร 3 ชั้น 2",
+      "machinenumber": [
+        {
+          "value": "10",
+          "label": "เครื่อง No. 10",
+          "id": "SH10"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-90",
+      "name": "ปรียาวดี ธีรานุวัตร",
+      "identity": "บุคลากร",
+      "department": "งานบริหารทรัพยากรบุคคล",
+      "tel": "1003",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ประชุมขอตำแหน่งทางวิชาการ",
+      "startdate": "2025-01-21T13:30",
+      "enddate": "2025-01-21T16:00",
+      "location": "ห้องประชุม (ฝั่งห้องการเงิน) อาคาร 3 ชั้น 1",
+      "machinenumber": [
+        {
+          "value": "2",
+          "label": "เครื่อง No. 2",
+          "id": "SH02"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-91",
+      "name": "ปรียาวดี ธีรานุวัตร",
+      "identity": "บุคลากร",
+      "department": "งานบริหารทรัพยากรบุคคล",
+      "tel": "1003",
+      "machine": "1 เครื่อง",
+      "stereo": "1",
+      "wirelessmic": "2",
+      "voicerec": "ไม่ใช้",
+      "objective": "โครงการปลูกผักปักสุข",
+      "startdate": "2025-02-26T09:00",
+      "enddate": "2025-02-26T14:00",
+      "location": "ลานนนทรี ",
+      "machinenumber": [
+        {
+          "value": "3",
+          "label": "เครื่อง No. 3",
+          "id": "SH03"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-92",
+      "name": "ชลธิชา ดิษฐเกษร",
+      "identity": "อาจารย์",
+      "department": "งานบริหารการศึกษาและกิจการนักศึกษา",
+      "tel": "1215",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ประชุมพัฒนาหลักสูตรนิติศาสตร์",
+      "startdate": "2025-01-28T15:00",
+      "enddate": "2025-01-28T17:00",
+      "location": "ห้องประชุมข้างห้องการเงิน",
+      "machinenumber": [
+        {
+          "value": "4",
+          "label": "เครื่อง No. 4",
+          "id": "SH04"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-93",
+      "name": "ปรียาวดี ธีรานุวัตร",
+      "identity": "บุคลากร",
+      "department": "งานบริหารทรัพยากรบุคคล",
+      "tel": "1003",
+      "machine": "2 เครื่อง",
+      "stereo": "1",
+      "wirelessmic": "4",
+      "voicerec": "ไม่ใช้",
+      "objective": "โครงการ CEC รุ่นที่ 2",
+      "startdate": "2025-03-27T13:00",
+      "enddate": "2025-03-27T16:00",
+      "location": "ห้อง 508",
+      "machinenumber": [
+        {
+          "value": "5",
+          "label": "เครื่อง No. 5",
+          "id": "SH05"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-94",
+      "name": "ธันยาพร ลักษณะ",
+      "identity": "บุคลากร",
+      "department": "งานบริหารทรัพยากรบุคคล",
+      "tel": "1110",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ประชุมคณะกรรมการรับรองการเผยแพร่ฯ",
+      "startdate": "2025-02-18T13:00",
+      "enddate": "2025-02-18T16:00",
+      "location": "ห้องประชุมข้างห้องการเงิน",
+      "machinenumber": [
+        {
+          "value": "6",
+          "label": "เครื่อง No. 6",
+          "id": "SH06"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-95",
+      "name": "วราภรณ์ รุจิระวาณิชย์",
+      "identity": "บุคลากร",
+      "department": "งานคลังและสินทรัพย์",
+      "tel": "1118",
+      "machine": "2 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ใช้อบรม",
+      "startdate": "2025-02-11T14:36",
+      "enddate": "2025-02-17T14:36",
+      "location": "สิทธาคาร มหาวิทยาลัยมหิดล",
+      "machinenumber": [
+        {
+          "value": "2",
+          "label": "เครื่อง No. 2",
+          "id": "SH02"
+        },
+        {
+          "value": "6",
+          "label": "เครื่อง No. 6",
+          "id": "SH06"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-96",
+      "name": "ธันยาพร ลักษณะ",
+      "identity": "บุคลากร",
+      "department": "งานบริหารทรัพยากรบุคคล",
+      "tel": "1110",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "กิจกรรมผู้บริหารพบบุคลากรใหม่ฯ",
+      "startdate": "2568-04-21T09:00",
+      "enddate": "2568-04-21T12:00",
+      "location": "ห้องประชุมกันภัยมหิดล",
+      "machinenumber": [
+        {
+          "value": "2",
+          "label": "เครื่อง No. 2",
+          "id": "SH02"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-97",
+      "name": "นางดาระวี เหลืองไพโรจน์",
+      "identity": "บุคลากร",
+      "department": "งานส่งเสริมการศึกษาแบบยืดหยุ่นและพัฒนาทักษะ",
+      "tel": "1121",
+      "machine": "2 เครื่อง",
+      "stereo": "1",
+      "wirelessmic": "3",
+      "voicerec": "ไม่ใช้",
+      "objective": "จัดงานโครงการขับเคลื่อนมาตรฐานหลักสูตรตามเกณฑ์ AUN-QA “การเรียนรู้และเข้าใจเกณฑ์ AUN-QA Criteria Version 4.0”",
+      "startdate": "2025-02-21T10:00",
+      "enddate": "2025-02-24T16:30",
+      "location": "อาคาร 4 ชั้น 5 ห้อง 508",
+      "machinenumber": [
+        {
+          "value": "9",
+          "label": "เครื่อง No. 9",
+          "id": "SH09"
+        },
+        {
+          "value": "8",
+          "label": "เครื่อง No. 8",
+          "id": "SH08"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-98",
+      "name": "ดาระวี เหลืองไพโรจน์",
+      "identity": "บุคลากร",
+      "department": "งานส่งเสริมการศึกษาแบบยืดหยุ่นและพัฒนาทักษะ",
+      "tel": "1121",
+      "machine": "2 เครื่อง",
+      "stereo": "1",
+      "wirelessmic": "3",
+      "voicerec": "ไม่ใช้",
+      "objective": "จัดโครงการขับเคลื่อนมาตรฐานหลักสูตรตามเกณฑ์ AUN-QA “การเรียนรู้และเข้าใจเกณฑ์ AUN-QA Criteria Version 4.0”",
+      "startdate": "2025-02-21T10:00",
+      "enddate": "2025-02-24T16:30",
+      "location": "ห้อง 508 อาคาร 4 ชั้น 5",
+      "machinenumber": [
+        {
+          "value": "8",
+          "label": "เครื่อง No. 8",
+          "id": "SH08"
+        },
+        {
+          "value": "7",
+          "label": "เครื่อง No. 7",
+          "id": "SH07"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-99",
+      "name": "ดารุณยา สติภา",
+      "identity": "บุคลากร",
+      "department": "งานบริหารการศึกษาและกิจการนักศึกษา",
+      "tel": "0873423746",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "แก้ไขเอกสานหลักสูตร",
+      "startdate": "2025-02-19T10:05",
+      "enddate": "2025-02-19T16:30",
+      "location": "ห้องประชุมข้างห้องการเงิน",
+      "machinenumber": [
+        {
+          "value": "4",
+          "label": "เครื่อง No. 4",
+          "id": "SH04"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-100",
+      "name": "ชลธิชา ดิษฐเกษร",
+      "identity": "บุคลากร",
+      "department": "งานบริหารการศึกษาและกิจการนักศึกษา",
+      "tel": "1215",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ประชุม",
+      "startdate": "2025-02-24T10:30",
+      "enddate": "2025-02-24T00:30",
+      "location": "ห้อง 309",
+      "machinenumber": [
+        {
+          "value": "7",
+          "label": "เครื่อง No. 7",
+          "id": "SH07"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-101",
+      "name": "วิศรุตา บุญปาลิต",
+      "identity": "บุคลากร",
+      "department": "ภาควิชาศึกษาศาสตร์",
+      "tel": "1331",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "สอบวิทยานิพนธ์ ป.เอก ประชากรฯ",
+      "startdate": "2025-03-25T09:00",
+      "enddate": "2025-03-25T00:00",
+      "location": "ห้องประชุมภาควิชาศึกษาศาสตร์ อาคาร 3 ชั้น 2",
+      "machinenumber": [
+        {
+          "value": "6",
+          "label": "เครื่อง No. 6",
+          "id": "SH06"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-102",
+      "name": "น้ำอ้อย  คำชื่น",
+      "identity": "บุคลากร",
+      "department": "ภาควิชาสังคมศาสตร์",
+      "tel": "1260",
+      "machine": "ไม่ใช้",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "พิมพ์เอกสาร",
+      "startdate": "2025-03-07T12:10",
+      "enddate": "2025-03-14T12:10",
+      "location": "ภาควิชาสังคมศาสตร์",
+      "machinenumber": [
+        {
+          "value": "7",
+          "label": "เครื่อง No. 7",
+          "id": "SH07"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-103",
+      "name": "สุพัตรา เกียรติเลิศธรรม",
+      "identity": "บุคลากร",
+      "department": "เลขาคณบดี",
+      "tel": "1111",
+      "machine": "3 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ประชุม",
+      "startdate": "2025-03-10T14:00",
+      "enddate": "2025-03-10T16:00",
+      "location": "ห้องกันภัย",
+      "machinenumber": [
+        {
+          "value": "3",
+          "label": "เครื่อง No. 3",
+          "id": "SH02"
+        },
+        {
+          "value": "4",
+          "label": "เครื่อง No. 4",
+          "id": "SH04"
+        },
+        {
+          "value": "9",
+          "label": "เครื่อง No. 9",
+          "id": "SH09"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-104",
+      "name": "ดาระวี เหลืองไพโรจน์",
+      "identity": "บุคลากร",
+      "department": "งานส่งเสริมการศึกษาแบบยืดหยุ่นและพัฒนาทักษะ",
+      "tel": "1121",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ประชุม mini MBA",
+      "startdate": "2025-03-14T13:40",
+      "enddate": "2025-03-14T16:30",
+      "location": "ห้องประชุมข้างห้องการเงิน",
+      "machinenumber": [
+        {
+          "value": "4",
+          "label": "เครื่อง No. 4",
+          "id": "SH04"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-105",
+      "name": "ดาระวี เหลืองไพโรจน์",
+      "identity": "บุคลากร",
+      "department": "งานส่งเสริมการศึกษาแบบยืดหยุ่นและพัฒนาทักษะ",
+      "tel": "1121",
+      "machine": "1 เครื่อง",
+      "stereo": "1",
+      "wirelessmic": "2",
+      "voicerec": "ไม่ใช้",
+      "objective": "โครงการขับเคลื่อนมาตรฐานหลักสูตรตามเกณฑ์ AUN-QA “การเขียนรายงานการประเมินตนเองตามเกณฑ์ AUN-QA Criteria Version 4.0” วันพุธที่ 26 มีนาคม พ.ศ. 2568 หมายเหตุ: ขอยืมคอมพิวเตอร์ 5 เครื่อง",
+      "startdate": "2025-03-25T13:00",
+      "enddate": "2025-03-26T16:30",
+      "location": "ห้อง 508 อาคาร 4 ชั้น 5 คณะสังคมศาสตร์และมนุษยศาสตร์ มหาวิทยาลัยมหิดล ",
+      "machinenumber": [
+        {
+          "value": "9",
+          "label": "เครื่อง No. 9",
+          "id": "SH09"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-106",
+      "name": "ปานชีวา เปี้ยปลูก",
+      "identity": "บุคลากร",
+      "department": "งานบริหารทรัพยากรบุคคล",
+      "tel": "1013",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ประชุมทดลองงาน",
+      "startdate": "2025-03-18T08:30",
+      "enddate": "2025-03-18T09:05",
+      "location": "ห้องประชุมภาคศึกษาศาสตร์",
+      "machinenumber": [
+        {
+          "value": "10",
+          "label": "เครื่อง No. 10",
+          "id": "SH10"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-107",
+      "name": "ณภาส์ณัฐ คงคารัตน์",
+      "identity": "บุคลากร",
+      "department": "งานยุทธศาสตร์แผนและงบประมาณ",
+      "tel": "1515",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ประชุม",
+      "startdate": "2025-03-18T13:30",
+      "enddate": "2025-03-18T14:00",
+      "location": "ห้องประชุมข้างห้องการเงิน",
+      "machinenumber": [
+        {
+          "value": "4",
+          "label": "เครื่อง No. 4",
+          "id": "SH04"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-108",
+      "name": "ศินาลักษณ์ จิตบวรรัตน์",
+      "identity": "บุคลากร",
+      "department": "งานบริหารการศึกษาและกิจการนักศึกษา",
+      "tel": "1215",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ประชุมโครงการเสริมสร้างจิตสำนึกของนักศึกษาและบุคลากรกับสังคม",
+      "startdate": "2025-03-18T16:00",
+      "enddate": "2025-03-18T18:00",
+      "location": "ห้องกันภัย",
+      "machinenumber": [
+        {
+          "value": "3",
+          "label": "เครื่อง No. 3",
+          "id": "SH02"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-109",
+      "name": "นางสาวธิดาพร บุญเม่น",
+      "identity": "บุคลากร",
+      "department": "งานยุทธศาสตร์แผนและงบประมาณ",
+      "tel": "1019",
+      "machine": "10 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ใช้ประกอบฉากถ่ายวีดิทัศน์คณะฯ",
+      "startdate": "2025-03-24T09:30",
+      "enddate": "2025-03-24T12:00",
+      "location": "ห้องประชุมศูนย์จีน",
+      "machinenumber": [
+        {
+          "value": "4",
+          "label": "เครื่อง No. 4",
+          "id": "SH04"
+        },
+        {
+          "value": "8",
+          "label": "เครื่อง No. 8",
+          "id": "SH08"
+        },
+        {
+          "value": "9",
+          "label": "เครื่อง No. 9",
+          "id": "SH09"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-110",
+      "name": "นางสาวธิดาพร บุญเม่น",
+      "identity": "บุคลากร",
+      "department": "งานยุทธศาสตร์แผนและงบประมาณ",
+      "tel": "1019",
+      "machine": "ไม่ใช้",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ประกอบฉากถ่ายวีดิทัศน์คณะฯ ",
+      "startdate": "2025-03-24T09:00",
+      "enddate": "2025-03-24T12:00",
+      "location": "ห้องประชุมศูนย์จีนฯ",
+      "machinenumber": [
+        {
+          "value": "4",
+          "label": "เครื่อง No. 4",
+          "id": "SH04"
+        },
+        {
+          "value": "8",
+          "label": "เครื่อง No. 8",
+          "id": "SH08"
+        },
+        {
+          "value": "9",
+          "label": "เครื่อง No. 9",
+          "id": "SH09"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-106",
+      "name": "ฆนัสวัน ทามณี",
+      "identity": "บุคลากร",
+      "department": "งานยุทธศาสตร์แผนและงบประมาณ",
+      "tel": "1000",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ประชุมเตรียมงาน USR",
+      "startdate": "2025-03-20T10:00",
+      "enddate": "2025-03-20T16:30",
+      "location": "คณะสังคมฯ ข้างห้องการเงิน ",
+      "machinenumber": [
+        {
+          "value": "4",
+          "label": "เครื่อง No. 4",
+          "id": "SH04"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-112",
+      "name": "ชวลิต นุชเจริญ",
+      "identity": "บุคลากร",
+      "department": "งานบริหารทั่วไป",
+      "tel": "1112",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "งานประชุม , เขียนแบบ",
+      "startdate": "2025-03-20T10:00",
+      "enddate": "2025-03-20T16:00",
+      "location": "คณะสังคมฯ",
+      "machinenumber": [
+        {
+          "value": "8",
+          "label": "เครื่อง No. 8",
+          "id": "SH08"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-113",
+      "name": "นางสาวธิดาพร บุญเม่น",
+      "identity": "บุคลากร",
+      "department": "งานยุทธศาสตร์แผนและงบประมาณ",
+      "tel": "0831677228",
+      "machine": "1 เครื่อง",
+      "stereo": "1",
+      "wirelessmic": "1",
+      "voicerec": "ไม่ใช้",
+      "objective": "ประชุมโครงการ SH Junior Guide 2025",
+      "startdate": "2568-03-24T08:30",
+      "enddate": "2568-03-24T23:00",
+      "location": "ห้องประชุมภาควิชาศึกษาศาสตร์ ",
+      "machinenumber": [
+        {
+          "value": "4",
+          "label": "เครื่อง No. 4",
+          "id": "SH04"
+        }
+      ]
     }
   ]
 }

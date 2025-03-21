@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import './App.css'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import CreatableSelect from "react-select/creatable";
+import { Modal, Button } from '@mui/material';
 
 function Table() {
     // const ip = '10.12.3.100';
@@ -28,32 +29,38 @@ function Table() {
     const [pendingData, setPendingData] = useState([]);
     const [staffName, setStaffName] = useState(''); // Staff identifier
     const [phpusers, setPhpusers] = useState([]); // Phpusers
+    const [selectedRow, setSelectedRow] = useState(null);
+    const [open, setOpen] = useState(false);
 
     useEffect(()=>{
         axios.get(`http://${ip}:3000/users`)
-        // axios.get(`http://localhost:3000/users`)
+        // axios.get(`http://localhost:3000/users?timestamp=${new Date().getTime()}`)
         .then(res => {
-            console.log("API response:", res.data); // Log the API response
+            console.log("API users response:", res.data); // Log the API response
             setData(res.data || []);
         })
         .catch(er => console.log(er));
     }, [])
     useEffect(()=>{
-        axios.get(`http://${ip}:3000/machines`)
+        const interval = setInterval(() => {
+        axios.get(`http://${ip}:3000/machines?timestamp=${new Date().getTime()}`)
         // axios.get(`http://localhost:3000/machines`)
         .then(res => {
+            console.log("API machines response:", res.data); // Log the API response
             const sortedMachines = res.data.sort((a, b) => a.value - b.value);
             setMachines(sortedMachines);
         })
         .catch(er => console.log(er));
+        }, 5000);
+        return () => clearInterval(interval);
     }, [])
     useEffect(() => {
-        axios.get(`http://${ip}:3000/pending`)
+        axios.get(`http://${ip}:3000/pending?timestamp=${new Date().getTime()}`)
             .then(res => setPendingData(res.data))
             .catch(er => console.log(er));
     }, []);
     useEffect(()=>{
-        axios.get(`http://${ip}:4000/usersreport`)
+        axios.get(`http://${ip}:4000/usersreport?timestamp=${new Date().getTime()}`)
         .then(res => setReport(res.data))
         .catch(er => console.log(er));
     }, [])
@@ -100,18 +107,16 @@ function Table() {
         console.log('handleChange', selectedOption);
       };
     
-    //   const handleInputChange = (inputValue) => {
-    //     console.log('handleInputChange', inputValue);
-    //   };
-    const sendLineNotification = async (message) => {
-        axios.post(`http://${ip}:3001/send-line-notification`, { message })
-            .then(() => {
-                console.log('LINE notification sent');
-            })
-            .catch(error => {
-                console.error('Error sending LINE notification:', error);
-            });
-    };
+    
+    // const sendLineNotification = async (message) => {
+    //     axios.post(`http://${ip}:3001/send-line-notification`, { message })
+    //         .then(() => {
+    //             console.log('LINE notification sent');
+    //         })
+    //         .catch(error => {
+    //             console.error('Error sending LINE notification:', error);
+    //         });
+    // };
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -157,6 +162,18 @@ function Table() {
                 console.error('Error deleting machine:', error);
             });
     }
+    
+    const userId = 'Cb2a1552898264bd93d1983061cd67af1'; // Replace with the actual user ID
+  // Function to send LINE notification
+  const sendLineNotification = async (userId, message) => {
+    try {
+      await axios.post(`http://${ip}:3050/send-line-message`, { userId, message });
+      console.log('LINE notification sent');
+    } catch (error) {
+      console.error('Error sending LINE notification:', error);
+    }
+  };
+  
 
     const handleApprove = (pendingId) => {
         const approvedItem = pendingData.find(item => item.id === pendingId);
@@ -169,13 +186,14 @@ function Table() {
             //     return axios.post(`http://${ip}:4000/usersreport`, approvedData);
             // })
             .then(() => {
-                return axios.delete(`http://${ip}:3000/pending/${pendingId}`);
+                axios.delete(`http://${ip}:3000/pending/${pendingId}`);
             })
             .then(() => {
                 console.log('Approved and moved to users');
                 setPendingData(pendingData.filter(item => item.id !== pendingId));
                  // Send LINE notification
-                sendLineNotification(`Request by ${approvedData.name} has been approved by ${staffName}.`);
+                sendLineNotification(userId, `มีการยืมโดย ${approvedData.name} จำนวน ${approvedData.machine} has been approved by ${staffName}.`);
+                // window.location.reload(true);
             })
             .catch(er => console.log(er));
     };
@@ -220,6 +238,14 @@ function Table() {
             .catch(error => console.log(error));
     };
     
+    const handleOpen = (row) => {
+        setSelectedRow(row); // Set the selected row data
+        setOpen(true); // Open the modal
+      };
+    
+      const handleClose = () => {
+        setOpen(false); // Close the modal
+      };
 
     return (
         <><div className='titleForm'>
@@ -260,6 +286,8 @@ function Table() {
                             <option value="งานบริหารการศึกษาและกิจการนักศึกษา">งานบริหารการศึกษาและกิจการนักศึกษา</option>
                             <option value="งานส่งเสริมการศึกษาแบบยืดหยุ่นและพัฒนาทักษะ">งานส่งเสริมการศึกษาแบบยืดหยุ่นและพัฒนาทักษะ</option>
                             <option value="สำนักงานบูรณาการวิชาการเพื่อสังคม">สำนักงานบูรณาการวิชาการเพื่อสังคม</option>
+                            <option value="งานวิเทศสัมพันธ์">งานวิเทศสัมพันธ์</option>
+                            <option value="เลขาคณบดี">[เลขา]คณบดีและผู้บริหาร</option>
                         </select>
                         </label>
                         <label className='righttitleTel' style={{ color: 'black' }}>
@@ -390,7 +418,10 @@ function Table() {
                     </div>
                     <div>
                     <label className='borrowBtn'>
-                    <button disabled={location === ''||enddate === ''}>ยืม</button>
+                        <div className="tooltip">
+                            <button disabled={name === '' ||identity === ''||department === ''||tel === ''|| machine === ''||stereo === ''||wirelessmic === ''||voicerec === ''||objective === ''||startdate === ''||location === ''||enddate === ''||selectedOption === 'ไม่ใช้' ||selectedOption === ''}>ยืม</button>
+                                <span className="tooltiptext">กรอกครบยังสุดสวย</span>
+                        </div>
                     </label>
                     </div>
                 </form>
@@ -414,24 +445,43 @@ function Table() {
                             <td>{item.id}</td>
                             <td>{item.name}</td>
                             <td>
-                                Staff Name:
+                                ชื่อ:
                                     <select value={staffName} onChange={(e) => setStaffName(e.target.value)}>
-                                    <option value="" disabled>Select Staff Name</option>
+                                    <option value="" disabled>เจ้าหน้าที่</option>
                                     
-                                    <option key="1" value="สราวุฒิ สุขเกลอ">สราวุฒิ สุขเกลอ</option>,
-                                    <option key="2" value="ชวลิต นุชเจริญ">ชวลิต นุชเจริญ</option>,
-                                    <option key="3" value="สิทธิพจน์ บุญเสริมสุข">สิทธิพจน์ บุญเสริมสุข</option>,
-                                    <option key="3" value="ธัญพจน์ ไตรเกษมศักดิ์">ธัญพจน์ ไตรเกษมศักดิ์</option>,
+                                    <option key="1" value="สราวุฒิ สุขเกลอ">สราวุฒิ สุขเกลอ</option>
                                     </select>
                             </td>
                             <td>
                                 <button onClick={() => handleApprove(item.id)} disabled={staffName === ''}>Approve</button>
                                 <button onClick={() => handleReject(item.id)}>Reject</button>
                             </td>
+                            <td>
+                                <Button variant="contained" onClick={() => handleOpen(item)}>
+                                      ดู รายละเอียด
+                                </Button>
+                            </td>
                         </tr>
                     ))}
                 </tbody>
             </table>
+            <Modal open={open} onClose={handleClose}>
+                 <div style={{ padding: '20px', background: 'white', borderRadius: '10px' }}>
+                    {selectedRow && (
+                          <div>
+                           <h2>Information for ID: {selectedRow.id}</h2>
+                           <p><strong>ชื่อ:</strong> {selectedRow.name}</p>
+                           <p><strong>หน่วยงาน:</strong> {selectedRow.department}</p>
+                           <p><strong>โทร:</strong> {selectedRow.tel}</p>
+                           <p><strong>โน๊ตบุ๊คจำนวน:</strong> {selectedRow.machine}</p>
+                           <p><strong>โน๊ตบุ๊คเบอร์:</strong> {Array.isArray(selectedRow.machinenumber) && selectedRow.machinenumber.length > 0 ? selectedRow.machinenumber.map(machine => machine.label).join(', ') : 'ไม่มีข้อมูล'}</p>
+                           <p><strong>ประสงค์ยืมวันที่:</strong> {selectedRow.startdate}</p>
+                           <p><strong>ใช้เสร็จวันที่:</strong> {selectedRow.enddate}</p>
+                       <Button onClick={handleClose}>Close</Button>
+                 </div>
+          )}
+        </div>
+      </Modal>
         </div>
         รายละเอียด
         <div className='containertable'>
