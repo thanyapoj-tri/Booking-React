@@ -129,7 +129,7 @@ function Table() {
             })
             .catch(er => console.log(er));
 
-        const id2 = data.length + 1;
+        const id2 = pendingData.length + 1;
         axios.post(`http://${ip}:3000/pending`
             , {id: 'q-'+id2+name, name: name,identity: identity,department: department,tel: tel, machine: machine,stereo: stereo,wirelessmic: wirelessmic,voicerec: voicerec ,objective: objective,startdate: startdate,enddate: enddate ,location: location,machinenumber: selectedOption})
                 .then(res => {    
@@ -278,15 +278,16 @@ function Table() {
                             <option value="ภาควิชาศึกษาศาสตร์">ภาควิชาศึกษาศาสตร์</option>
                             <option value="ภาควิชาสังคมและสุขภาพ">ภาควิชาสังคมและสุขภาพ</option>
                             <option value="ภาควิชามนุษยศาสตร์">ภาควิชามนุษยศาสตร์</option>
-                            <option value="งานบริหารทั่วไป">งานบริหารทั่วไป</option>
-                            <option value="งานคลังและสินทรัพย์">งานคลังและสินทรัพย์</option>
-                            <option value="งานยุทธศาสตร์แผนและงบประมาณ">งานยุทธศาสตร์แผนและงบประมาณ</option>
-                            <option value="งานบริหารทรัพยากรบุคคล">งานบริหารทรัพยากรบุคคล</option>
-                            <option value="งานบริหารและส่งเสริมการวิจัยและบริการวิชาการ">งานบริหารและส่งเสริมการวิจัยและบริการวิชาการ</option>
-                            <option value="งานบริหารการศึกษาและกิจการนักศึกษา">งานบริหารการศึกษาและกิจการนักศึกษา</option>
+                            <option value="งานบริหารและพัฒนาอย่างยั่งยืน">งานบริหารทั่วไป</option>
+                            <option value="งานบริหารคลังและสินทรัพย์">งานคลังและสินทรัพย์</option>
+                            <option value="งานยุทธศาสตร์และพัฒนาคุณภาพ">งานยุทธศาสตร์แผนและงบประมาณ</option>
+                            <option value="งานบริหารและพัฒนาทรัพยากรบุคคล">งานบริหารทรัพยากรบุคคล</option>
+                            <option value="งานวิจัยและบริการวิชาการ">งานบริหารและส่งเสริมการวิจัยและบริการวิชาการ</option>
+                            <option value="งานบริหารการศึกษาและนวัตกรรมการเรียนรู้">งานบริหารการศึกษาและนวัตกรรมการเรียนรู้</option>
                             <option value="งานส่งเสริมการศึกษาแบบยืดหยุ่นและพัฒนาทักษะ">งานส่งเสริมการศึกษาแบบยืดหยุ่นและพัฒนาทักษะ</option>
                             <option value="สำนักงานบูรณาการวิชาการเพื่อสังคม">สำนักงานบูรณาการวิชาการเพื่อสังคม</option>
-                            <option value="งานวิเทศสัมพันธ์">งานวิเทศสัมพันธ์</option>
+                            <option value="งานวิเทศสัมพันธ์ สื่อสารองค์กร และกิจการนักศึกษา">งานวิเทศสัมพันธ์ สื่อสารองค์กร และกิจการนักศึกษา</option>
+                            <option value="งานบัณฑิตศึกษา">งานบัณฑิตศึกษา</option>
                             <option value="เลขาคณบดี">[เลขา]คณบดีและผู้บริหาร</option>
                         </select>
                         </label>
@@ -449,7 +450,7 @@ function Table() {
                                     <select value={staffName} onChange={(e) => setStaffName(e.target.value)}>
                                     <option value="" disabled>เจ้าหน้าที่</option>
                                     
-                                    <option key="1" value="สราวุฒิ สุขเกลอ">สราวุฒิ สุขเกลอ</option>
+                                    <option key="1" value="กนกวรรณ นิ่มทัศนศิริ">กนกวรรณ นิ่มทัศนศิริ</option>
                                     </select>
                             </td>
                             <td>

@@ -2457,6 +2457,549 @@
           "id": "SH04"
         }
       ]
+    },
+    {
+      "id": "IT-S002-114",
+      "name": "ดารุณยา สติภา",
+      "identity": "บุคลากร",
+      "department": "งานบริหารการศึกษาและกิจการนักศึกษา",
+      "tel": "1122",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "แก้ไขเอกสาร มม.2",
+      "startdate": "2025-03-24T09:03",
+      "enddate": "2025-03-24T16:03",
+      "location": "ห้องประชุมข้างห้องการเงิน",
+      "machinenumber": [
+        {
+          "value": "4",
+          "label": "เครื่อง No. 4",
+          "id": "SH04"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-115",
+      "name": "ปรียาวดี ธีรานุวัตร",
+      "identity": "บุคลากร",
+      "department": "งานบริหารทรัพยากรบุคคล",
+      "tel": "1003",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ประชุมทีมเลขาฯ ประจำเดือนเมษายน 2568",
+      "startdate": "2025-04-09T13:00",
+      "enddate": "2025-04-09T16:00",
+      "location": "ห้องประชุม (ข้างห้องการเงิน) อาคาร 3 ชั้น 1 ",
+      "machinenumber": [
+        {
+          "value": "3",
+          "label": "เครื่อง No. 3",
+          "id": "SH02"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-116",
+      "name": "ปานชีวา เปี้ยปลูก",
+      "identity": "บุคลากร",
+      "department": "งานบริหารทรัพยากรบุคคล",
+      "tel": "1013",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ประชุมทดลองงานอาจารย์ Istvan",
+      "startdate": "2025-04-09T14:00",
+      "enddate": "2025-04-09T15:00",
+      "location": "ห้องประชุมภาควิชาศึกษาศาสตร์ อ.3 ช.2",
+      "machinenumber": []
+    },
+    {
+      "id": "IT-S002-117",
+      "name": "ปรียาวดี ธีรานุวัตร",
+      "identity": "บุคลากร",
+      "department": "งานบริหารทรัพยากรบุคคล",
+      "tel": "1003",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ประชุมคณะอนุกรรมการฯ ครั้งที่ 2/2568 ",
+      "startdate": "2025-04-28T13:30",
+      "enddate": "2025-04-28T16:30",
+      "location": "ห้องประชุมกันภัย ชั้น 1 ",
+      "machinenumber": [
+        {
+          "value": "4",
+          "label": "เครื่อง No. 4",
+          "id": "SH04"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-118",
+      "name": "รุ่งนภา จีนโสภา",
+      "identity": "บุคลากร",
+      "department": "งานบริหารคลังและสินทรัพย์",
+      "tel": "1116",
+      "machine": "1 เครื่อง",
+      "stereo": "1",
+      "wirelessmic": "2",
+      "voicerec": "ไม่ใช้",
+      "objective": "ประชุมคณะกรรมการซื้อหรือจ้างโดยวิธีคัดเลือก  โครงการจัดซื้อครุภัณฑ์ห้องเรียนผสมผสานอัจฉริยะ (Smart Classroom)",
+      "startdate": "2025-04-23T15:00",
+      "enddate": "2025-04-23T18:00",
+      "location": "ห้องประชุมลัดดาวัลย์",
+      "machinenumber": [
+        {
+          "value": "4",
+          "label": "เครื่อง No. 4",
+          "id": "SH04"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-119",
+      "name": "นางสาวธิดาพร บุญเม่น",
+      "identity": "บุคลากร",
+      "department": "งานวิเทศสัมพันธ์ สื่อสารองค์กร และกิจการนักศึกษา",
+      "tel": "1515",
+      "machine": "7 เครื่อง",
+      "stereo": "7",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ประชุมฝ่ายต้อนรับประชุมวิชาการ",
+      "startdate": "2025-04-08T15:00",
+      "enddate": "2025-04-08T16:00",
+      "location": "ห้องประชุมข้างห้องการเงิน",
+      "machinenumber": [
+        {
+          "value": "7",
+          "label": "เครื่อง No. 7",
+          "id": "SH07"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-120",
+      "name": "ธันยาพร ลักษณะ",
+      "identity": "บุคลากร",
+      "department": "งานบริหารและพัฒนาทรัพยากรบุคคล",
+      "tel": "1110",
+      "machine": "1 เครื่อง",
+      "stereo": "1",
+      "wirelessmic": "1",
+      "voicerec": "ไม่ใช้",
+      "objective": "อบรม",
+      "startdate": "2025-04-10T08:00",
+      "enddate": "2025-04-10T16:00",
+      "location": "ห้องประชุมกันภัยมหิดล",
+      "machinenumber": [
+        {
+          "value": "8",
+          "label": "เครื่อง No. 8",
+          "id": "SH08"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-121",
+      "name": "สุพัตรา เกียรติเลิศธรรม",
+      "identity": "บุคลากร",
+      "department": "เลขาคณบดี",
+      "tel": "1111",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ทำงาน",
+      "startdate": "2025-04-12T15:16",
+      "enddate": "2025-04-17T15:16",
+      "location": "ห้องประชุม",
+      "machinenumber": []
+    },
+    {
+      "id": "IT-S002-122",
+      "name": "วรรณวิมล สิทธิโชคสัมพันธ์",
+      "identity": "บุคลากร",
+      "department": "งานบริหารคลังและสินทรัพย์",
+      "tel": "1005",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ใช้ในการทำงาน",
+      "startdate": "2025-04-11T16:25",
+      "enddate": "2025-04-20T16:25",
+      "location": "งานคลังฯ",
+      "machinenumber": [
+        {
+          "value": "9",
+          "label": "เครื่อง No. 9",
+          "id": "SH09"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-123",
+      "name": "วิศรุตา บุญปาลิต",
+      "identity": "บุคลากร",
+      "department": "งานบัณฑิตศึกษา",
+      "tel": "1014 (เบอร์พี่หนูเดิม)",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "สอน ป.เอก สังคมสุขภาพ",
+      "startdate": "2025-04-17T09:00",
+      "enddate": "2025-04-17T12:00",
+      "location": "ห้องศรีตรัง",
+      "machinenumber": [
+        {
+          "label": "10",
+          "value": "10",
+          "__isNew__": true
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-124",
+      "name": "นางน้ำอ้อย   คำชื่น",
+      "identity": "บุคลากร",
+      "department": "งานบัณฑิตศึกษา",
+      "tel": "1109",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "เพื่อจัดพิมพ์เอกสารงานบัณฑิตศึกษา",
+      "startdate": "2025-04-18T16:04",
+      "enddate": "2025-05-02T16:04",
+      "location": "งานการศึกษา",
+      "machinenumber": [
+        {
+          "value": "7",
+          "label": "เครื่อง No. 7",
+          "id": "SH07"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-125",
+      "name": "ฉันทิสา ทาจินะ",
+      "identity": "บุคลากร",
+      "department": "งานบริหารคลังและสินทรัพย์",
+      "tel": "1644",
+      "machine": "1 เครื่อง",
+      "stereo": "1",
+      "wirelessmic": "2",
+      "voicerec": "ไม่ใช้",
+      "objective": "สัมนาการเงินและพัสดุ",
+      "startdate": "2025-05-27T09:00",
+      "enddate": "2025-05-27T12:00",
+      "location": "ห้องประชุม 508",
+      "machinenumber": [
+        {
+          "value": "5",
+          "label": "เครื่อง No. 5",
+          "id": "SH05"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-126",
+      "name": "นางสาวธิดาพร บุญเม่น",
+      "identity": "บุคลากร",
+      "department": "งานวิเทศสัมพันธ์ สื่อสารองค์กร และกิจการนักศึกษา",
+      "tel": "1019",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ประชุมเตรียมงานเสวนาประจำปี 2568",
+      "startdate": "2025-04-24T23:00",
+      "enddate": "2025-04-24T12:23",
+      "location": "ห้องประชุมผกากรอง",
+      "machinenumber": [
+        {
+          "value": "6",
+          "label": "เครื่อง No. 6",
+          "id": "SH06"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-127",
+      "name": "วิศรุตา บุญปาลิต",
+      "identity": "บุคลากร",
+      "department": "งานบริหารการศึกษา",
+      "tel": "1014",
+      "machine": "1 เครื่อง",
+      "stereo": "1",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "การเรียนการสอน ภาคสังคมและสุขภาพ",
+      "startdate": "2025-04-24T08:30",
+      "enddate": "2025-04-24T16:30",
+      "location": "ห้องศรีตรัง",
+      "machinenumber": [
+        {
+          "value": "10",
+          "label": "เครื่อง No. 10",
+          "id": "c2d2"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-128",
+      "name": "วทินา วัชระรังษี",
+      "identity": "บุคลากร",
+      "department": "งานบริหารการศึกษา",
+      "tel": "1121",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "อบรม ภาควิชาสังคมศาสตร์การแพทย์",
+      "startdate": "2025-04-24T08:39",
+      "enddate": "2025-04-24T08:40",
+      "location": "ห้องศรีตรัง",
+      "machinenumber": [
+        {
+          "value": "9",
+          "label": "เครื่อง No. 9",
+          "id": "SH09"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-129",
+      "name": "ปรียาวดี ธีรานุวัตร",
+      "identity": "บุคลากร",
+      "department": "งานบริหารและพัฒนาทรัพยากรบุคคล",
+      "tel": "1003",
+      "machine": "1 เครื่อง",
+      "stereo": "1",
+      "wirelessmic": "2",
+      "voicerec": "ไม่ใช้",
+      "objective": "โครงการปลูกผักปักสุข",
+      "startdate": "2025-05-02T10:30",
+      "enddate": "2025-05-02T10:30",
+      "location": "ลานนนทรี",
+      "machinenumber": [
+        {
+          "value": "8",
+          "label": "เครื่อง No. 8",
+          "id": "SH08"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-129",
+      "name": "วรรณวิมล สิทธิโชคสัมพันธ์",
+      "identity": "บุคลากร",
+      "department": "งานบริหารคลังและสินทรัพย์",
+      "tel": "1005",
+      "machine": "2 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "นำเสนอการทำบัตรเครดิตราชการ",
+      "startdate": "2025-05-02T16:22",
+      "enddate": "2025-05-06T16:22",
+      "location": "คณะฯ",
+      "machinenumber": [
+        {
+          "value": "4",
+          "label": "เครื่อง No. 4",
+          "id": "SH04"
+        },
+        {
+          "value": "6",
+          "label": "เครื่อง No. 6",
+          "id": "SH06"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-131",
+      "name": "ศินาลักษณ์ จิตบวรรัตน์",
+      "identity": "บุคลากร",
+      "department": "งานวิเทศสัมพันธ์ สื่อสารองค์กร และกิจการนักศึกษา",
+      "tel": "0632599624",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "1",
+      "voicerec": "ไม่ใช้",
+      "objective": "โครงการสัมมนาจัดทำแผนสโมสรนักศึกษาคณะสังคมศาสตร์และมนุษยศาสตร์",
+      "startdate": "2025-05-13T08:00",
+      "enddate": "2025-05-13T16:00",
+      "location": "ห้องประชุม 508 ชั้น 5 อาคาร 4",
+      "machinenumber": [
+        {
+          "value": "5",
+          "label": "เครื่อง No. 5",
+          "id": "SH05"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-132",
+      "name": "ปานชีวา เปี้ยปลูก",
+      "identity": "บุคลากร",
+      "department": "งานบริหารและพัฒนาทรัพยากรบุคคล",
+      "tel": "1013",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "ไม่ใช้",
+      "voicerec": "ไม่ใช้",
+      "objective": "ประชุมสอบสัมภาษณ์ ตำแหน่งอาจารย์ชาวต่างประเทศ",
+      "startdate": "2025-05-06T13:30",
+      "enddate": "2025-05-06T16:30",
+      "location": "ห้องประชุม(ฝั่งห้องคณบดี) อาคาร1 ชั้น2",
+      "machinenumber": [
+        {
+          "value": "5",
+          "label": "เครื่อง No. 5",
+          "id": "SH05"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-133",
+      "name": "ปรียาวดี ธีรานุวัตร",
+      "identity": "บุคลากร",
+      "department": "งานบริหารและพัฒนาทรัพยากรบุคคล",
+      "tel": "1003",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "1",
+      "voicerec": "ไม่ใช้",
+      "objective": "โครงการ English for Fun ",
+      "startdate": "2025-05-28T13:00",
+      "enddate": "2025-05-28T16:00",
+      "location": "ห้อง 208 อาคาร 4",
+      "machinenumber": [
+        {
+          "value": "9",
+          "label": "เครื่อง No. 9",
+          "id": "SH09"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-134",
+      "name": "ปรียาวดี ธีรานุวัตร",
+      "identity": "บุคลากร",
+      "department": "งานบริหารและพัฒนาทรัพยากรบุคคล",
+      "tel": "1003",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "1",
+      "voicerec": "ไม่ใช้",
+      "objective": "โครงการ English for Fun ",
+      "startdate": "2025-06-25T13:00",
+      "enddate": "2025-06-25T16:00",
+      "location": "ห้อง 208 อาคาร 4",
+      "machinenumber": [
+        {
+          "value": "9",
+          "label": "เครื่อง No. 9",
+          "id": "SH09"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-135",
+      "name": "ปรียาวดี ธีรานุวัตร",
+      "identity": "บุคลากร",
+      "department": "งานบริหารและพัฒนาทรัพยากรบุคคล",
+      "tel": "1003",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "1",
+      "voicerec": "ไม่ใช้",
+      "objective": "โครงการ English for Fun ",
+      "startdate": "2025-07-30T13:00",
+      "enddate": "2025-07-30T16:00",
+      "location": "ห้อง 208 อาคาร 4",
+      "machinenumber": [
+        {
+          "value": "10",
+          "label": "เครื่อง No. 10",
+          "id": "c2d2"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-136",
+      "name": "ปรียาวดี ธีรานุวัตร",
+      "identity": "บุคลากร",
+      "department": "งานบริหารและพัฒนาทรัพยากรบุคคล",
+      "tel": "1003",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "1",
+      "voicerec": "ไม่ใช้",
+      "objective": "โครงการ English for Fun ",
+      "startdate": "2025-08-27T13:00",
+      "enddate": "2025-08-27T16:00",
+      "location": "ห้อง 208 อาคาร 4",
+      "machinenumber": [
+        {
+          "value": "10",
+          "label": "เครื่อง No. 10",
+          "id": "c2d2"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-137",
+      "name": "ปรียาวดี ธีรานุวัตร",
+      "identity": "บุคลากร",
+      "department": "งานบริหารและพัฒนาทรัพยากรบุคคล",
+      "tel": "1003",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "1",
+      "voicerec": "ไม่ใช้",
+      "objective": "ครั้งที่ 5 โครงการฝึกทักษะภาษาอังกฤษ English for Fun",
+      "startdate": "2025-09-24T13:00",
+      "enddate": "2025-09-24T16:00",
+      "location": "ห้อง 208 อาคาร 4",
+      "machinenumber": [
+        {
+          "value": "3",
+          "label": "เครื่อง No. 3",
+          "id": "SH03"
+        }
+      ]
+    },
+    {
+      "id": "IT-S002-138",
+      "name": "ปรียาวดี ธีรานุวัตร ",
+      "identity": "บุคลากร",
+      "department": "งานบริหารและพัฒนาทรัพยากรบุคคล",
+      "tel": "1003",
+      "machine": "1 เครื่อง",
+      "stereo": "ไม่ใช้",
+      "wirelessmic": "1",
+      "voicerec": "ไม่ใช้",
+      "objective": "ครั้งที่ 6 โครงการฝึกทักษะภาษาอังกฤษ English for Fun  ",
+      "startdate": "2025-10-29T13:00",
+      "enddate": "2025-10-29T16:00",
+      "location": "ห้อง 208 อาคาร 4 ",
+      "machinenumber": [
+        {
+          "value": "4",
+          "label": "เครื่อง No. 4",
+          "id": "SH04"
+        }
+      ]
     }
   ]
 }
